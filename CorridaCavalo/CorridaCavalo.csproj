@@ -46,40 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAjuda.cs">
+    <Compile Include="views\FrmAjuda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAjuda.Designer.cs">
+    <Compile Include="views\FrmAjuda.Designer.cs">
       <DependentUpon>FrmAjuda.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadastroApostador.cs">
+    <Compile Include="views\FrmCadastroApostador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCadastroApostador.Designer.cs">
+    <Compile Include="views\FrmCadastroApostador.Designer.cs">
       <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultaApostador.cs">
+    <Compile Include="views\FrmConsultaApostador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConsultaApostador.Designer.cs">
+    <Compile Include="views\FrmConsultaApostador.Designer.cs">
       <DependentUpon>FrmConsultaApostador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultaCavalo.cs">
+    <Compile Include="views\FrmConsultaCavalo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConsultaCavalo.Designer.cs">
+    <Compile Include="views\FrmConsultaCavalo.Designer.cs">
       <DependentUpon>FrmConsultaCavalo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultaCorrida.cs">
+    <Compile Include="views\FrmConsultaCorrida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConsultaCorrida.Designer.cs">
+    <Compile Include="views\FrmConsultaCorrida.Designer.cs">
       <DependentUpon>FrmConsultaCorrida.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCorrida.cs">
+    <Compile Include="views\FrmCorrida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCorrida.Designer.cs">
+    <Compile Include="views\FrmCorrida.Designer.cs">
       <DependentUpon>FrmCorrida.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
@@ -94,30 +94,30 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadastroCavalo.cs">
+    <Compile Include="views\FrmCadastroCavalo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCadastroCavalo.Designer.cs">
+    <Compile Include="views\FrmCadastroCavalo.Designer.cs">
       <DependentUpon>FrmCadastroCavalo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAjuda.resx">
+    <EmbeddedResource Include="views\FrmAjuda.resx">
       <DependentUpon>FrmAjuda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadastroApostador.resx">
+    <EmbeddedResource Include="views\FrmCadastroApostador.resx">
       <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultaApostador.resx">
+    <EmbeddedResource Include="views\FrmConsultaApostador.resx">
       <DependentUpon>FrmConsultaApostador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultaCavalo.resx">
+    <EmbeddedResource Include="views\FrmConsultaCavalo.resx">
       <DependentUpon>FrmConsultaCavalo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultaCorrida.resx">
+    <EmbeddedResource Include="views\FrmConsultaCorrida.resx">
       <DependentUpon>FrmConsultaCorrida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCorrida.resx">
+    <EmbeddedResource Include="views\FrmCorrida.resx">
       <DependentUpon>FrmCorrida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
@@ -126,7 +126,7 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadastroCavalo.resx">
+    <EmbeddedResource Include="views\FrmCadastroCavalo.resx">
       <DependentUpon>FrmCadastroCavalo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
