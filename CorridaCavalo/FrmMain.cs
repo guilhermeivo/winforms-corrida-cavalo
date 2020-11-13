@@ -337,6 +337,7 @@ namespace CorridaCavalo
         // btnConsulta
         private void panelConsulta_MouseClick(object sender, MouseEventArgs e)
         {
+            setColorButtonMenu(panelConsulta);
             showSubMenu(panelConsultaSubmenu);
         }
         private void btnConsultaCavalo_Click(object sender, EventArgs e)
