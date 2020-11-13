@@ -257,9 +257,9 @@
             this.label1.Location = new System.Drawing.Point(355, 317);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(80, 25);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "LOGO";
+            this.label1.Text = "LOGO EMPRESA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelSideMenu
