@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E917E8BA-2DF4-4114-B68C-DFA875267DF2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CorridaCavalo</RootNamespace>
+    <AssemblyName>CorridaCavalo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAjuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjuda.Designer.cs">
+      <DependentUpon>FrmAjuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroApostador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroApostador.Designer.cs">
+      <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaApostador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaApostador.Designer.cs">
+      <DependentUpon>FrmConsultaApostador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaCavalo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaCavalo.Designer.cs">
+      <DependentUpon>FrmConsultaCavalo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaCorrida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaCorrida.Designer.cs">
+      <DependentUpon>FrmConsultaCorrida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCorrida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCorrida.Designer.cs">
+      <DependentUpon>FrmCorrida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroCavalo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroCavalo.Designer.cs">
+      <DependentUpon>FrmCadastroCavalo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjuda.resx">
+      <DependentUpon>FrmAjuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroApostador.resx">
+      <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaApostador.resx">
+      <DependentUpon>FrmConsultaApostador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaCavalo.resx">
+      <DependentUpon>FrmConsultaCavalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaCorrida.resx">
+      <DependentUpon>FrmConsultaCorrida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCorrida.resx">
+      <DependentUpon>FrmCorrida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroCavalo.resx">
+      <DependentUpon>FrmCadastroCavalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\admin.png" />
+    <Content Include="icons\angle_down_black.png" />
+    <Content Include="icons\angle_down_white.png" />
+    <Content Include="icons\consulta_icon.png" />
+    <Content Include="icons\help_icon.png" />
+    <Content Include="icons\house_icon.png" />
+    <Content Include="icons\power_icon.png" />
+    <Content Include="icons\query_icon.png" />
+    <Content Include="icons\flag-white.png" />
+    <Content Include="icons\windows_buttons\close\close-pressed.png" />
+    <Content Include="icons\windows_buttons\close\close.png" />
+    <Content Include="icons\windows_buttons\close\close_prelight.png" />
+    <Content Include="icons\windows_buttons\close\close_unfocused.png" />
+    <Content Include="icons\windows_buttons\maximize\maximize.png" />
+    <Content Include="icons\windows_buttons\maximize\maximize_prelight.png" />
+    <Content Include="icons\windows_buttons\maximize\maximize_pressed.png" />
+    <Content Include="icons\windows_buttons\maximize\maximize_unfocused.png" />
+    <Content Include="icons\windows_buttons\minimize\minimize.png" />
+    <Content Include="icons\windows_buttons\minimize\minimize_prelight.png" />
+    <Content Include="icons\windows_buttons\minimize\minimize_pressed.png" />
+    <Content Include="icons\windows_buttons\minimize\minimize_unfocused.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
