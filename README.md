@@ -1,11 +1,11 @@
 <div align="center">
-    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/logo_horse.png" alt"logo-horse" title="logo-horse" />
+    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/logo_horse.png" alt"logo-horse" title="logo-horse" width="150px" />
 </div>
 
 <br />
 
 <div align="center">
-    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/print-app.png" alt"logo-horse" title="logo-horse" />
+    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/print-app.png" alt"logo-horse" title="logo-horse"/>
 </div>
 
 # :scroll: Sumário
@@ -15,7 +15,6 @@
     - [Baixando o projeto](#computer-baixando-o-projeto)
     - [Configurando o projeto](#wrench-configurando-o-ambiente)
     - [Rodando o projeto](#computer-rodando-o-projeto)
-        - [Projeto](#Projeto)
 
 # :computer: Tecnologias
 
@@ -46,8 +45,6 @@ $ git clone https://github.com/guilhermeivo/winforms-corrida-cavalo.git
 
 
 ### :computer: Rodando o projeto
-
-#### Projeto
 
 Abra o projeto no Visual Studio e inicie o projeto.
 
