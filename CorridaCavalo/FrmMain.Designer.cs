@@ -257,7 +257,7 @@
             this.label1.Location = new System.Drawing.Point(355, 317);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.Size = new System.Drawing.Size(191, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "LOGO EMPRESA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -519,9 +519,9 @@
             this.lblTextoButtonCorrida.ForeColor = System.Drawing.Color.White;
             this.lblTextoButtonCorrida.Location = new System.Drawing.Point(42, 13);
             this.lblTextoButtonCorrida.Name = "lblTextoButtonCorrida";
-            this.lblTextoButtonCorrida.Size = new System.Drawing.Size(60, 20);
+            this.lblTextoButtonCorrida.Size = new System.Drawing.Size(56, 20);
             this.lblTextoButtonCorrida.TabIndex = 1;
-            this.lblTextoButtonCorrida.Text = "Corrida";
+            this.lblTextoButtonCorrida.Text = "Racha";
             this.lblTextoButtonCorrida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelCorrida_MouseClick);
             // 
             // pcbButtomCorrida
@@ -696,7 +696,7 @@
             this.lblLogo.Location = new System.Drawing.Point(86, 14);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblLogo.Size = new System.Drawing.Size(71, 23);
+            this.lblLogo.Size = new System.Drawing.Size(70, 26);
             this.lblLogo.TabIndex = 3;
             this.lblLogo.Text = "LOGO";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -758,7 +758,7 @@
             this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(35, 11);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(59, 19);
+            this.lblUser.Size = new System.Drawing.Size(61, 21);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "Admin";
             // 
@@ -841,7 +841,7 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1024, 700);
@@ -850,7 +850,7 @@
             this.Controls.Add(this.panelLeftCorner);
             this.Controls.Add(this.panelTopCorner);
             this.Controls.Add(this.panelBottomCorner);
-            this.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(700, 400);
