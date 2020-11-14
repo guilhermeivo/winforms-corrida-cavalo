@@ -25,7 +25,7 @@ namespace CorridaCavalo
         // Estado do formulario
         bool StateFormMaximized = false;
 
-        Color ActiveBorderColor = Color.FromArgb(8, 109, 227); // Roxo
+        Color ActiveBorderColor = Color.FromArgb(8, 109, 227); // Primária
         Color InactiveBorderColor = Color.FromArgb(240, 240, 240); // Cinza
 
         private void FormMain_Activated(object sender, EventArgs e)
@@ -40,46 +40,7 @@ namespace CorridaCavalo
             SetBorderColor(InactiveBorderColor);
         }
 
-        public void SetButtonWindowImage(bool active = true)
-        {
-            if (active)
-            {
-                btnClose.BackgroundImage = Properties.Resources.close;
-                btnMaximized.BackgroundImage = Properties.Resources.maximize;
-                btnMinimize.BackgroundImage = Properties.Resources.minimize;
-            }
-            else
-            {
-                btnClose.BackgroundImage = Properties.Resources.close_unfocused;
-                btnMaximized.BackgroundImage = Properties.Resources.maximize_unfocused;
-                btnMinimize.BackgroundImage = Properties.Resources.minimize_unfocused;
-            }
-        }
-        // Definir as cores das bordas de resize
-        public void SetBorderColor(Color color)
-        {
-            panelBottomCorner.BackColor = color;
-            panelBottomRightCorner.BackColor = color;
-            panelBottomLeftCorner.BackColor = color;
-            panelTopCorner.BackColor = color;
-            panelTopRightCorner.BackColor = color;
-            panelTopLeftCorner.BackColor = color;
-            panelLeftCorner.BackColor = color;
-            panelRightPanel.BackColor = color;
-        }
-        // Deixar visivil as bordas de resize
-        public void SetBorderVisible(bool value)
-        {
-            panelBottomCorner.Visible = value;
-            panelBottomRightCorner.Visible = value;
-            panelBottomLeftCorner.Visible = value;
-            panelTopCorner.Visible = value;
-            panelTopRightCorner.Visible = value;
-            panelTopLeftCorner.Visible = value;
-            panelLeftCorner.Visible = value;
-            panelRightPanel.Visible = value;
-        }
-        // btnClose
+        #region btnClose methods
         private void btnClose_MouseUp(object sender, MouseEventArgs e)
         {
             btnClose.BackgroundImage = Properties.Resources.close;
@@ -100,7 +61,8 @@ namespace CorridaCavalo
         {
             Application.Exit();
         }
-        // btnMaximized
+        #endregion
+        #region btnMaximized methods
         private void btnMaximized_MouseUp(object sender, MouseEventArgs e)
         {
             btnMaximized.BackgroundImage = Properties.Resources.maximize;
@@ -121,7 +83,8 @@ namespace CorridaCavalo
         {
             ChangeSize();
         }
-        //btnMinimize
+        #endregion
+        #region btnMinimize methods
         private void btnMinimize_MouseUp(object sender, MouseEventArgs e)
         {
             btnMinimize.BackgroundImage = Properties.Resources.minimize;
@@ -142,8 +105,8 @@ namespace CorridaCavalo
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        // panelHeader - Movimentations
+        #endregion
+        #region panelHeader methods
         bool mouseDownHeader;
         Point lastLocation;
         private void panelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -172,8 +135,73 @@ namespace CorridaCavalo
         {
             ChangeSize();
         }
+        #endregion
+
+        /// <summary>
+        /// Altera as imagens dos botões da Window (close, maximize, minimize) dependo do <paramref name="active"/>.
+        /// </summary>
+        /// <param name="active">
+        /// Estado do Window.
+        /// </param>
+        public void SetButtonWindowImage(bool active = true)
+        {
+            if (active)
+            {
+                btnClose.BackgroundImage = Properties.Resources.close;
+                btnMaximized.BackgroundImage = Properties.Resources.maximize;
+                btnMinimize.BackgroundImage = Properties.Resources.minimize;
+            }
+            else
+            {
+                btnClose.BackgroundImage = Properties.Resources.close_unfocused;
+                btnMaximized.BackgroundImage = Properties.Resources.maximize_unfocused;
+                btnMinimize.BackgroundImage = Properties.Resources.minimize_unfocused;
+            }
+        }
+
+        /// <summary>
+        /// Altera a cor da borda de resize dependo do <paramref name="color"/>.
+        /// </summary>
+        /// <param name="color">
+        /// Cor da borda.
+        /// </param>
+        public void SetBorderColor(Color color)
+        {
+            panelBottomCorner.BackColor = color;
+            panelBottomRightCorner.BackColor = color;
+            panelBottomLeftCorner.BackColor = color;
+            panelTopCorner.BackColor = color;
+            panelTopRightCorner.BackColor = color;
+            panelTopLeftCorner.BackColor = color;
+            panelLeftCorner.BackColor = color;
+            panelRightPanel.BackColor = color;
+        }
+
+        /// <summary>
+        /// Altera a visibilidade do resize dependo do <paramref name="value"/>.
+        /// </summary>
+        /// <param name="value">
+        /// Estado da Window.
+        /// </param>
+        public void SetBorderVisible(bool value)
+        {
+            panelBottomCorner.Visible = value;
+            panelBottomRightCorner.Visible = value;
+            panelBottomLeftCorner.Visible = value;
+            panelTopCorner.Visible = value;
+            panelTopRightCorner.Visible = value;
+            panelTopLeftCorner.Visible = value;
+            panelLeftCorner.Visible = value;
+            panelRightPanel.Visible = value;
+
+            SetBorderColor(ActiveBorderColor);
+        }      
+        
         Size lastSize;
         Point lastPosition;
+        /// <summary>
+        /// Altera o tamanho e a posição da Window para Maximized ou para o último.
+        /// </summary>
         public void ChangeSize()
         {
             if (StateFormMaximized)
@@ -231,7 +259,6 @@ namespace CorridaCavalo
                 ResizerWindow(5);
             }
         }
-
         private void panelBottomCorner_MouseMove(object sender, MouseEventArgs e)
         {
             if (mov)
@@ -261,46 +288,8 @@ namespace CorridaCavalo
         #endregion
 
         #region configuração-menu
-        private void customizedMenu()
-        {
-            panelCadastrarSubmenu.Visible = false;
-            panelConsultaSubmenu.Visible = false;
-        }
-        private void hideSubMenu()
-        {
-            if (panelCadastrarSubmenu.Visible)
-            {
-                panelCadastrarSubmenu.Visible = false;
-            }
-            if (panelConsultaSubmenu.Visible)
-            {
-                panelConsultaSubmenu.Visible = false;
-            }
-        }
-        private void showSubMenu(Panel subMenu)
-        {
-            if (!subMenu.Visible)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
-            }
-        }
-        private void setColorButtonMenu(Panel panelButton)
-        {
-            panelHome.BackColor = Color.FromArgb(12, 255, 255, 255);
-            panelCadastrar.BackColor = Color.FromArgb(12, 255, 255, 255);
-            panelCorrida.BackColor = Color.FromArgb(12, 255, 255, 255);
-            panelConsulta.BackColor = Color.FromArgb(12, 255, 255, 255);
-            panelAjuda.BackColor = Color.FromArgb(12, 255, 255, 255);
-            panelSair.BackColor = Color.FromArgb(12, 255, 255, 255);
 
-            panelButton.BackColor = Color.FromArgb(8, 109, 227);
-        }
-        // btnCadastrar
+        #region btnCadastrar methods and subbuttons
         private void btnCadastrarCavalo_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmCadastroCavalo());
@@ -316,9 +305,10 @@ namespace CorridaCavalo
         {
             hideSubMenu();
             showSubMenu(panelCadastrarSubmenu);
-            setColorButtonMenu(panelCadastrar);            
+            setColorButtonMenu(panelCadastrar);
         }
-        // btnHome
+        #endregion
+        #region btnHome methods
         private void panelHome_MouseClick(object sender, MouseEventArgs e)
         {
             if (activeForm != null)
@@ -328,14 +318,16 @@ namespace CorridaCavalo
             setColorButtonMenu(panelHome);
             hideSubMenu();
         }
-        // btnCorrida
+        #endregion
+        #region corrida methods
         private void panelCorrida_MouseClick(object sender, MouseEventArgs e)
         {
             openChildForm(new FrmCorrida());
             setColorButtonMenu(panelCorrida);
             hideSubMenu();
         }
-        // btnConsulta
+        #endregion
+        #region btnConsulta methods and subbuttons
         private void panelConsulta_MouseClick(object sender, MouseEventArgs e)
         {
             setColorButtonMenu(panelConsulta);
@@ -349,7 +341,7 @@ namespace CorridaCavalo
 
         private void btnConsultaApostador_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmConsultaApostador()); 
+            openChildForm(new FrmConsultaApostador());
             hideSubMenu();
         }
         private void btnConsultaCorrida_Click(object sender, EventArgs e)
@@ -357,7 +349,8 @@ namespace CorridaCavalo
             openChildForm(new FrmConsultaApostador());
             hideSubMenu();
         }
-        // btnAjuda
+        #endregion
+        #region btnAjuda methods
         private void panelAjuda_MouseClick(object sender, MouseEventArgs e)
         {
             // A classe fornece acesso a processos locais e remotos (como uma url)
@@ -366,7 +359,8 @@ namespace CorridaCavalo
             setColorButtonMenu(panelAjuda);
             hideSubMenu();
         }
-        // btnSair
+        #endregion
+        #region btnSair methods
         private void panelSair_MouseClick(object sender, MouseEventArgs e)
         {
             Form FLogin = new FrmLogin();
@@ -375,9 +369,78 @@ namespace CorridaCavalo
             setColorButtonMenu(panelSair);
             hideSubMenu();
         }
+        #endregion
 
-        // openChildForm
+        /// <summary>
+        /// Deixa os submenus invísivel.
+        /// </summary>
+        private void customizedMenu()
+        {
+            panelCadastrarSubmenu.Visible = false;
+            panelConsultaSubmenu.Visible = false;
+        }
+
+        /// <summary>
+        /// Deixa os submenus invísivel, se eles estiverem ativos.
+        /// </summary>
+        private void hideSubMenu()
+        {
+            if (panelCadastrarSubmenu.Visible)
+            {
+                panelCadastrarSubmenu.Visible = false;
+            }
+            if (panelConsultaSubmenu.Visible)
+            {
+                panelConsultaSubmenu.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// Verifica se o <paramref name="subMenu"/> está ativo senão deixa ativo.
+        /// </summary>
+        /// <param name="subMenu">
+        /// Panel SubMenu
+        /// </param>
+        private void showSubMenu(Panel subMenu)
+        {
+            if (!subMenu.Visible)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
+        Color ColorButtonMenuInactive = Color.FromArgb(12, 255, 255, 255);
+        Color ColorButtonMenuActive = Color.FromArgb(8, 109, 227);
+        /// <summary>
+        /// Deixa todos os panels buttons com a cor inactive e deixa o <paramref name="panelButton"/> com a cor ativa
+        /// </summary>
+        /// <param name="panelButton">
+        /// Panel panelButton
+        /// </param>
+        private void setColorButtonMenu(Panel panelButton)
+        {
+            panelHome.BackColor = ColorButtonMenuInactive;
+            panelCadastrar.BackColor = ColorButtonMenuInactive;
+            panelCorrida.BackColor = ColorButtonMenuInactive;
+            panelConsulta.BackColor = ColorButtonMenuInactive;
+            panelAjuda.BackColor = ColorButtonMenuInactive;
+            panelSair.BackColor = ColorButtonMenuInactive;
+
+            panelButton.BackColor = Color.FromArgb(8, 109, 227);
+        }
+        
         private Form activeForm = null;
+        /// <summary>
+        /// Fecha o formulário aberto e abre o <paramref name="childForm"/>.
+        /// </summary>
+        /// <param name="childForm">
+        /// Formulário que deseja abrir.
+        /// </param>
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -394,6 +457,5 @@ namespace CorridaCavalo
             childForm.Show();
         }
         #endregion
-
     }
 }
