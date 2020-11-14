@@ -257,7 +257,7 @@
             this.label1.Location = new System.Drawing.Point(355, 317);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(191, 29);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "LOGO EMPRESA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -519,9 +519,9 @@
             this.lblTextoButtonCorrida.ForeColor = System.Drawing.Color.White;
             this.lblTextoButtonCorrida.Location = new System.Drawing.Point(42, 13);
             this.lblTextoButtonCorrida.Name = "lblTextoButtonCorrida";
-            this.lblTextoButtonCorrida.Size = new System.Drawing.Size(56, 20);
+            this.lblTextoButtonCorrida.Size = new System.Drawing.Size(60, 20);
             this.lblTextoButtonCorrida.TabIndex = 1;
-            this.lblTextoButtonCorrida.Text = "Racha";
+            this.lblTextoButtonCorrida.Text = "Corrida";
             this.lblTextoButtonCorrida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelCorrida_MouseClick);
             // 
             // pcbButtomCorrida
@@ -696,7 +696,7 @@
             this.lblLogo.Location = new System.Drawing.Point(86, 14);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblLogo.Size = new System.Drawing.Size(70, 26);
+            this.lblLogo.Size = new System.Drawing.Size(71, 23);
             this.lblLogo.TabIndex = 3;
             this.lblLogo.Text = "LOGO";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -758,7 +758,7 @@
             this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(35, 11);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(61, 21);
+            this.lblUser.Size = new System.Drawing.Size(59, 19);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "Admin";
             // 
