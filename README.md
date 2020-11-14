@@ -1,11 +1,11 @@
 <div align="center">
-    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/logo-horse.PNG" alt"logo-horse" title="logo-horse" />
+    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/logo_horse.png" alt"logo-horse" title="logo-horse" />
 </div>
 
 <br />
 
 <div align="center">
-    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/print-app.PNG" alt"logo-horse" title="logo-horse" />
+    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/print-app.png" alt"logo-horse" title="logo-horse" />
 </div>
 
 # :scroll: Sumário
