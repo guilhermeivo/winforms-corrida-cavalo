@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -359,7 +360,9 @@ namespace CorridaCavalo
         // btnAjuda
         private void panelAjuda_MouseClick(object sender, MouseEventArgs e)
         {
-            openChildForm(new FrmAjuda());
+            // A classe fornece acesso a processos locais e remotos (como uma url)
+            // Ele está abrindo no navegador padrão
+            Process.Start("https://github.com/guilhermeivo/winforms-corrida-cavalo");
             setColorButtonMenu(panelAjuda);
             hideSubMenu();
         }
