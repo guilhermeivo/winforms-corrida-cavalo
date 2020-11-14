@@ -154,6 +154,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\admin.png" />
+    <Content Include="assets\logo_horse_1.png" />
+    <Content Include="assets\logo_horse_2.png" />
     <Content Include="icons\angle_down_black.png" />
     <Content Include="icons\angle_down_white.png" />
     <Content Include="icons\consulta_icon.png" />
