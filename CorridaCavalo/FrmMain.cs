@@ -77,7 +77,7 @@ namespace CorridaCavalo
         }
         private void btnConsultaCorrida_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmConsultaApostador());
+            openChildForm(new FrmConsultaCorrida());
             hideSubMenu();
         }
         #endregion
