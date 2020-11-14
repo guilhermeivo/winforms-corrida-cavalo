@@ -734,7 +734,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(894, 2);
+            this.panel1.Location = new System.Drawing.Point(875, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 36);
             this.panel1.TabIndex = 4;
@@ -745,18 +745,19 @@
             this.panelUser.Controls.Add(this.lblUser);
             this.panelUser.Controls.Add(this.pcbUser);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelUser.Location = new System.Drawing.Point(895, 2);
+            this.panelUser.Location = new System.Drawing.Point(876, 2);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(125, 36);
+            this.panelUser.Size = new System.Drawing.Size(144, 36);
             this.panelUser.TabIndex = 3;
             // 
             // lblUser
             // 
+            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.lblUser.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(35, 11);
+            this.lblUser.Location = new System.Drawing.Point(51, 9);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(59, 19);
             this.lblUser.TabIndex = 1;
@@ -764,10 +765,11 @@
             // 
             // pcbUser
             // 
+            this.pcbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.pcbUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbUser.BackgroundImage")));
             this.pcbUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbUser.Location = new System.Drawing.Point(5, 7);
+            this.pcbUser.Location = new System.Drawing.Point(114, 5);
             this.pcbUser.Name = "pcbUser";
             this.pcbUser.Size = new System.Drawing.Size(25, 25);
             this.pcbUser.TabIndex = 0;
