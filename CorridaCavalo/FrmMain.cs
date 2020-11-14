@@ -20,6 +20,174 @@ namespace CorridaCavalo
             customizedMenu();  
         }
 
+        #region btnCadastrar methods and subbuttons
+        private void btnCadastrarCavalo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCadastroCavalo());
+            hideSubMenu();
+        }
+        private void btnCadastrarApostador_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCadastroApostador());
+            hideSubMenu();
+        }
+
+        private void cadastrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            hideSubMenu();
+            showSubMenu(panelCadastrarSubmenu);
+            setColorButtonMenu(panelCadastrar);
+        }
+        #endregion
+        #region btnHome methods
+        private void panelHome_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            setColorButtonMenu(panelHome);
+            hideSubMenu();
+        }
+        #endregion
+        #region corrida methods
+        private void panelCorrida_MouseClick(object sender, MouseEventArgs e)
+        {
+            openChildForm(new FrmCorrida());
+            setColorButtonMenu(panelCorrida);
+            hideSubMenu();
+        }
+        #endregion
+        #region btnConsulta methods and subbuttons
+        private void panelConsulta_MouseClick(object sender, MouseEventArgs e)
+        {
+            setColorButtonMenu(panelConsulta);
+            showSubMenu(panelConsultaSubmenu);
+        }
+        private void btnConsultaCavalo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmConsultaCavalo());
+            hideSubMenu();
+        }
+
+        private void btnConsultaApostador_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmConsultaApostador());
+            hideSubMenu();
+        }
+        private void btnConsultaCorrida_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmConsultaApostador());
+            hideSubMenu();
+        }
+        #endregion
+        #region btnAjuda methods
+        private void panelAjuda_MouseClick(object sender, MouseEventArgs e)
+        {
+            // A classe fornece acesso a processos locais e remotos (como uma url)
+            // Ele está abrindo no navegador padrão
+            Process.Start("https://github.com/guilhermeivo/winforms-corrida-cavalo");
+            setColorButtonMenu(panelAjuda);
+            hideSubMenu();
+        }
+        #endregion
+        #region btnSair methods
+        private void panelSair_MouseClick(object sender, MouseEventArgs e)
+        {
+            Form FLogin = new FrmLogin();
+            this.Hide();
+            FLogin.ShowDialog();
+            setColorButtonMenu(panelSair);
+            hideSubMenu();
+        }
+        #endregion
+
+        /// <summary>
+        /// Deixa os submenus invísivel.
+        /// </summary>
+        private void customizedMenu()
+        {
+            panelCadastrarSubmenu.Visible = false;
+            panelConsultaSubmenu.Visible = false;
+        }
+
+        /// <summary>
+        /// Deixa os submenus invísivel, se eles estiverem ativos.
+        /// </summary>
+        private void hideSubMenu()
+        {
+            if (panelCadastrarSubmenu.Visible)
+            {
+                panelCadastrarSubmenu.Visible = false;
+            }
+            if (panelConsultaSubmenu.Visible)
+            {
+                panelConsultaSubmenu.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// Verifica se o <paramref name="subMenu"/> está ativo senão deixa ativo.
+        /// </summary>
+        /// <param name="subMenu">
+        /// Panel SubMenu
+        /// </param>
+        private void showSubMenu(Panel subMenu)
+        {
+            if (!subMenu.Visible)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
+        Color ColorButtonMenuInactive = Color.FromArgb(12, 255, 255, 255);
+        Color ColorButtonMenuActive = Color.FromArgb(8, 109, 227);
+        /// <summary>
+        /// Deixa todos os panels buttons com a cor inactive e deixa o <paramref name="panelButton"/> com a cor ativa
+        /// </summary>
+        /// <param name="panelButton">
+        /// Panel panelButton
+        /// </param>
+        private void setColorButtonMenu(Panel panelButton)
+        {
+            panelHome.BackColor = ColorButtonMenuInactive;
+            panelCadastrar.BackColor = ColorButtonMenuInactive;
+            panelCorrida.BackColor = ColorButtonMenuInactive;
+            panelConsulta.BackColor = ColorButtonMenuInactive;
+            panelAjuda.BackColor = ColorButtonMenuInactive;
+            panelSair.BackColor = ColorButtonMenuInactive;
+
+            panelButton.BackColor = Color.FromArgb(8, 109, 227);
+        }
+
+        private Form activeForm = null;
+        /// <summary>
+        /// Fecha o formulário aberto e abre o <paramref name="childForm"/>.
+        /// </summary>
+        /// <param name="childForm">
+        /// Formulário que deseja abrir.
+        /// </param>
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         #region configuração-formsMain
 
         // Estado do formulario
@@ -284,177 +452,6 @@ namespace CorridaCavalo
 
                     break;
             }
-        }
-        #endregion
-
-        #region configuração-menu
-
-        #region btnCadastrar methods and subbuttons
-        private void btnCadastrarCavalo_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FrmCadastroCavalo());
-            hideSubMenu();
-        }
-        private void btnCadastrarApostador_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FrmCadastroApostador());
-            hideSubMenu();
-        }
-
-        private void cadastrar_MouseClick(object sender, MouseEventArgs e)
-        {
-            hideSubMenu();
-            showSubMenu(panelCadastrarSubmenu);
-            setColorButtonMenu(panelCadastrar);
-        }
-        #endregion
-        #region btnHome methods
-        private void panelHome_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            setColorButtonMenu(panelHome);
-            hideSubMenu();
-        }
-        #endregion
-        #region corrida methods
-        private void panelCorrida_MouseClick(object sender, MouseEventArgs e)
-        {
-            openChildForm(new FrmCorrida());
-            setColorButtonMenu(panelCorrida);
-            hideSubMenu();
-        }
-        #endregion
-        #region btnConsulta methods and subbuttons
-        private void panelConsulta_MouseClick(object sender, MouseEventArgs e)
-        {
-            setColorButtonMenu(panelConsulta);
-            showSubMenu(panelConsultaSubmenu);
-        }
-        private void btnConsultaCavalo_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FrmConsultaCavalo());
-            hideSubMenu();
-        }
-
-        private void btnConsultaApostador_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FrmConsultaApostador());
-            hideSubMenu();
-        }
-        private void btnConsultaCorrida_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FrmConsultaApostador());
-            hideSubMenu();
-        }
-        #endregion
-        #region btnAjuda methods
-        private void panelAjuda_MouseClick(object sender, MouseEventArgs e)
-        {
-            // A classe fornece acesso a processos locais e remotos (como uma url)
-            // Ele está abrindo no navegador padrão
-            Process.Start("https://github.com/guilhermeivo/winforms-corrida-cavalo");
-            setColorButtonMenu(panelAjuda);
-            hideSubMenu();
-        }
-        #endregion
-        #region btnSair methods
-        private void panelSair_MouseClick(object sender, MouseEventArgs e)
-        {
-            Form FLogin = new FrmLogin();
-            this.Hide();
-            FLogin.ShowDialog();
-            setColorButtonMenu(panelSair);
-            hideSubMenu();
-        }
-        #endregion
-
-        /// <summary>
-        /// Deixa os submenus invísivel.
-        /// </summary>
-        private void customizedMenu()
-        {
-            panelCadastrarSubmenu.Visible = false;
-            panelConsultaSubmenu.Visible = false;
-        }
-
-        /// <summary>
-        /// Deixa os submenus invísivel, se eles estiverem ativos.
-        /// </summary>
-        private void hideSubMenu()
-        {
-            if (panelCadastrarSubmenu.Visible)
-            {
-                panelCadastrarSubmenu.Visible = false;
-            }
-            if (panelConsultaSubmenu.Visible)
-            {
-                panelConsultaSubmenu.Visible = false;
-            }
-        }
-
-        /// <summary>
-        /// Verifica se o <paramref name="subMenu"/> está ativo senão deixa ativo.
-        /// </summary>
-        /// <param name="subMenu">
-        /// Panel SubMenu
-        /// </param>
-        private void showSubMenu(Panel subMenu)
-        {
-            if (!subMenu.Visible)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
-            }
-        }
-
-        Color ColorButtonMenuInactive = Color.FromArgb(12, 255, 255, 255);
-        Color ColorButtonMenuActive = Color.FromArgb(8, 109, 227);
-        /// <summary>
-        /// Deixa todos os panels buttons com a cor inactive e deixa o <paramref name="panelButton"/> com a cor ativa
-        /// </summary>
-        /// <param name="panelButton">
-        /// Panel panelButton
-        /// </param>
-        private void setColorButtonMenu(Panel panelButton)
-        {
-            panelHome.BackColor = ColorButtonMenuInactive;
-            panelCadastrar.BackColor = ColorButtonMenuInactive;
-            panelCorrida.BackColor = ColorButtonMenuInactive;
-            panelConsulta.BackColor = ColorButtonMenuInactive;
-            panelAjuda.BackColor = ColorButtonMenuInactive;
-            panelSair.BackColor = ColorButtonMenuInactive;
-
-            panelButton.BackColor = Color.FromArgb(8, 109, 227);
-        }
-        
-        private Form activeForm = null;
-        /// <summary>
-        /// Fecha o formulário aberto e abre o <paramref name="childForm"/>.
-        /// </summary>
-        /// <param name="childForm">
-        /// Formulário que deseja abrir.
-        /// </param>
-        private void openChildForm(Form childForm)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
         }
         #endregion
     }

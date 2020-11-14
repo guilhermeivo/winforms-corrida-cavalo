@@ -45,20 +45,7 @@ namespace CorridaCavalo
             SetButtonWindowImage(false);
         }
 
-        public void SetButtonWindowImage(bool active = true)
-        {
-            if (active)
-            {
-                btnClose.BackgroundImage = Properties.Resources.close;
-                btnMinimize.BackgroundImage = Properties.Resources.minimize;
-            }
-            else
-            {
-                btnClose.BackgroundImage = Properties.Resources.close_unfocused;
-                btnMinimize.BackgroundImage = Properties.Resources.minimize_unfocused;
-            }
-        }
-        // btnClose
+        #region btnClose methods
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -79,11 +66,12 @@ namespace CorridaCavalo
         {
             btnClose.BackgroundImage = Properties.Resources.close;
         }
-        //btnMinimize
+        #endregion
+        #region btnMinimize methods
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }        
+        }
         private void btnMinimize_MouseUp(object sender, MouseEventArgs e)
         {
             btnMinimize.BackgroundImage = Properties.Resources.minimize;
@@ -100,7 +88,8 @@ namespace CorridaCavalo
         {
             btnMinimize.BackgroundImage = Properties.Resources.minimize;
         }
-        // panelHeader - Movimentations
+        #endregion
+        #region panelHeader methods
         bool mouseDownHeader;
         Point lastLocation;
         private void panelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -116,10 +105,30 @@ namespace CorridaCavalo
                 this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
             }
         }
-
         private void panelHeader_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDownHeader = false;
+        }
+        #endregion
+
+        /// <summary>
+        /// Altera as imagens dos botões da Window (close, maximize, minimize) dependo do <paramref name="active"/>.
+        /// </summary>
+        /// <param name="active">
+        /// Estado do Window.
+        /// </param>
+        public void SetButtonWindowImage(bool active = true)
+        {
+            if (active)
+            {
+                btnClose.BackgroundImage = Properties.Resources.close;
+                btnMinimize.BackgroundImage = Properties.Resources.minimize;
+            }
+            else
+            {
+                btnClose.BackgroundImage = Properties.Resources.close_unfocused;
+                btnMinimize.BackgroundImage = Properties.Resources.minimize_unfocused;
+            }
         }
         #endregion
     }
