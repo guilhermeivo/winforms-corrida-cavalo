@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\ConexionDataBase.cs" />
     <Compile Include="model\Apostador.cs" />
     <Compile Include="model\Cavalo.cs" />
     <Compile Include="views\FrmAjuda.cs">
@@ -180,7 +181,6 @@
     <Content Include="icons\windows_buttons\minimize\minimize_unfocused.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="dao\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
