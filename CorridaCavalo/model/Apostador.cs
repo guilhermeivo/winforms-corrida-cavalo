@@ -8,6 +8,7 @@ namespace CorridaCavalo.model
 {
     class Apostador
     {
+        /// <summary>Primary key</summary>
         private int idApostador;
         private String nome;
         private String telefone;
