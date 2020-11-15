@@ -18,15 +18,23 @@ namespace CorridaCavalo.dao
         {
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("insert int Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor", conn);
-                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
-                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
-                cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
-                cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("insert into Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor)", conn);
+                    cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
+                    cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
+                    cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
 
-                ConexionDataBase.fecharConexao();
+                    cmd.ExecuteScalar();
+                    ConexionDataBase.fecharConexao();
 
-                MessageBox.Show("Registro inserido");
+                    MessageBox.Show("Registro inserido");
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show("Registro não inserido" + e);
+                }                
             }
         }
     }
