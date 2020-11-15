@@ -1,45 +1,21 @@
-create database cavalo
+create database Cavalo
 
-use cavalo 
+use Cavalo 
 
-create table apostador(
-    idapostador int identity primary key not null,
-    nome char(100),
-    telefone char(11),
-    email char(100)
+create table Apostador(
+idApostador int identity (1,1) primary key not null,
+nome char (100),
+telefone char(11),
+email char(100),
+valor money,
 )
 
-create table statu(
-    idstatus int primary key not null,
-    descr char(200)
+create table tblLogin(
+idLogin int identity (1,1) primary key not null,
+usuario char (100),
+senha char (20),
+email char(100),
+telefone char (10)
 )
 
-create table cavalo (
-    idcavalo int identity primary key not null,
-    dono char (100),
-    nome char (100),
-    idade int,
-    idstatus int foreign key references statu(idstatus)
-)
-
-create table corrida(
-    idcorrida int identity primary key not null,
-    dt_corrida date,
-    local_ char(30),
-    distancia char(9)
-)
-
-create table aposta(
-    idapostador int not null,
-    idcavalo int not null,
-    idcorrida int not null,
-    valor money default 0.0,
-    foreign key (idapostador) references apostador(idapostador),
-    foreign key (idcavalo) references cavalo(idcavalo),
-    foreign key (idcorrida) references corrida(idcorrida)
-)
-
-
-
-
-
+insert into tblLogin values ('admin','123','cudepia@gmail','4002-8922')
