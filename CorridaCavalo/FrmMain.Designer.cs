@@ -41,76 +41,76 @@
             this.panelMainContent = new System.Windows.Forms.Panel();
             this.panelDivisionSideMenu = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSair = new System.Windows.Forms.Panel();
             this.lblTextoButtonSair = new System.Windows.Forms.Label();
+            this.pcbButtomSair = new System.Windows.Forms.PictureBox();
             this.panelAjuda = new System.Windows.Forms.Panel();
             this.lblTextoButtonAjuda = new System.Windows.Forms.Label();
+            this.pcbButtomAjuda = new System.Windows.Forms.PictureBox();
             this.panelConsultaSubmenu = new System.Windows.Forms.Panel();
             this.btnConsultarApostador = new System.Windows.Forms.Button();
             this.btnConsultaApostador = new System.Windows.Forms.Button();
             this.btnConsultaCavalo = new System.Windows.Forms.Button();
             this.panelConsulta = new System.Windows.Forms.Panel();
+            this.pcbIconConsulta = new System.Windows.Forms.PictureBox();
             this.lblTextoButtonConsulta = new System.Windows.Forms.Label();
+            this.pcbButtomConsulta = new System.Windows.Forms.PictureBox();
             this.panelCorrida = new System.Windows.Forms.Panel();
             this.lblTextoButtonCorrida = new System.Windows.Forms.Label();
+            this.pcbButtomCorrida = new System.Windows.Forms.PictureBox();
             this.panelCadastrarSubmenu = new System.Windows.Forms.Panel();
             this.btnCadastrarApostador = new System.Windows.Forms.Button();
             this.btnCadastrarCavalo = new System.Windows.Forms.Button();
             this.panelCadastrar = new System.Windows.Forms.Panel();
+            this.pcbIconCadastro = new System.Windows.Forms.PictureBox();
             this.lblTextoButtonCadastro = new System.Windows.Forms.Label();
+            this.pcbButtomCadastro = new System.Windows.Forms.PictureBox();
             this.panelHome = new System.Windows.Forms.Panel();
             this.lblTextoButtonHome = new System.Windows.Forms.Label();
+            this.pcbButtomHome = new System.Windows.Forms.PictureBox();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDivisionHeader = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelUser = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pcbButtomSair = new System.Windows.Forms.PictureBox();
-            this.pcbButtomAjuda = new System.Windows.Forms.PictureBox();
-            this.pcbIconConsulta = new System.Windows.Forms.PictureBox();
-            this.pcbButtomConsulta = new System.Windows.Forms.PictureBox();
-            this.pcbButtomCorrida = new System.Windows.Forms.PictureBox();
-            this.pcbIconCadastro = new System.Windows.Forms.PictureBox();
-            this.pcbButtomCadastro = new System.Windows.Forms.PictureBox();
-            this.pcbButtomHome = new System.Windows.Forms.PictureBox();
             this.pcbUser = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximized = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBottomCorner.SuspendLayout();
             this.panelTopCorner.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelMainContent.SuspendLayout();
             this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSideMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSair.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomSair)).BeginInit();
             this.panelAjuda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomAjuda)).BeginInit();
             this.panelConsultaSubmenu.SuspendLayout();
             this.panelConsulta.SuspendLayout();
-            this.panelCorrida.SuspendLayout();
-            this.panelCadastrarSubmenu.SuspendLayout();
-            this.panelCadastrar.SuspendLayout();
-            this.panelHome.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            this.panelHeader.SuspendLayout();
-            this.panelUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomSair)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomAjuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIconConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbButtomConsulta)).BeginInit();
+            this.panelCorrida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbButtomCorrida)).BeginInit();
+            this.panelCadastrarSubmenu.SuspendLayout();
+            this.panelCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIconCadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbButtomCadastro)).BeginInit();
+            this.panelHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbButtomHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelHeader.SuspendLayout();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBottomCorner
@@ -249,6 +249,17 @@
             this.panelChildForm.Size = new System.Drawing.Size(780, 657);
             this.panelChildForm.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::CorridaCavalo.Properties.Resources.logo_horse_2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(228, 237);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(317, 183);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
@@ -306,6 +317,18 @@
             this.lblTextoButtonSair.Text = "Sair";
             this.lblTextoButtonSair.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelSair_MouseClick);
             // 
+            // pcbButtomSair
+            // 
+            this.pcbButtomSair.BackColor = System.Drawing.Color.Transparent;
+            this.pcbButtomSair.BackgroundImage = global::CorridaCavalo.Properties.Resources.power_icon;
+            this.pcbButtomSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbButtomSair.Location = new System.Drawing.Point(14, 12);
+            this.pcbButtomSair.Name = "pcbButtomSair";
+            this.pcbButtomSair.Size = new System.Drawing.Size(20, 20);
+            this.pcbButtomSair.TabIndex = 0;
+            this.pcbButtomSair.TabStop = false;
+            this.pcbButtomSair.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelSair_MouseClick);
+            // 
             // panelAjuda
             // 
             this.panelAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -332,6 +355,18 @@
             this.lblTextoButtonAjuda.TabIndex = 1;
             this.lblTextoButtonAjuda.Text = "Ajuda";
             this.lblTextoButtonAjuda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelAjuda_MouseClick);
+            // 
+            // pcbButtomAjuda
+            // 
+            this.pcbButtomAjuda.BackColor = System.Drawing.Color.Transparent;
+            this.pcbButtomAjuda.BackgroundImage = global::CorridaCavalo.Properties.Resources.help_icon;
+            this.pcbButtomAjuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbButtomAjuda.Location = new System.Drawing.Point(18, 12);
+            this.pcbButtomAjuda.Name = "pcbButtomAjuda";
+            this.pcbButtomAjuda.Size = new System.Drawing.Size(10, 20);
+            this.pcbButtomAjuda.TabIndex = 0;
+            this.pcbButtomAjuda.TabStop = false;
+            this.pcbButtomAjuda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelAjuda_MouseClick);
             // 
             // panelConsultaSubmenu
             // 
@@ -423,6 +458,18 @@
             this.panelConsulta.TabIndex = 8;
             this.panelConsulta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelConsulta_MouseClick);
             // 
+            // pcbIconConsulta
+            // 
+            this.pcbIconConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.pcbIconConsulta.BackgroundImage = global::CorridaCavalo.Properties.Resources.angle_down_white;
+            this.pcbIconConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbIconConsulta.Location = new System.Drawing.Point(198, 18);
+            this.pcbIconConsulta.Name = "pcbIconConsulta";
+            this.pcbIconConsulta.Size = new System.Drawing.Size(18, 12);
+            this.pcbIconConsulta.TabIndex = 2;
+            this.pcbIconConsulta.TabStop = false;
+            this.pcbIconConsulta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelConsulta_MouseClick);
+            // 
             // lblTextoButtonConsulta
             // 
             this.lblTextoButtonConsulta.AutoSize = true;
@@ -435,6 +482,18 @@
             this.lblTextoButtonConsulta.TabIndex = 1;
             this.lblTextoButtonConsulta.Text = "Consulta";
             this.lblTextoButtonConsulta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelConsulta_MouseClick);
+            // 
+            // pcbButtomConsulta
+            // 
+            this.pcbButtomConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.pcbButtomConsulta.BackgroundImage = global::CorridaCavalo.Properties.Resources.consulta_icon;
+            this.pcbButtomConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbButtomConsulta.Location = new System.Drawing.Point(15, 12);
+            this.pcbButtomConsulta.Name = "pcbButtomConsulta";
+            this.pcbButtomConsulta.Size = new System.Drawing.Size(15, 20);
+            this.pcbButtomConsulta.TabIndex = 0;
+            this.pcbButtomConsulta.TabStop = false;
+            this.pcbButtomConsulta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelConsulta_MouseClick);
             // 
             // panelCorrida
             // 
@@ -462,6 +521,18 @@
             this.lblTextoButtonCorrida.TabIndex = 1;
             this.lblTextoButtonCorrida.Text = "Corrida";
             this.lblTextoButtonCorrida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelCorrida_MouseClick);
+            // 
+            // pcbButtomCorrida
+            // 
+            this.pcbButtomCorrida.BackColor = System.Drawing.Color.Transparent;
+            this.pcbButtomCorrida.BackgroundImage = global::CorridaCavalo.Properties.Resources.flag_white;
+            this.pcbButtomCorrida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbButtomCorrida.Location = new System.Drawing.Point(13, 12);
+            this.pcbButtomCorrida.Name = "pcbButtomCorrida";
+            this.pcbButtomCorrida.Size = new System.Drawing.Size(20, 20);
+            this.pcbButtomCorrida.TabIndex = 0;
+            this.pcbButtomCorrida.TabStop = false;
+            this.pcbButtomCorrida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelCorrida_MouseClick);
             // 
             // panelCadastrarSubmenu
             // 
@@ -531,6 +602,17 @@
             this.panelCadastrar.TabIndex = 5;
             this.panelCadastrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cadastrar_MouseClick);
             // 
+            // pcbIconCadastro
+            // 
+            this.pcbIconCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.pcbIconCadastro.BackgroundImage = global::CorridaCavalo.Properties.Resources.angle_down_white;
+            this.pcbIconCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbIconCadastro.Location = new System.Drawing.Point(198, 18);
+            this.pcbIconCadastro.Name = "pcbIconCadastro";
+            this.pcbIconCadastro.Size = new System.Drawing.Size(18, 12);
+            this.pcbIconCadastro.TabIndex = 2;
+            this.pcbIconCadastro.TabStop = false;
+            // 
             // lblTextoButtonCadastro
             // 
             this.lblTextoButtonCadastro.AutoSize = true;
@@ -542,6 +624,17 @@
             this.lblTextoButtonCadastro.Size = new System.Drawing.Size(74, 20);
             this.lblTextoButtonCadastro.TabIndex = 1;
             this.lblTextoButtonCadastro.Text = "Cadastro";
+            // 
+            // pcbButtomCadastro
+            // 
+            this.pcbButtomCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.pcbButtomCadastro.BackgroundImage = global::CorridaCavalo.Properties.Resources.query_icon;
+            this.pcbButtomCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbButtomCadastro.Location = new System.Drawing.Point(13, 12);
+            this.pcbButtomCadastro.Name = "pcbButtomCadastro";
+            this.pcbButtomCadastro.Size = new System.Drawing.Size(20, 20);
+            this.pcbButtomCadastro.TabIndex = 0;
+            this.pcbButtomCadastro.TabStop = false;
             // 
             // panelHome
             // 
@@ -570,6 +663,18 @@
             this.lblTextoButtonHome.Text = "Home";
             this.lblTextoButtonHome.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelHome_MouseClick);
             // 
+            // pcbButtomHome
+            // 
+            this.pcbButtomHome.BackColor = System.Drawing.Color.Transparent;
+            this.pcbButtomHome.BackgroundImage = global::CorridaCavalo.Properties.Resources.house_icon;
+            this.pcbButtomHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbButtomHome.Location = new System.Drawing.Point(13, 13);
+            this.pcbButtomHome.Name = "pcbButtomHome";
+            this.pcbButtomHome.Size = new System.Drawing.Size(25, 20);
+            this.pcbButtomHome.TabIndex = 0;
+            this.pcbButtomHome.TabStop = false;
+            this.pcbButtomHome.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelHome_MouseClick);
+            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -579,6 +684,16 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(242, 50);
             this.panelLogo.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CorridaCavalo.Properties.Resources.logo_horse_1;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(74, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(94, 28);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panelDivisionHeader
             // 
@@ -599,6 +714,7 @@
             this.panelHeader.Controls.Add(this.btnClose);
             this.panelHeader.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Padding = new System.Windows.Forms.Padding(2);
@@ -641,111 +757,6 @@
             this.lblUser.Size = new System.Drawing.Size(59, 19);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "Admin";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::CorridaCavalo.Properties.Resources.logo_horse_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(228, 237);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 183);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pcbButtomSair
-            // 
-            this.pcbButtomSair.BackColor = System.Drawing.Color.Transparent;
-            this.pcbButtomSair.BackgroundImage = global::CorridaCavalo.Properties.Resources.power_icon;
-            this.pcbButtomSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbButtomSair.Location = new System.Drawing.Point(14, 12);
-            this.pcbButtomSair.Name = "pcbButtomSair";
-            this.pcbButtomSair.Size = new System.Drawing.Size(20, 20);
-            this.pcbButtomSair.TabIndex = 0;
-            this.pcbButtomSair.TabStop = false;
-            this.pcbButtomSair.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelSair_MouseClick);
-            // 
-            // pcbButtomAjuda
-            // 
-            this.pcbButtomAjuda.BackColor = System.Drawing.Color.Transparent;
-            this.pcbButtomAjuda.BackgroundImage = global::CorridaCavalo.Properties.Resources.help_icon;
-            this.pcbButtomAjuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbButtomAjuda.Location = new System.Drawing.Point(18, 12);
-            this.pcbButtomAjuda.Name = "pcbButtomAjuda";
-            this.pcbButtomAjuda.Size = new System.Drawing.Size(10, 20);
-            this.pcbButtomAjuda.TabIndex = 0;
-            this.pcbButtomAjuda.TabStop = false;
-            this.pcbButtomAjuda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelAjuda_MouseClick);
-            // 
-            // pcbIconConsulta
-            // 
-            this.pcbIconConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.pcbIconConsulta.BackgroundImage = global::CorridaCavalo.Properties.Resources.angle_down_white;
-            this.pcbIconConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbIconConsulta.Location = new System.Drawing.Point(198, 18);
-            this.pcbIconConsulta.Name = "pcbIconConsulta";
-            this.pcbIconConsulta.Size = new System.Drawing.Size(18, 12);
-            this.pcbIconConsulta.TabIndex = 2;
-            this.pcbIconConsulta.TabStop = false;
-            this.pcbIconConsulta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelConsulta_MouseClick);
-            // 
-            // pcbButtomConsulta
-            // 
-            this.pcbButtomConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.pcbButtomConsulta.BackgroundImage = global::CorridaCavalo.Properties.Resources.consulta_icon;
-            this.pcbButtomConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbButtomConsulta.Location = new System.Drawing.Point(15, 12);
-            this.pcbButtomConsulta.Name = "pcbButtomConsulta";
-            this.pcbButtomConsulta.Size = new System.Drawing.Size(15, 20);
-            this.pcbButtomConsulta.TabIndex = 0;
-            this.pcbButtomConsulta.TabStop = false;
-            this.pcbButtomConsulta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelConsulta_MouseClick);
-            // 
-            // pcbButtomCorrida
-            // 
-            this.pcbButtomCorrida.BackColor = System.Drawing.Color.Transparent;
-            this.pcbButtomCorrida.BackgroundImage = global::CorridaCavalo.Properties.Resources.flag_white;
-            this.pcbButtomCorrida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbButtomCorrida.Location = new System.Drawing.Point(13, 12);
-            this.pcbButtomCorrida.Name = "pcbButtomCorrida";
-            this.pcbButtomCorrida.Size = new System.Drawing.Size(20, 20);
-            this.pcbButtomCorrida.TabIndex = 0;
-            this.pcbButtomCorrida.TabStop = false;
-            this.pcbButtomCorrida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelCorrida_MouseClick);
-            // 
-            // pcbIconCadastro
-            // 
-            this.pcbIconCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.pcbIconCadastro.BackgroundImage = global::CorridaCavalo.Properties.Resources.angle_down_white;
-            this.pcbIconCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbIconCadastro.Location = new System.Drawing.Point(198, 18);
-            this.pcbIconCadastro.Name = "pcbIconCadastro";
-            this.pcbIconCadastro.Size = new System.Drawing.Size(18, 12);
-            this.pcbIconCadastro.TabIndex = 2;
-            this.pcbIconCadastro.TabStop = false;
-            // 
-            // pcbButtomCadastro
-            // 
-            this.pcbButtomCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.pcbButtomCadastro.BackgroundImage = global::CorridaCavalo.Properties.Resources.query_icon;
-            this.pcbButtomCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbButtomCadastro.Location = new System.Drawing.Point(13, 12);
-            this.pcbButtomCadastro.Name = "pcbButtomCadastro";
-            this.pcbButtomCadastro.Size = new System.Drawing.Size(20, 20);
-            this.pcbButtomCadastro.TabIndex = 0;
-            this.pcbButtomCadastro.TabStop = false;
-            // 
-            // pcbButtomHome
-            // 
-            this.pcbButtomHome.BackColor = System.Drawing.Color.Transparent;
-            this.pcbButtomHome.BackgroundImage = global::CorridaCavalo.Properties.Resources.house_icon;
-            this.pcbButtomHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbButtomHome.Location = new System.Drawing.Point(13, 13);
-            this.pcbButtomHome.Name = "pcbButtomHome";
-            this.pcbButtomHome.Size = new System.Drawing.Size(25, 20);
-            this.pcbButtomHome.TabIndex = 0;
-            this.pcbButtomHome.TabStop = false;
-            this.pcbButtomHome.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelHome_MouseClick);
             // 
             // pcbUser
             // 
@@ -825,16 +836,6 @@
             this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             this.btnClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseUp);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::CorridaCavalo.Properties.Resources.logo_horse_1;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(94, 28);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 17F);
@@ -860,37 +861,37 @@
             this.panelMain.ResumeLayout(false);
             this.panelMainContent.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSideMenu.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelSair.ResumeLayout(false);
             this.panelSair.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomSair)).EndInit();
             this.panelAjuda.ResumeLayout(false);
             this.panelAjuda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomAjuda)).EndInit();
             this.panelConsultaSubmenu.ResumeLayout(false);
             this.panelConsulta.ResumeLayout(false);
             this.panelConsulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIconConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomConsulta)).EndInit();
             this.panelCorrida.ResumeLayout(false);
             this.panelCorrida.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomCorrida)).EndInit();
             this.panelCadastrarSubmenu.ResumeLayout(false);
             this.panelCadastrar.ResumeLayout(false);
             this.panelCadastrar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIconCadastro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomCadastro)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomHome)).EndInit();
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomSair)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomAjuda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbIconConsulta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomConsulta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomCorrida)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbIconCadastro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomCadastro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbButtomHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

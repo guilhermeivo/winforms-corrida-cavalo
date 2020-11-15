@@ -37,5 +37,15 @@ namespace CorridaCavalo.dao
                 }                
             }
         }
+
+        public void listarApostador()
+        {
+
+        }
+
+        public void excluirApostador()
+        {
+
+        }
     }
 }
