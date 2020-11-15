@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\Apostador.cs" />
     <Compile Include="views\FrmAjuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +179,7 @@
     <Content Include="icons\windows_buttons\minimize\minimize_unfocused.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dao\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

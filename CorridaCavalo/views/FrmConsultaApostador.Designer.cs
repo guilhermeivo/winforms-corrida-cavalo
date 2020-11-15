@@ -30,7 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.codApos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -43,11 +47,6 @@
             this.lblTel = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.codApos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.lblCod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +59,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 29);
+            this.label1.Size = new System.Drawing.Size(225, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Consulta Apostador";
             // 
@@ -77,6 +76,31 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(448, 133);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // codApos
+            // 
+            this.codApos.HeaderText = "Código de Apostador";
+            this.codApos.Name = "codApos";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Telefone
+            // 
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Dinheiro";
+            this.valor.Name = "valor";
             // 
             // btnSair
             // 
@@ -182,31 +206,6 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Nome";
             // 
-            // codApos
-            // 
-            this.codApos.HeaderText = "Código de Apostador";
-            this.codApos.Name = "codApos";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Telefone
-            // 
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Dinheiro";
-            this.valor.Name = "valor";
-            // 
             // txtCod
             // 
             this.txtCod.Location = new System.Drawing.Point(165, 238);
@@ -258,7 +257,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
