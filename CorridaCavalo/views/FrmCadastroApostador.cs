@@ -16,5 +16,10 @@ namespace CorridaCavalo
         {
             InitializeComponent();
         }
+
+        private void btnCadatro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
