@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Apostador.cs" />
+    <Compile Include="model\Cavalo.cs" />
     <Compile Include="views\FrmAjuda.cs">
       <SubType>Form</SubType>
     </Compile>
