@@ -10,21 +10,23 @@ namespace CorridaCavalo.dao
 {
     class ConexionDataBase
     {
-        private static string connString = "Server = localhost; Database = vendas; Uid = root; Pwd = 161810";
-
-        // representa a conexão com o banco
+        /// <summary>String para conectar no banco.</summary>
+        private static string connString = "Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=Cavalo; Data Source=" + Environment.MachineName;
+        /// <summary>Representa a conexão com o banco.</summary>
         private static SqlConnection conn = null;
 
-        // método que permite obter a conexão
+        /// <summary>
+        /// Método que permite obter a conexão.
+        /// </summary>
+        /// <returns>
+        /// conn, tipo SqlConnection.
+        /// </returns>
         public static SqlConnection obterConexao()
         {
-            // vamos criar a conexão
             conn = new SqlConnection(connString);
 
-            // a conexão foi feita com sucesso?
             try
             {
-                // abre a conexão e a devolve ao chamador do método
                 conn.Open();
             }
             catch (SqlException sqle)
@@ -37,6 +39,9 @@ namespace CorridaCavalo.dao
             return conn;
         }
 
+        /// <summary>
+        /// Método que permite fechar a conexão.
+        /// </summary>
         public static void fecharConexao()
         {
             if (conn != null)
