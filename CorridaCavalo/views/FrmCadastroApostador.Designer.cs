@@ -34,9 +34,9 @@
             this.lblemail = new System.Windows.Forms.Label();
             this.lblDindin = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.txtemail = new System.Windows.Forms.TextBox();
-            this.txtvalor = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.btnCadatro = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 29);
+            this.label1.Size = new System.Drawing.Size(221, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro apostador";
             // 
@@ -99,26 +99,26 @@
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 6;
             // 
-            // txtTel
+            // txtTelefone
             // 
-            this.txtTel.Location = new System.Drawing.Point(211, 142);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 20);
-            this.txtTel.TabIndex = 7;
+            this.txtTelefone.Location = new System.Drawing.Point(211, 142);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 7;
             // 
-            // txtemail
+            // txtEmail
             // 
-            this.txtemail.Location = new System.Drawing.Point(211, 193);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(100, 20);
-            this.txtemail.TabIndex = 8;
+            this.txtEmail.Location = new System.Drawing.Point(211, 193);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 8;
             // 
-            // txtvalor
+            // txtValor
             // 
-            this.txtvalor.Location = new System.Drawing.Point(211, 236);
-            this.txtvalor.Name = "txtvalor";
-            this.txtvalor.Size = new System.Drawing.Size(100, 20);
-            this.txtvalor.TabIndex = 9;
+            this.txtValor.Location = new System.Drawing.Point(211, 236);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.TabIndex = 9;
             // 
             // btnCadatro
             // 
@@ -147,9 +147,9 @@
             this.ClientSize = new System.Drawing.Size(780, 657);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.btnCadatro);
-            this.Controls.Add(this.txtvalor);
-            this.Controls.Add(this.txtemail);
-            this.Controls.Add(this.txtTel);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblDindin);
             this.Controls.Add(this.lblemail);
@@ -171,9 +171,9 @@
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label lblDindin;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.TextBox txtvalor;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Button btnCadatro;
         private System.Windows.Forms.Button btnConsulta;
     }

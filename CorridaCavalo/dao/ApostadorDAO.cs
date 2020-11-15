@@ -19,9 +19,6 @@ namespace CorridaCavalo.dao
             if (conn.State == ConnectionState.Open)
             {
                 SqlCommand cmd = new SqlCommand("insert int Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor", conn);
-                /*comm.CommandText = "insert into Apostador (nome, telefone, email, valor)" +
-                    "values ('" + apostador.getNome() + "','" + apostador.getTelefone() + "','" + apostador.getEmail() + "','"+ apostador.getValor() +")";
-                */
                 cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
                 cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
