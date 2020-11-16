@@ -1,4 +1,4 @@
-﻿using CorridaCavalo.dao;
+﻿using CorridaCavalo.crud;
 using CorridaCavalo.model;
 using System;
 using System.Collections.Generic;
@@ -45,9 +45,6 @@ namespace CorridaCavalo
                 dataGridView2.Rows[i].Cells[3].Value = apostador.getEmail();
                 dataGridView2.Rows[i].Cells[4].Value = apostador.getValor();
             }
-
-            btnEditar.Visible = t;
-            btnExcluir.Visible = true;
         }
         public void limparTextBox()
         {
@@ -66,42 +63,67 @@ namespace CorridaCavalo
 
             listarTable();
 
-            btnEditar.Visible = false;
-            btnEditar.Visible = false;
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int linhas = dataGridView2.CurrentRow.Index;
 
-            txtCodigo.Text = dataGridView2.Rows[linhas].Cells[0].Value.ToString();
-            txtNome.Text = dataGridView2.Rows[linhas].Cells[1].Value.ToString();
-            txtTelefone.Text = dataGridView2.Rows[linhas].Cells[2].Value.ToString();
-            txtEmail.Text = dataGridView2.Rows[linhas].Cells[3].Value.ToString();
-            txtDinherio.Text = dataGridView2.Rows[linhas].Cells[4].Value.ToString();
+            try
+            {
+                txtCodigo.Text = dataGridView2.Rows[linhas].Cells[0].Value.ToString();
+                txtNome.Text = dataGridView2.Rows[linhas].Cells[1].Value.ToString();
+                txtTelefone.Text = dataGridView2.Rows[linhas].Cells[2].Value.ToString();
+                txtEmail.Text = dataGridView2.Rows[linhas].Cells[3].Value.ToString();
+                txtDinherio.Text = dataGridView2.Rows[linhas].Cells[4].Value.ToString();
+
+                btnEditar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Não foi possível exibir os valores!");
+            }
+            
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtCodigo.Text);
-            apostadorDAO.excluirApostador(id);
+            try
+            {
+                int id = int.Parse(txtCodigo.Text);
+                apostadorDAO.excluirApostador(id);
 
-            limparTextBox();
+                limparTextBox();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Não foi possível excluir os valores!");
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Apostador apostador = new Apostador();
+            try
+            {
+                Apostador apostador = new Apostador();
 
-            apostador.setIdApostador(int.Parse(txtCodigo.Text));
-            apostador.setNome(txtNome.Text);
-            apostador.setTelefone(txtTelefone.Text);
-            apostador.setEmail(txtEmail.Text);
-            apostador.setValor(Convert.ToDouble(txtDinherio.Text));
+                apostador.setIdApostador(int.Parse(txtCodigo.Text));
+                apostador.setNome(txtNome.Text);
+                apostador.setTelefone(txtTelefone.Text);
+                apostador.setEmail(txtEmail.Text);
+                apostador.setValor(Convert.ToDouble(txtDinherio.Text));
 
-            apostadorDAO.alterarApostador(apostador);
+                apostadorDAO.alterarApostador(apostador);
 
-            limparTextBox();
+                limparTextBox();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Não foi possível editar os valores!");
+            }
         }
     }
 }

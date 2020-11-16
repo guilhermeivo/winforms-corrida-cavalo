@@ -1,4 +1,4 @@
-﻿using CorridaCavalo.dao;
+﻿using CorridaCavalo.crud;
 using CorridaCavalo.model;
 using System;
 using System.Collections.Generic;
@@ -23,24 +23,31 @@ namespace CorridaCavalo
 
         private void btnCadatro_Click(object sender, EventArgs e)
         {
-            // Inicializa o apostador para poder usar seus metodos {get, set}
-            Apostador apostador = new Apostador();
+            try
+            {
+                // Inicializa o apostador para poder usar seus metodos {get, set}
+                Apostador apostador = new Apostador();
 
-            // Armazena os valores das textbox na classe apostador
-            apostador.setNome(txtNome.Text);
-            apostador.setTelefone(txtTelefone.Text);
-            apostador.setEmail(txtEmail.Text);
-            apostador.setValor(Convert.ToDouble(txtValor.Text));
+                // Armazena os valores das textbox na classe apostador
+                apostador.setNome(txtNome.Text);
+                apostador.setTelefone(txtTelefone.Text);
+                apostador.setEmail(txtEmail.Text);
+                apostador.setValor(Convert.ToDouble(txtValor.Text));
 
-            // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
-            apostadorDAO.criarApostador(apostador);
+                // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
+                apostadorDAO.criarApostador(apostador);
 
-            txtNome.Clear();
-            txtTelefone.Clear();
-            txtEmail.Clear();
-            txtValor.Clear();
+                txtNome.Clear();
+                txtTelefone.Clear();
+                txtEmail.Clear();
+                txtValor.Clear();
 
-            txtNome.Focus();
+                txtNome.Focus();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Não foi possível cadastrar!");
+            }
         }
     }
 }

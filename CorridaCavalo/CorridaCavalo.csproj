@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dao\ApostadorDAO.cs" />
-    <Compile Include="dao\ConexionDataBase.cs" />
+    <Compile Include="crud\ApostadorDAO.cs" />
+    <Compile Include="crud\CavaloDAO.cs" />
+    <Compile Include="crud\ConexionDataBase.cs" />
     <Compile Include="model\Apostador.cs" />
     <Compile Include="model\Cavalo.cs" />
     <Compile Include="views\FrmAjuda.cs">
