@@ -23,12 +23,12 @@ namespace CorridaCavalo.crud
         /// </returns>
         public static SqlConnection obterConexao()
         {
-            MessageBox.Show("Conectando...");
-
-            conn = new SqlConnection(connString);
-
             try
             {
+                MessageBox.Show("Conectando...");
+
+                conn = new SqlConnection(connString);
+
                 conn.Open();
             }
             catch (SqlException sqle)
