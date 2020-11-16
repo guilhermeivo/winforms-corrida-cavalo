@@ -21,13 +21,19 @@ namespace CorridaCavalo
             listarTable();
         }
 
+        /// <summary>
+        /// Coloca no dataGridView todos os valores do banco de dados e deixa visivel os banco de editar e excluir
+        /// </summary>
         public void listarTable()
         {
             DataSet ds = new DataSet();
 
+            // Pega os Id da tabela do banco de dados
             ds = apostadorDAO.listarQuantidade();
+            // Pega a quantidade de registros no banco de dados
+            int quantidade = ds.Tables[0].Rows.Count - 1;
 
-            for (int i = 0; i <= (int)(ds.Tables[0].Rows.Count) - 1; i++)
+            for (int i = 0; i <= quantidade; i++)
             {
                 Apostador apostador = apostadorDAO.listarApostador((int)(ds.Tables[0].Rows[i][0]));
 
@@ -40,8 +46,8 @@ namespace CorridaCavalo
                 dataGridView2.Rows[i].Cells[4].Value = apostador.getValor();
             }
 
-            btnEditar.Visible = true;
-            btnEditar.Visible = true;
+            btnEditar.Visible = t;
+            btnExcluir.Visible = true;
         }
         public void limparTextBox()
         {

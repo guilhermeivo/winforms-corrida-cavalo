@@ -14,6 +14,12 @@ namespace CorridaCavalo.dao
     {
         SqlConnection conn;
 
+        /// <summary>
+        /// Inseri no banco de dados o <paramref name="apostador"/>
+        /// </summary>
+        /// <param name="apostador">
+        /// Apostador com os seus gets e sets.
+        /// </param>
         public void criarApostador(Apostador apostador)
         {
             conn = ConexionDataBase.obterConexao();
@@ -39,6 +45,12 @@ namespace CorridaCavalo.dao
             }
         }
 
+        /// <summary>
+        /// Lista a quantidade da cadastros no banco de dados
+        /// </summary>
+        /// <returns>
+        /// Retorna um ds com o idApostador ou null
+        /// </returns>
         public DataSet listarQuantidade()
         {
             conn = ConexionDataBase.obterConexao();
@@ -57,6 +69,11 @@ namespace CorridaCavalo.dao
 
         }
 
+        /// <summary>
+        /// Retorna na classe Apostador todos os seus valores dependo do <paramref name="id"/>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Retorna a classe Apostador</returns>
         public Apostador listarApostador(int id)
         {
             conn = ConexionDataBase.obterConexao();
@@ -96,6 +113,10 @@ namespace CorridaCavalo.dao
             }
         }
 
+        /// <summary>
+        /// Exclui o valor no banco de dados dependo do <paramref name="id"/>
+        /// </summary>
+        /// <param name="id"></param>
         public void excluirApostador(int id)
         {
             conn = ConexionDataBase.obterConexao();
@@ -116,6 +137,10 @@ namespace CorridaCavalo.dao
 
         }
 
+        /// <summary>
+        /// Altera no banco de dados o Apostador
+        /// </summary>
+        /// <param name="apostador"></param>
         public void alterarApostador(Apostador apostador)
         {
             conn = ConexionDataBase.obterConexao();
