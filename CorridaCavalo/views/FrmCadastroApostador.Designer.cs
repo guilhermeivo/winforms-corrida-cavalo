@@ -33,15 +33,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnCadatro = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblDindin = new System.Windows.Forms.Label();
-            this.lblemail = new System.Windows.Forms.Label();
-            this.lblTel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -64,7 +64,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 474);
-            this.panel1.TabIndex = 11;
+            this.panel1.TabIndex = 36;
             // 
             // panel5
             // 
@@ -76,9 +76,9 @@
             this.panel5.Controls.Add(this.txtEmail);
             this.panel5.Controls.Add(this.txtTelefone);
             this.panel5.Controls.Add(this.txtNome);
-            this.panel5.Controls.Add(this.lblDindin);
-            this.panel5.Controls.Add(this.lblemail);
-            this.panel5.Controls.Add(this.lblTel);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.lblNome);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(2, 2);
@@ -115,23 +115,23 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.label3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(711, 85);
             this.panel6.TabIndex = 31;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro Apostador";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(29, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Cadastro Apostador";
             // 
             // btnCadatro
             // 
@@ -147,11 +147,13 @@
             this.btnCadatro.TabIndex = 30;
             this.btnCadatro.Text = "Cadastrar";
             this.btnCadatro.UseVisualStyleBackColor = false;
+            this.btnCadatro.Click += new System.EventHandler(this.btnCadatro_Click);
             // 
             // txtValor
             // 
             this.txtValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtValor.ForeColor = System.Drawing.Color.White;
             this.txtValor.Location = new System.Drawing.Point(37, 292);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValor.Name = "txtValor";
@@ -162,6 +164,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(367, 145);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
@@ -172,6 +175,7 @@
             // 
             this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
             this.txtTelefone.Location = new System.Drawing.Point(37, 220);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefone.Name = "txtTelefone";
@@ -182,44 +186,45 @@
             // 
             this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.ForeColor = System.Drawing.Color.White;
             this.txtNome.Location = new System.Drawing.Point(34, 145);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(278, 26);
             this.txtNome.TabIndex = 26;
             // 
-            // lblDindin
+            // label4
             // 
-            this.lblDindin.AutoSize = true;
-            this.lblDindin.ForeColor = System.Drawing.Color.White;
-            this.lblDindin.Location = new System.Drawing.Point(33, 267);
-            this.lblDindin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDindin.Name = "lblDindin";
-            this.lblDindin.Size = new System.Drawing.Size(50, 20);
-            this.lblDindin.TabIndex = 25;
-            this.lblDindin.Text = "Saldo";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(33, 267);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Saldo";
             // 
-            // lblemail
+            // label5
             // 
-            this.lblemail.AutoSize = true;
-            this.lblemail.ForeColor = System.Drawing.Color.White;
-            this.lblemail.Location = new System.Drawing.Point(363, 120);
-            this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(48, 20);
-            this.lblemail.TabIndex = 24;
-            this.lblemail.Text = "Email";
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(363, 120);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 20);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Email";
             // 
-            // lblTel
+            // label6
             // 
-            this.lblTel.AutoSize = true;
-            this.lblTel.ForeColor = System.Drawing.Color.White;
-            this.lblTel.Location = new System.Drawing.Point(33, 195);
-            this.lblTel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(71, 20);
-            this.lblTel.TabIndex = 23;
-            this.lblTel.Text = "Telefone";
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(33, 195);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Telefone";
             // 
             // lblNome
             // 
@@ -294,24 +299,25 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCadatro;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblDindin;
-        private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.Label lblTel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelDivisionSideMenu;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
     }
 }
