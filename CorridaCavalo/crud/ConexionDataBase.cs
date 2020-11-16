@@ -23,6 +23,8 @@ namespace CorridaCavalo.crud
         /// </returns>
         public static SqlConnection obterConexao()
         {
+            MessageBox.Show("Conectando...");
+
             conn = new SqlConnection(connString);
 
             try
