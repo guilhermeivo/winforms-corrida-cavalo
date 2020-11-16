@@ -28,7 +28,9 @@ namespace CorridaCavalo.crud
             {
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor)", conn);
+                    string queryString = "insert into Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor)";
+
+                    SqlCommand cmd = new SqlCommand(queryString, conn);
                     cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
                     cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
                     cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
@@ -59,6 +61,7 @@ namespace CorridaCavalo.crud
         public DataSet listarQuantidade()
         {
             conn = ConexionDataBase.obterConexao();
+
             if (conn.State == ConnectionState.Open)
             {
                 try
@@ -94,7 +97,9 @@ namespace CorridaCavalo.crud
 
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("select * from Apostador where idApostador = @id", conn);
+                string queryString = "select * from Apostador where idApostador = @id";
+
+                SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.AddWithValue("@id", id);
 
                 try
@@ -147,7 +152,9 @@ namespace CorridaCavalo.crud
 
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("delete from Apostador where idApostador = @id", conn);
+                string queryString = "delete from Apostador where idApostador = @id";
+
+                SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.AddWithValue("@id", id);
 
                 try
@@ -177,7 +184,9 @@ namespace CorridaCavalo.crud
 
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("update Apostador set nome = @nome, Telefone = @telefone, Email = @Email, valor = @valor where idApostador = @Id", conn);
+                string queryString = "update Apostador set nome = @nome, Telefone = @telefone, Email = @Email, valor = @valor where idApostador = @Id";
+
+                SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.Add("@Id", SqlDbType.Int).Value = apostador.getIdApostador();
                 cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
                 cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
