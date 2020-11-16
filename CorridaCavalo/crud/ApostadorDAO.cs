@@ -58,21 +58,34 @@ namespace CorridaCavalo.crud
         /// <returns>
         /// Retorna um ds com o idApostador ou null
         /// </returns>
-        public DataSet listarQuantidade()
+        public SqlDataReader listarQuantidade()
         {
             conn = ConexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
-            {
+            {     
+                string queryString = "select idApostador from Apostador";
+
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+
                 try
                 {
-                    SqlDataAdapter adaptador = new SqlDataAdapter("select idApostador from Apostador", conn);
-                    DataSet ds = new DataSet();
-                    adaptador.Fill(ds);
-                    return ds;
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        return reader;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível encontrar!");
+                        return null;
+                    }
                 }
-                catch (Exception)
+                catch (Exception error)
                 {
+                    MessageBox.Show("Erro: " + error);
+
                     return null;
                 }
                 finally

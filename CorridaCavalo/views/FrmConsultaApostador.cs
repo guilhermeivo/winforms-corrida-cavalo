@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,25 +27,27 @@ namespace CorridaCavalo
         /// </summary>
         public void listarTable()
         {
-            DataSet ds = new DataSet();
+
 
             // Pega os Id da tabela do banco de dados
-            ds = apostadorDAO.listarQuantidade();
-            // Pega a quantidade de registros no banco de dados
-            int quantidade = ds.Tables[0].Rows.Count - 1;
+            SqlDataReader reader = apostadorDAO.listarQuantidade();
 
-            for (int i = 0; i <= quantidade; i++)
+            if (!(reader == null))
             {
-                Apostador apostador = apostadorDAO.listarApostador((int)(ds.Tables[0].Rows[i][0]));
+                while (reader.Read())
+                {
+                    int value = (int)(reader[0]);
+                    Apostador apostador = apostadorDAO.listarApostador(value);
 
-                dataGridView2.Rows.Add();
+                    dataGridView2.Rows.Add();
 
-                dataGridView2.Rows[i].Cells[0].Value = apostador.getIdApostador();
-                dataGridView2.Rows[i].Cells[1].Value = apostador.getNome();
-                dataGridView2.Rows[i].Cells[2].Value = apostador.getTelefone();
-                dataGridView2.Rows[i].Cells[3].Value = apostador.getEmail();
-                dataGridView2.Rows[i].Cells[4].Value = apostador.getValor();
-            }
+                    dataGridView2.Rows[value].Cells[0].Value = apostador.getIdApostador();
+                    dataGridView2.Rows[value].Cells[1].Value = apostador.getNome();
+                    dataGridView2.Rows[value].Cells[2].Value = apostador.getTelefone();
+                    dataGridView2.Rows[value].Cells[3].Value = apostador.getEmail();
+                    dataGridView2.Rows[value].Cells[4].Value = apostador.getValor();
+                }
+            } 
         }
         public void limparTextBox()
         {
