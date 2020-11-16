@@ -39,6 +39,9 @@ namespace CorridaCavalo
                 dataGridView2.Rows[i].Cells[3].Value = apostador.getEmail();
                 dataGridView2.Rows[i].Cells[4].Value = apostador.getValor();
             }
+
+            btnEditar.Visible = true;
+            btnEditar.Visible = true;
         }
         public void limparTextBox()
         {
@@ -56,6 +59,9 @@ namespace CorridaCavalo
             }
 
             listarTable();
+
+            btnEditar.Visible = false;
+            btnEditar.Visible = false;
         }
 
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
