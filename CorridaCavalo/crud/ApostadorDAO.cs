@@ -12,17 +12,18 @@ namespace CorridaCavalo.crud
 {
     class ApostadorDAO
     {
-        SqlConnection conn;
-
+        SqlConnection conn = new SqlConnection("Password = 12345; Persist Security Info=True; User ID = sa; Initial Catalog = Cavalo; Data Source = " + Environment.MachineName);
         /// <summary>
         /// Inseri no banco de dados o <paramref name="apostador"/>
         /// </summary>
         /// <param name="apostador">
         /// Apostador com os seus gets e sets.
         /// </param>
+        /// 
+
         public void criarApostador(Apostador apostador)
         {
-            conn = ConexionDataBase.obterConexao();
+            
 
             if (conn.State == ConnectionState.Open)
             {
@@ -60,7 +61,7 @@ namespace CorridaCavalo.crud
         /// </returns>
         public int listarQuantidade()
         {
-            conn = ConexionDataBase.obterConexao();
+            
 
             if (conn.State == ConnectionState.Open)
             {     
@@ -106,7 +107,7 @@ namespace CorridaCavalo.crud
         /// <returns>Retorna a classe Apostador</returns>
         public Apostador listarApostador(int id)
         {
-            conn = ConexionDataBase.obterConexao();
+            
 
             if (conn.State == ConnectionState.Open)
             {
@@ -160,7 +161,7 @@ namespace CorridaCavalo.crud
         /// <param name="id"></param>
         public void excluirApostador(int id)
         {
-            conn = ConexionDataBase.obterConexao();
+            
 
             if (conn.State == ConnectionState.Open)
             {
@@ -192,7 +193,7 @@ namespace CorridaCavalo.crud
         /// <param name="apostador"></param>
         public void alterarApostador(Apostador apostador)
         {
-            conn = ConexionDataBase.obterConexao();
+            
 
             if (conn.State == ConnectionState.Open)
             {
