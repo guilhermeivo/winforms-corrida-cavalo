@@ -58,13 +58,13 @@ namespace CorridaCavalo.crud
         /// <returns>
         /// Retorna um ds com o idApostador ou null
         /// </returns>
-        public SqlDataReader listarQuantidade()
+        public int listarQuantidade()
         {
             conn = ConexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
             {     
-                string queryString = "select idApostador from Apostador";
+                string queryString = "select max(idApostador) from Apostador";
 
                 SqlCommand cmd = new SqlCommand(queryString, conn);
 
@@ -72,21 +72,21 @@ namespace CorridaCavalo.crud
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    if (reader.Read())
+                    if (reader.HasRows)
                     {
-                        return reader;
+                        if (reader.Read())
+                        {
+                            return Convert.ToInt32(reader[0]);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Não foi possível encontrar!");
-                        return null;
-                    }
+
+                    return 0;
                 }
                 catch (Exception error)
                 {
                     MessageBox.Show("Erro: " + error);
 
-                    return null;
+                    return 0;
                 }
                 finally
                 {
@@ -95,7 +95,7 @@ namespace CorridaCavalo.crud
             } 
             else
             {
-                return null;
+                return 0;
             }
         }
 
@@ -134,7 +134,6 @@ namespace CorridaCavalo.crud
                     }
                     else
                     {
-                        MessageBox.Show("Não encontrou foi possível encontrar!");
                         return null;
                     }
                 }

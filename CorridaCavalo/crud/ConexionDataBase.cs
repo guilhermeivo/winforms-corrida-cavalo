@@ -25,8 +25,6 @@ namespace CorridaCavalo.crud
         {
             try
             {
-                MessageBox.Show("Conectando...");
-
                 conn = new SqlConnection(connString);
 
                 conn.Open();

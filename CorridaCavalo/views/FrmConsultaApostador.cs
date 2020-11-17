@@ -28,26 +28,27 @@ namespace CorridaCavalo
         public void listarTable()
         {
 
-
             // Pega os Id da tabela do banco de dados
-            SqlDataReader reader = apostadorDAO.listarQuantidade();
+            int count = apostadorDAO.listarQuantidade();
+            int aa = 0;
 
-            if (!(reader == null))
+            for (int i = 0; i <= count; i++)
             {
-                while (reader.Read())
+                if (!(apostadorDAO.listarApostador(i) == null))
                 {
-                    int value = (int)(reader[0]);
-                    Apostador apostador = apostadorDAO.listarApostador(value);
+                    Apostador apostador = apostadorDAO.listarApostador(i);
 
                     dataGridView2.Rows.Add();
 
-                    dataGridView2.Rows[value].Cells[0].Value = apostador.getIdApostador();
-                    dataGridView2.Rows[value].Cells[1].Value = apostador.getNome();
-                    dataGridView2.Rows[value].Cells[2].Value = apostador.getTelefone();
-                    dataGridView2.Rows[value].Cells[3].Value = apostador.getEmail();
-                    dataGridView2.Rows[value].Cells[4].Value = apostador.getValor();
+                    dataGridView2.Rows[aa].Cells[0].Value = apostador.getIdApostador();
+                    dataGridView2.Rows[aa].Cells[1].Value = apostador.getNome();
+                    dataGridView2.Rows[aa].Cells[2].Value = apostador.getTelefone();
+                    dataGridView2.Rows[aa].Cells[3].Value = apostador.getEmail();
+                    dataGridView2.Rows[aa].Cells[4].Value = apostador.getValor();
+
+                    aa++;
                 }
-            } 
+            }
         }
         public void limparTextBox()
         {
