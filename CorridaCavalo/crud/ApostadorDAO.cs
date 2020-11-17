@@ -12,7 +12,9 @@ namespace CorridaCavalo.crud
 {
     class ApostadorDAO
     {
-        SqlConnection conn = new SqlConnection("Password = 12345; Persist Security Info=True; User ID = sa; Initial Catalog = Cavalo; Data Source = " + Environment.MachineName);
+        // string connString = "Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=Cavalo; Data Source=" + Environment.MachineName;
+        SqlConnection conn;
+        
         /// <summary>
         /// Inseri no banco de dados o <paramref name="apostador"/>
         /// </summary>
@@ -23,7 +25,8 @@ namespace CorridaCavalo.crud
 
         public void criarApostador(Apostador apostador)
         {
-            
+            //conn = new SqlConnection(connString);
+            conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
             {
@@ -38,7 +41,6 @@ namespace CorridaCavalo.crud
                     cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
 
                     cmd.ExecuteScalar();
-                    ConexionDataBase.fecharConexao();
 
                     MessageBox.Show("Registro inserido com sucesso!");
                 }
@@ -48,7 +50,7 @@ namespace CorridaCavalo.crud
                 }
                 finally
                 {
-                    ConexionDataBase.fecharConexao();
+                    ConnexionDataBase.fecharConexao();
                 }
             }
         }
@@ -61,7 +63,8 @@ namespace CorridaCavalo.crud
         /// </returns>
         public int listarQuantidade()
         {
-            
+            //conn = new SqlConnection(connString);
+            conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
             {     
@@ -91,7 +94,7 @@ namespace CorridaCavalo.crud
                 }
                 finally
                 {
-                    ConexionDataBase.fecharConexao();
+                    ConnexionDataBase.fecharConexao();
                 }
             } 
             else
@@ -107,7 +110,8 @@ namespace CorridaCavalo.crud
         /// <returns>Retorna a classe Apostador</returns>
         public Apostador listarApostador(int id)
         {
-            
+            //conn = new SqlConnection(connString);
+            conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
             {
@@ -146,7 +150,7 @@ namespace CorridaCavalo.crud
                 }
                 finally
                 {
-                    ConexionDataBase.fecharConexao();
+                    ConnexionDataBase.fecharConexao();
                 }
             }
             else
@@ -161,7 +165,8 @@ namespace CorridaCavalo.crud
         /// <param name="id"></param>
         public void excluirApostador(int id)
         {
-            
+            //conn = new SqlConnection(connString);
+            conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
             {
@@ -182,7 +187,7 @@ namespace CorridaCavalo.crud
                 }
                 finally
                 {
-                    ConexionDataBase.fecharConexao();
+                    ConnexionDataBase.fecharConexao();
                 }
             }
         }
@@ -193,7 +198,8 @@ namespace CorridaCavalo.crud
         /// <param name="apostador"></param>
         public void alterarApostador(Apostador apostador)
         {
-            
+            //conn = new SqlConnection(connString);
+            conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
             {
@@ -218,7 +224,7 @@ namespace CorridaCavalo.crud
                 }
                 finally
                 {
-                    ConexionDataBase.fecharConexao();
+                    ConnexionDataBase.fecharConexao();
                 }
             }
         }

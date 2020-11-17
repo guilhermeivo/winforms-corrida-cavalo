@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CorridaCavalo.crud
 {
-    class ConexionDataBase
+    class ConnexionDataBase
     {
         /// <summary>String para conectar no banco.</summary>
         private static string connString = "Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=Cavalo; Data Source=" + Environment.MachineName;
@@ -51,4 +51,3 @@ namespace CorridaCavalo.crud
         }
     }
 }
-
