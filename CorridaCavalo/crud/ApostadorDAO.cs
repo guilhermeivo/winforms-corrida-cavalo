@@ -12,7 +12,6 @@ namespace CorridaCavalo.crud
 {
     class ApostadorDAO
     {
-        // string connString = "Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=Cavalo; Data Source=" + Environment.MachineName;
         SqlConnection conn;
         
         /// <summary>
@@ -25,7 +24,6 @@ namespace CorridaCavalo.crud
 
         public void criarApostador(Apostador apostador)
         {
-            //conn = new SqlConnection(connString);
             conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
@@ -63,7 +61,6 @@ namespace CorridaCavalo.crud
         /// </returns>
         public int listarQuantidade()
         {
-            //conn = new SqlConnection(connString);
             conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
@@ -76,12 +73,9 @@ namespace CorridaCavalo.crud
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    if (reader.HasRows)
+                    if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
                     {
-                        if (reader.Read())
-                        {
-                            return Convert.ToInt32(reader[0]);
-                        }
+                        return Convert.ToInt32(reader[0]);
                     }
 
                     return 0;
@@ -110,7 +104,6 @@ namespace CorridaCavalo.crud
         /// <returns>Retorna a classe Apostador</returns>
         public Apostador listarApostador(int id)
         {
-            //conn = new SqlConnection(connString);
             conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
@@ -165,7 +158,6 @@ namespace CorridaCavalo.crud
         /// <param name="id"></param>
         public void excluirApostador(int id)
         {
-            //conn = new SqlConnection(connString);
             conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)
@@ -198,7 +190,6 @@ namespace CorridaCavalo.crud
         /// <param name="apostador"></param>
         public void alterarApostador(Apostador apostador)
         {
-            //conn = new SqlConnection(connString);
             conn = ConnexionDataBase.obterConexao();
 
             if (conn.State == ConnectionState.Open)

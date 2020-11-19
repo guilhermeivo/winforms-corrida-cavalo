@@ -19,6 +19,8 @@ namespace CorridaCavalo
         public FrmConsultaApostador()
         {
             InitializeComponent();
+
+            limparTextBox();
             listarTable();
         }
 
@@ -27,10 +29,10 @@ namespace CorridaCavalo
         /// </summary>
         public void listarTable()
         {
-
+            dataGridView2.Enabled = true;
             // Pega os Id da tabela do banco de dados
             int count = apostadorDAO.listarQuantidade();
-            int aa = 0;
+            int index = 0;
 
             for (int i = 0; i <= count; i++)
             {
@@ -40,14 +42,19 @@ namespace CorridaCavalo
 
                     dataGridView2.Rows.Add();
 
-                    dataGridView2.Rows[aa].Cells[0].Value = apostador.getIdApostador();
-                    dataGridView2.Rows[aa].Cells[1].Value = apostador.getNome();
-                    dataGridView2.Rows[aa].Cells[2].Value = apostador.getTelefone();
-                    dataGridView2.Rows[aa].Cells[3].Value = apostador.getEmail();
-                    dataGridView2.Rows[aa].Cells[4].Value = apostador.getValor();
+                    dataGridView2.Rows[index].Cells[0].Value = apostador.getIdApostador();
+                    dataGridView2.Rows[index].Cells[1].Value = apostador.getNome();
+                    dataGridView2.Rows[index].Cells[2].Value = apostador.getTelefone();
+                    dataGridView2.Rows[index].Cells[3].Value = apostador.getEmail();
+                    dataGridView2.Rows[index].Cells[4].Value = apostador.getValor();
 
-                    aa++;
+                    index++;
                 }
+            }
+
+            if (count == 0)
+            {
+                dataGridView2.Enabled = false;
             }
         }
         public void limparTextBox()
@@ -63,9 +70,12 @@ namespace CorridaCavalo
             for (int i = 0; i < dataGridView2.RowCount; i++)
             {
                 dataGridView2.Rows[i].DataGridView.Rows.Clear();
-            }
+            }            
 
-            listarTable();
+            txtNome.Enabled = false;
+            txtTelefone.Enabled = false;
+            txtEmail.Enabled = false;
+            txtDinherio.Enabled = false;
 
             btnEditar.Enabled = false;
             btnExcluir.Enabled = false;
@@ -82,6 +92,11 @@ namespace CorridaCavalo
                 txtTelefone.Text = dataGridView2.Rows[linhas].Cells[2].Value.ToString();
                 txtEmail.Text = dataGridView2.Rows[linhas].Cells[3].Value.ToString();
                 txtDinherio.Text = dataGridView2.Rows[linhas].Cells[4].Value.ToString();
+
+                txtNome.Enabled = true;
+                txtTelefone.Enabled = true;
+                txtEmail.Enabled = true;
+                txtDinherio.Enabled = true;
 
                 btnEditar.Enabled = true;
                 btnExcluir.Enabled = true;
@@ -101,6 +116,7 @@ namespace CorridaCavalo
                 apostadorDAO.excluirApostador(id);
 
                 limparTextBox();
+                listarTable();
             }
             catch (Exception error)
             {
@@ -123,10 +139,38 @@ namespace CorridaCavalo
                 apostadorDAO.alterarApostador(apostador);
 
                 limparTextBox();
+                listarTable();
             }
             catch (Exception error)
             {
                 MessageBox.Show("Não foi possível editar os valores!");
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Enabled = true;           
+
+            int codApostador = 0;
+            int.Parse(txtCodigo.Text);
+
+            if ((apostadorDAO.listarApostador(codApostador) != null))
+            {
+                limparTextBox();
+
+                Apostador apostador = apostadorDAO.listarApostador(codApostador);
+
+                dataGridView2.Rows.Add();
+                
+                dataGridView2.Rows[0].Cells[0].Value = apostador.getIdApostador();
+                dataGridView2.Rows[0].Cells[1].Value = apostador.getNome();
+                dataGridView2.Rows[0].Cells[2].Value = apostador.getTelefone();
+                dataGridView2.Rows[0].Cells[3].Value = apostador.getEmail();
+                dataGridView2.Rows[0].Cells[4].Value = apostador.getValor();
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar!");
             }
         }
     }

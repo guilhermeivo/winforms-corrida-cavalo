@@ -15,6 +15,8 @@ namespace CorridaCavalo
         public FrmLogin()
         {
             InitializeComponent();
+
+            txtUsuario.Focus();
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
@@ -31,6 +33,8 @@ namespace CorridaCavalo
                 MessageBox.Show("Usuário ou senha incorretos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUsuario.Clear();
                 txtSenha.Clear();
+
+                txtUsuario.Focus();
             }
         }
 
