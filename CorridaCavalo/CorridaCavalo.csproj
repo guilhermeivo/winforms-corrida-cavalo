@@ -51,6 +51,7 @@
     <Compile Include="crud\ConnexionDataBase.cs" />
     <Compile Include="model\Apostador.cs" />
     <Compile Include="model\Cavalo.cs" />
+    <Compile Include="model\Dono.cs" />
     <Compile Include="views\FrmAjuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="views\FrmCadastroApostador.Designer.cs">
       <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FrmCadastroDono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FrmCadastroDono.Designer.cs">
+      <DependentUpon>FrmCadastroDono.cs</DependentUpon>
     </Compile>
     <Compile Include="views\FrmConsultaApostador.cs">
       <SubType>Form</SubType>
@@ -112,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\FrmCadastroApostador.resx">
       <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FrmCadastroDono.resx">
+      <DependentUpon>FrmCadastroDono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\FrmConsultaApostador.resx">
       <DependentUpon>FrmConsultaApostador.cs</DependentUpon>
