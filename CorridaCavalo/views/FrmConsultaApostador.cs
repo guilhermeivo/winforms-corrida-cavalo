@@ -22,6 +22,8 @@ namespace CorridaCavalo
 
             limparTextBox();
             listarTable();
+
+            txtCodigo.Focus();
         }
 
         /// <summary>
@@ -29,24 +31,24 @@ namespace CorridaCavalo
         /// </summary>
         public void listarTable()
         {
-            dataGridView2.Enabled = true;
+            dgvConsultaApostador.Enabled = true;
             // Pega os Id da tabela do banco de dados
             int count = apostadorDAO.listarQuantidade();
             int index = 0;
 
             for (int i = 0; i <= count; i++)
             {
-                if (!(apostadorDAO.listarApostador(i) == null))
+                if (apostadorDAO.listarApostador(i) != null)
                 {
                     Apostador apostador = apostadorDAO.listarApostador(i);
 
-                    dataGridView2.Rows.Add();
+                    dgvConsultaApostador.Rows.Add();
 
-                    dataGridView2.Rows[index].Cells[0].Value = apostador.getIdApostador();
-                    dataGridView2.Rows[index].Cells[1].Value = apostador.getNome();
-                    dataGridView2.Rows[index].Cells[2].Value = apostador.getTelefone();
-                    dataGridView2.Rows[index].Cells[3].Value = apostador.getEmail();
-                    dataGridView2.Rows[index].Cells[4].Value = apostador.getValor();
+                    dgvConsultaApostador.Rows[index].Cells[0].Value = apostador.getIdApostador();
+                    dgvConsultaApostador.Rows[index].Cells[1].Value = apostador.getNome();
+                    dgvConsultaApostador.Rows[index].Cells[2].Value = apostador.getTelefone();
+                    dgvConsultaApostador.Rows[index].Cells[3].Value = apostador.getEmail();
+                    dgvConsultaApostador.Rows[index].Cells[4].Value = apostador.getValor();
 
                     index++;
                 }
@@ -54,7 +56,7 @@ namespace CorridaCavalo
 
             if (count == 0)
             {
-                dataGridView2.Enabled = false;
+                dgvConsultaApostador.Enabled = false;
             }
         }
         public void limparTextBox()
@@ -67,9 +69,9 @@ namespace CorridaCavalo
 
             txtCodigo.Focus();
 
-            for (int i = 0; i < dataGridView2.RowCount; i++)
+            for (int i = 0; i < dgvConsultaApostador.RowCount; i++)
             {
-                dataGridView2.Rows[i].DataGridView.Rows.Clear();
+                dgvConsultaApostador.Rows[i].DataGridView.Rows.Clear();
             }            
 
             txtNome.Enabled = false;
@@ -83,29 +85,37 @@ namespace CorridaCavalo
 
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int linhas = dataGridView2.CurrentRow.Index;
+            int linhas = dgvConsultaApostador.CurrentRow.Index;
 
-            try
+            if (dgvConsultaApostador.Rows[linhas].Cells[0].Value != null ||
+                    dgvConsultaApostador.Rows[linhas].Cells[1].Value != null ||
+                    dgvConsultaApostador.Rows[linhas].Cells[2].Value != null ||
+                    dgvConsultaApostador.Rows[linhas].Cells[3].Value != null ||
+                    dgvConsultaApostador.Rows[linhas].Cells[4].Value != null)
             {
-                txtCodigo.Text = dataGridView2.Rows[linhas].Cells[0].Value.ToString();
-                txtNome.Text = dataGridView2.Rows[linhas].Cells[1].Value.ToString();
-                txtTelefone.Text = dataGridView2.Rows[linhas].Cells[2].Value.ToString();
-                txtEmail.Text = dataGridView2.Rows[linhas].Cells[3].Value.ToString();
-                txtDinherio.Text = dataGridView2.Rows[linhas].Cells[4].Value.ToString();
+                try
+                {
 
-                txtNome.Enabled = true;
-                txtTelefone.Enabled = true;
-                txtEmail.Enabled = true;
-                txtDinherio.Enabled = true;
 
-                btnEditar.Enabled = true;
-                btnExcluir.Enabled = true;
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show("Não foi possível exibir os valores!");
-            }
-            
+                    txtCodigo.Text = dgvConsultaApostador.Rows[linhas].Cells[0].Value.ToString().Trim();
+                    txtNome.Text = dgvConsultaApostador.Rows[linhas].Cells[1].Value.ToString().Trim();
+                    txtTelefone.Text = dgvConsultaApostador.Rows[linhas].Cells[2].Value.ToString().Trim();
+                    txtEmail.Text = dgvConsultaApostador.Rows[linhas].Cells[3].Value.ToString().Trim();
+                    txtDinherio.Text = dgvConsultaApostador.Rows[linhas].Cells[4].Value.ToString().Trim();
+
+                    txtNome.Enabled = true;
+                    txtTelefone.Enabled = true;
+                    txtEmail.Enabled = true;
+                    txtDinherio.Enabled = true;
+
+                    btnEditar.Enabled = true;
+                    btnExcluir.Enabled = true;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Não foi possível exibir os valores!");
+                }
+            }        
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -149,29 +159,34 @@ namespace CorridaCavalo
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            dataGridView2.Enabled = true;           
+            dgvConsultaApostador.Enabled = true;           
 
             int codApostador = 0;
-            int.Parse(txtCodigo.Text);
+            codApostador = int.Parse(txtCodigo.Text);
 
-            if ((apostadorDAO.listarApostador(codApostador) != null))
+            if (apostadorDAO.listarApostador(codApostador) != null)
             {
                 limparTextBox();
 
                 Apostador apostador = apostadorDAO.listarApostador(codApostador);
 
-                dataGridView2.Rows.Add();
+                dgvConsultaApostador.Rows.Add();
                 
-                dataGridView2.Rows[0].Cells[0].Value = apostador.getIdApostador();
-                dataGridView2.Rows[0].Cells[1].Value = apostador.getNome();
-                dataGridView2.Rows[0].Cells[2].Value = apostador.getTelefone();
-                dataGridView2.Rows[0].Cells[3].Value = apostador.getEmail();
-                dataGridView2.Rows[0].Cells[4].Value = apostador.getValor();
+                dgvConsultaApostador.Rows[0].Cells[0].Value = apostador.getIdApostador();
+                dgvConsultaApostador.Rows[0].Cells[1].Value = apostador.getNome();
+                dgvConsultaApostador.Rows[0].Cells[2].Value = apostador.getTelefone();
+                dgvConsultaApostador.Rows[0].Cells[3].Value = apostador.getEmail();
+                dgvConsultaApostador.Rows[0].Cells[4].Value = apostador.getValor();
             }
             else
             {
                 MessageBox.Show("Não foi possível encontrar!");
             }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -62,38 +62,31 @@ namespace CorridaCavalo.crud
         public int listarQuantidade()
         {
             conn = ConnexionDataBase.obterConexao();
+   
+            string queryString = "select max(idApostador) from Apostador";
 
-            if (conn.State == ConnectionState.Open)
-            {     
-                string queryString = "select max(idApostador) from Apostador";
+            SqlCommand cmd = new SqlCommand(queryString, conn);
 
-                SqlCommand cmd = new SqlCommand(queryString, conn);
-
-                try
-                {
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
-                    {
-                        return Convert.ToInt32(reader[0]);
-                    }
-
-                    return 0;
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Erro: " + error);
-
-                    return 0;
-                }
-                finally
-                {
-                    ConnexionDataBase.fecharConexao();
-                }
-            } 
-            else
+            try
             {
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
+                {
+                    return Convert.ToInt32(reader[0]);
+                }
+
                 return 0;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro: " + error);
+
+                return 0; 
+            }
+            finally
+            {
+                ConnexionDataBase.fecharConexao();
             }
         }
 
@@ -106,49 +99,42 @@ namespace CorridaCavalo.crud
         {
             conn = ConnexionDataBase.obterConexao();
 
-            if (conn.State == ConnectionState.Open)
+            string queryString = "select * from Apostador where idApostador = @id";
+
+            SqlCommand cmd = new SqlCommand(queryString, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
             {
-                string queryString = "select * from Apostador where idApostador = @id";
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-
-                try
+                if (reader.Read())
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    Apostador apostador = new Apostador();
+                    apostador.setIdApostador(id);
 
-                    if (reader.Read())
-                    {
-                        Apostador apostador = new Apostador();
-                        apostador.setIdApostador(id);
+                    apostador.setIdApostador(int.Parse(reader[0].ToString()));
+                    apostador.setNome(reader[1].ToString());
+                    apostador.setTelefone(reader[2].ToString());
+                    apostador.setEmail(reader[3].ToString());
+                    apostador.setValor(Convert.ToDouble(reader[4].ToString()));
 
-                        apostador.setIdApostador(int.Parse(reader[0].ToString()));
-                        apostador.setNome(reader[1].ToString());
-                        apostador.setTelefone(reader[2].ToString());
-                        apostador.setEmail(reader[3].ToString());
-                        apostador.setValor(Convert.ToDouble(reader[4].ToString()));
-
-                        return apostador;
-                    }
-                    else
-                    {
-                        return null;
-                    }
+                    return apostador;
                 }
-                catch (Exception error)
+                else
                 {
-                    MessageBox.Show("Erro: " + error);
-
                     return null;
                 }
-                finally
-                {
-                    ConnexionDataBase.fecharConexao();
-                }
             }
-            else
+            catch (Exception error)
             {
+                MessageBox.Show("Erro: " + error);
+
                 return null;
+            }
+            finally
+            {
+                ConnexionDataBase.fecharConexao();
             }
         }
 
@@ -160,27 +146,24 @@ namespace CorridaCavalo.crud
         {
             conn = ConnexionDataBase.obterConexao();
 
-            if (conn.State == ConnectionState.Open)
+            string queryString = "delete from Apostador where idApostador = @id";
+
+            SqlCommand cmd = new SqlCommand(queryString, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
             {
-                string queryString = "delete from Apostador where idApostador = @id";
-
-                SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-
-                try
-                {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > 0)
-                        MessageBox.Show("Registro excluído com sucesso!");
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Erro: " + error);
-                }
-                finally
-                {
-                    ConnexionDataBase.fecharConexao();
-                }
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                    MessageBox.Show("Registro excluído com sucesso!");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro: " + error);
+            }
+            finally
+            {
+                ConnexionDataBase.fecharConexao();
             }
         }
 
@@ -192,31 +175,30 @@ namespace CorridaCavalo.crud
         {
             conn = ConnexionDataBase.obterConexao();
 
-            if (conn.State == ConnectionState.Open)
+            string queryString = "update Apostador set nome = @nome, Telefone = @telefone, Email = @Email, valor = @valor where idApostador = @Id";
+
+            SqlCommand cmd = new SqlCommand(queryString, conn);
+            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = apostador.getIdApostador();
+            cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
+            cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
+            cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
+            cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
+
+            try
             {
-                string queryString = "update Apostador set nome = @nome, Telefone = @telefone, Email = @Email, valor = @valor where idApostador = @Id";
-
-                SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = apostador.getIdApostador();
-                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
-                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
-                cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
-                cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
-
-                try
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
                 {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > 0)
-                        MessageBox.Show("Registro atualizado com sucesso!");
+                    MessageBox.Show("Registro atualizado com sucesso!");
                 }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Erro: " + error);
-                }
-                finally
-                {
-                    ConnexionDataBase.fecharConexao();
-                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro: " + error);
+            }
+            finally
+            {
+                ConnexionDataBase.fecharConexao();
             }
         }
     }

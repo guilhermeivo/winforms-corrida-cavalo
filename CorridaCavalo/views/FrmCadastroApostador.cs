@@ -29,10 +29,10 @@ namespace CorridaCavalo
                 Apostador apostador = new Apostador();
 
                 // Armazena os valores das textbox na classe apostador
-                apostador.setNome(txtNome.Text);
-                apostador.setTelefone(txtTelefone.Text);
-                apostador.setEmail(txtEmail.Text);
-                apostador.setValor(Convert.ToDouble(txtValor.Text));
+                apostador.setNome(txtNome.Text.Trim());
+                apostador.setTelefone(txtTelefone.Text.Trim());
+                apostador.setEmail(txtEmail.Text.Trim());
+                apostador.setValor(Convert.ToDouble(txtValor.Text.Trim()));
 
                 // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
                 apostadorDAO.criarApostador(apostador);
