@@ -19,6 +19,8 @@ namespace CorridaCavalo
         public FrmCadastroApostador()
         {
             InitializeComponent();
+
+            txtNome.Focus();
         }
 
         private void btnCadatro_Click(object sender, EventArgs e)
@@ -44,10 +46,18 @@ namespace CorridaCavalo
 
                 txtNome.Focus();
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 MessageBox.Show("Não foi possível cadastrar!");
             }
+        }
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

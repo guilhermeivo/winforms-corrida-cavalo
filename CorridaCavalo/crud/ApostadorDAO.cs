@@ -20,36 +20,30 @@ namespace CorridaCavalo.crud
         /// <param name="apostador">
         /// Apostador com os seus gets e sets.
         /// </param>
-        /// 
-
         public void criarApostador(Apostador apostador)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "insert into Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor)";
 
-            if (conn.State == ConnectionState.Open)
+            try
+            {                   
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
+                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
+                cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
+                cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
+
+                cmd.ExecuteScalar();
+
+                MessageBox.Show("Registro inserido com sucesso!");
+            }
+            catch(Exception error)
             {
-                try
-                {
-                    string queryString = "insert into Apostador (nome, telefone, email, valor) values (@nome, @telefone, @email, @valor)";
-
-                    SqlCommand cmd = new SqlCommand(queryString, conn);
-                    cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
-                    cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
-                    cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
-                    cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
-
-                    cmd.ExecuteScalar();
-
-                    MessageBox.Show("Registro inserido com sucesso!");
-                }
-                catch(Exception error)
-                {
-                    MessageBox.Show("Erro: " + error);
-                }
-                finally
-                {
-                    ConnexionDataBase.fecharConexao();
-                }
+                MessageBox.Show("Erro: " + error);
+            }
+            finally
+            {
+                ConnexionDataBase.fecharConexao();
             }
         }
 
@@ -61,14 +55,12 @@ namespace CorridaCavalo.crud
         /// </returns>
         public int listarQuantidade()
         {
-            conn = ConnexionDataBase.obterConexao();
-   
+            conn = ConnexionDataBase.obterConexao();   
             string queryString = "select max(idApostador) from Apostador";
-
-            SqlCommand cmd = new SqlCommand(queryString, conn);
 
             try
             {
+                SqlCommand cmd = new SqlCommand(queryString, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
@@ -98,14 +90,13 @@ namespace CorridaCavalo.crud
         public Apostador listarApostador(int id)
         {
             conn = ConnexionDataBase.obterConexao();
-
             string queryString = "select * from Apostador where idApostador = @id";
-
-            SqlCommand cmd = new SqlCommand(queryString, conn);
-            cmd.Parameters.AddWithValue("@id", id);
 
             try
             {
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
@@ -113,11 +104,11 @@ namespace CorridaCavalo.crud
                     Apostador apostador = new Apostador();
                     apostador.setIdApostador(id);
 
-                    apostador.setIdApostador(int.Parse(reader[0].ToString()));
-                    apostador.setNome(reader[1].ToString());
-                    apostador.setTelefone(reader[2].ToString());
-                    apostador.setEmail(reader[3].ToString());
-                    apostador.setValor(Convert.ToDouble(reader[4].ToString()));
+                    apostador.setIdApostador(int.Parse(reader["idApostador"].ToString()));
+                    apostador.setNome(reader["nome"].ToString());
+                    apostador.setTelefone(reader["telefone"].ToString());
+                    apostador.setEmail(reader["email"].ToString());
+                    apostador.setValor(Convert.ToDouble(reader["valor"].ToString()));
 
                     return apostador;
                 }
@@ -145,17 +136,18 @@ namespace CorridaCavalo.crud
         public void excluirApostador(int id)
         {
             conn = ConnexionDataBase.obterConexao();
-
-            string queryString = "delete from Apostador where idApostador = @id";
-
-            SqlCommand cmd = new SqlCommand(queryString, conn);
-            cmd.Parameters.AddWithValue("@id", id);
+            string queryString = "delete from Apostador where idApostador = @id";            
 
             try
             {
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
+                {
                     MessageBox.Show("Registro excluído com sucesso!");
+                }                    
             }
             catch (Exception error)
             {
@@ -174,18 +166,17 @@ namespace CorridaCavalo.crud
         public void alterarApostador(Apostador apostador)
         {
             conn = ConnexionDataBase.obterConexao();
-
             string queryString = "update Apostador set nome = @nome, Telefone = @telefone, Email = @Email, valor = @valor where idApostador = @Id";
-
-            SqlCommand cmd = new SqlCommand(queryString, conn);
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = apostador.getIdApostador();
-            cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
-            cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
-            cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
-            cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
 
             try
             {
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = apostador.getIdApostador();
+                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
+                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
+                cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
+                cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
+
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {

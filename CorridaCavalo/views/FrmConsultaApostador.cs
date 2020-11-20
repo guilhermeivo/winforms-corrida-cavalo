@@ -88,15 +88,13 @@ namespace CorridaCavalo
             int linhas = dgvConsultaApostador.CurrentRow.Index;
 
             if (dgvConsultaApostador.Rows[linhas].Cells[0].Value != null ||
-                    dgvConsultaApostador.Rows[linhas].Cells[1].Value != null ||
-                    dgvConsultaApostador.Rows[linhas].Cells[2].Value != null ||
-                    dgvConsultaApostador.Rows[linhas].Cells[3].Value != null ||
-                    dgvConsultaApostador.Rows[linhas].Cells[4].Value != null)
+                dgvConsultaApostador.Rows[linhas].Cells[1].Value != null ||
+                dgvConsultaApostador.Rows[linhas].Cells[2].Value != null ||
+                dgvConsultaApostador.Rows[linhas].Cells[3].Value != null ||
+                dgvConsultaApostador.Rows[linhas].Cells[4].Value != null)
             {
                 try
                 {
-
-
                     txtCodigo.Text = dgvConsultaApostador.Rows[linhas].Cells[0].Value.ToString().Trim();
                     txtNome.Text = dgvConsultaApostador.Rows[linhas].Cells[1].Value.ToString().Trim();
                     txtTelefone.Text = dgvConsultaApostador.Rows[linhas].Cells[2].Value.ToString().Trim();
@@ -111,7 +109,7 @@ namespace CorridaCavalo
                     btnEditar.Enabled = true;
                     btnExcluir.Enabled = true;
                 }
-                catch (Exception error)
+                catch (Exception)
                 {
                     MessageBox.Show("Não foi possível exibir os valores!");
                 }
@@ -128,7 +126,7 @@ namespace CorridaCavalo
                 limparTextBox();
                 listarTable();
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 MessageBox.Show("Não foi possível excluir os valores!");
             }
@@ -151,7 +149,7 @@ namespace CorridaCavalo
                 limparTextBox();
                 listarTable();
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 MessageBox.Show("Não foi possível editar os valores!");
             }

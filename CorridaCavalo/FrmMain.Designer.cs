@@ -82,6 +82,7 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximized = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnCadastrarDono = new System.Windows.Forms.Button();
             this.panelBottomCorner.SuspendLayout();
             this.panelTopCorner.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -298,7 +299,7 @@
             this.panelSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelSair.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSair.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSair.Location = new System.Drawing.Point(5, 440);
+            this.panelSair.Location = new System.Drawing.Point(5, 485);
             this.panelSair.Name = "panelSair";
             this.panelSair.Size = new System.Drawing.Size(232, 45);
             this.panelSair.TabIndex = 13;
@@ -337,7 +338,7 @@
             this.panelAjuda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelAjuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAjuda.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelAjuda.Location = new System.Drawing.Point(5, 395);
+            this.panelAjuda.Location = new System.Drawing.Point(5, 440);
             this.panelAjuda.Name = "panelAjuda";
             this.panelAjuda.Size = new System.Drawing.Size(232, 45);
             this.panelAjuda.TabIndex = 11;
@@ -375,7 +376,7 @@
             this.panelConsultaSubmenu.Controls.Add(this.btnConsultaApostador);
             this.panelConsultaSubmenu.Controls.Add(this.btnConsultaCavalo);
             this.panelConsultaSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsultaSubmenu.Location = new System.Drawing.Point(5, 270);
+            this.panelConsultaSubmenu.Location = new System.Drawing.Point(5, 315);
             this.panelConsultaSubmenu.Name = "panelConsultaSubmenu";
             this.panelConsultaSubmenu.Size = new System.Drawing.Size(232, 125);
             this.panelConsultaSubmenu.TabIndex = 10;
@@ -452,7 +453,7 @@
             this.panelConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelConsulta.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConsulta.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelConsulta.Location = new System.Drawing.Point(5, 225);
+            this.panelConsulta.Location = new System.Drawing.Point(5, 270);
             this.panelConsulta.Name = "panelConsulta";
             this.panelConsulta.Size = new System.Drawing.Size(232, 45);
             this.panelConsulta.TabIndex = 8;
@@ -503,7 +504,7 @@
             this.panelCorrida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelCorrida.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCorrida.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCorrida.Location = new System.Drawing.Point(5, 180);
+            this.panelCorrida.Location = new System.Drawing.Point(5, 225);
             this.panelCorrida.Name = "panelCorrida";
             this.panelCorrida.Size = new System.Drawing.Size(232, 45);
             this.panelCorrida.TabIndex = 6;
@@ -537,12 +538,13 @@
             // panelCadastrarSubmenu
             // 
             this.panelCadastrarSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.panelCadastrarSubmenu.Controls.Add(this.btnCadastrarDono);
             this.panelCadastrarSubmenu.Controls.Add(this.btnCadastrarApostador);
             this.panelCadastrarSubmenu.Controls.Add(this.btnCadastrarCavalo);
             this.panelCadastrarSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastrarSubmenu.Location = new System.Drawing.Point(5, 100);
             this.panelCadastrarSubmenu.Name = "panelCadastrarSubmenu";
-            this.panelCadastrarSubmenu.Size = new System.Drawing.Size(232, 80);
+            this.panelCadastrarSubmenu.Size = new System.Drawing.Size(232, 125);
             this.panelCadastrarSubmenu.TabIndex = 2;
             // 
             // btnCadastrarApostador
@@ -836,6 +838,27 @@
             this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             this.btnClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseUp);
             // 
+            // btnCadastrarDono
+            // 
+            this.btnCadastrarDono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnCadastrarDono.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarDono.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastrarDono.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarDono.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCadastrarDono.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCadastrarDono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarDono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarDono.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarDono.Location = new System.Drawing.Point(0, 80);
+            this.btnCadastrarDono.Name = "btnCadastrarDono";
+            this.btnCadastrarDono.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnCadastrarDono.Size = new System.Drawing.Size(232, 40);
+            this.btnCadastrarDono.TabIndex = 2;
+            this.btnCadastrarDono.Text = "Dono";
+            this.btnCadastrarDono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarDono.UseVisualStyleBackColor = false;
+            this.btnCadastrarDono.Click += new System.EventHandler(this.btnCadastrarDono_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 17F);
@@ -951,6 +974,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCadastrarDono;
     }
 }
 

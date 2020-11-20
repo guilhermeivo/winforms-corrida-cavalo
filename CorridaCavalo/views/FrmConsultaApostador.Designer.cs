@@ -33,33 +33,33 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtDinherio = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblDinheiro = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvConsultaApostador = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -86,25 +86,41 @@
             this.panel9.Controls.Add(this.btnConsultar);
             this.panel9.Controls.Add(this.txtDinherio);
             this.panel9.Controls.Add(this.txtCodigo);
-            this.panel9.Controls.Add(this.label7);
+            this.panel9.Controls.Add(this.lblDinheiro);
             this.panel9.Controls.Add(this.txtTelefone);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.txtEmail);
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.lblTelefone);
+            this.panel9.Controls.Add(this.lblCodigo);
             this.panel9.Controls.Add(this.txtNome);
             this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.lblEmail);
             this.panel9.Controls.Add(this.btnExcluir);
             this.panel9.Controls.Add(this.btnEditar);
             this.panel9.Controls.Add(this.dgvConsultaApostador);
-            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.lblNome);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(2, 2);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(722, 594);
             this.panel9.TabIndex = 25;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(34, 536);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(148, 35);
+            this.btnFechar.TabIndex = 50;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnConsultar
             // 
@@ -144,17 +160,17 @@
             this.txtCodigo.Size = new System.Drawing.Size(71, 26);
             this.txtCodigo.TabIndex = 48;
             // 
-            // label7
+            // lblDinheiro
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(28, 461);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 20);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Dinheiro";
+            this.lblDinheiro.AutoSize = true;
+            this.lblDinheiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblDinheiro.ForeColor = System.Drawing.Color.White;
+            this.lblDinheiro.Location = new System.Drawing.Point(28, 461);
+            this.lblDinheiro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDinheiro.Name = "lblDinheiro";
+            this.lblDinheiro.Size = new System.Drawing.Size(68, 20);
+            this.lblDinheiro.TabIndex = 40;
+            this.lblDinheiro.Text = "Dinheiro";
             // 
             // txtTelefone
             // 
@@ -188,29 +204,29 @@
             this.txtEmail.Size = new System.Drawing.Size(181, 26);
             this.txtEmail.TabIndex = 42;
             // 
-            // label8
+            // lblTelefone
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(448, 383);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Telefone";
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblTelefone.ForeColor = System.Drawing.Color.White;
+            this.lblTelefone.Location = new System.Drawing.Point(448, 383);
+            this.lblTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(71, 20);
+            this.lblTelefone.TabIndex = 39;
+            this.lblTelefone.Text = "Telefone";
             // 
-            // label9
+            // lblCodigo
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(28, 311);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 20);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Código Apostador";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblCodigo.ForeColor = System.Drawing.Color.White;
+            this.lblCodigo.Location = new System.Drawing.Point(28, 311);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(137, 20);
+            this.lblCodigo.TabIndex = 47;
+            this.lblCodigo.Text = "Código Apostador";
             // 
             // txtNome
             // 
@@ -225,35 +241,35 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.label10);
+            this.panel11.Controls.Add(this.lblTitle);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(722, 85);
             this.panel11.TabIndex = 31;
             // 
-            // label10
+            // lblTitle
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(29, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(225, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Consulta Apostador";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(29, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(225, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Consulta Apostador";
             // 
-            // label11
+            // lblEmail
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(249, 383);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 20);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(249, 383);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(48, 20);
+            this.lblEmail.TabIndex = 38;
+            this.lblEmail.Text = "Email";
             // 
             // btnExcluir
             // 
@@ -339,17 +355,55 @@
             this.dgvConsultaApostador.TabIndex = 36;
             this.dgvConsultaApostador.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
-            // label12
+            // Código
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(28, 383);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 20);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Nome";
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            this.Código.ReadOnly = true;
+            this.Código.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Código.Width = 50;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nome.Width = 150;
+            // 
+            // Telefone
+            // 
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            this.Telefone.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Email.Width = 150;
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            this.Valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(28, 383);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(51, 20);
+            this.lblNome.TabIndex = 37;
+            this.lblNome.Text = "Nome";
             // 
             // panel12
             // 
@@ -391,60 +445,6 @@
             this.panel15.Size = new System.Drawing.Size(2, 598);
             this.panel15.TabIndex = 21;
             // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(34, 536);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(148, 35);
-            this.btnFechar.TabIndex = 50;
-            this.btnFechar.Text = "Fechar";
-            this.btnFechar.UseVisualStyleBackColor = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // Código
-            // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            this.Código.ReadOnly = true;
-            this.Código.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Código.Width = 50;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nome.Width = 150;
-            // 
-            // Telefone
-            // 
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
-            this.Telefone.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Email.Width = 150;
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            this.Valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // FrmConsultaApostador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -471,20 +471,20 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtDinherio;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblDinheiro;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dgvConsultaApostador;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;

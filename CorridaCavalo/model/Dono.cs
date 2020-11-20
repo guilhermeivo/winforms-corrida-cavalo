@@ -12,7 +12,6 @@ namespace CorridaCavalo.model
         private String nomeDn;
         private String telefone;
         private String email;
-        private double valor;
 
         public void setIdDono(int idDono)
         {
@@ -52,16 +51,6 @@ namespace CorridaCavalo.model
         public string getEmail()
         {
             return email;
-        }
-
-        public void setValor(double valor)
-        {
-            this.valor = valor;
-        }
-
-        public double getValor()
-        {
-            return valor;
         }
     }
 }

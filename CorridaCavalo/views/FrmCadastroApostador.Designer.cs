@@ -30,7 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,7 +69,8 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.btnFechar);
+            this.panel5.Controls.Add(this.btnConsulta);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.btnCadatro);
@@ -87,21 +89,38 @@
             this.panel5.Size = new System.Drawing.Size(711, 470);
             this.panel5.TabIndex = 25;
             // 
-            // button1
+            // btnFechar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(523, 391);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 35);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(203, 404);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(148, 35);
+            this.btnFechar.TabIndex = 34;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnConsulta.Enabled = false;
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.ForeColor = System.Drawing.Color.White;
+            this.btnConsulta.Location = new System.Drawing.Point(527, 404);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(148, 35);
+            this.btnConsulta.TabIndex = 33;
+            this.btnConsulta.Text = "Consultar";
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // panel7
             // 
@@ -140,7 +159,7 @@
             this.btnCadatro.FlatAppearance.BorderSize = 0;
             this.btnCadatro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadatro.ForeColor = System.Drawing.Color.White;
-            this.btnCadatro.Location = new System.Drawing.Point(367, 391);
+            this.btnCadatro.Location = new System.Drawing.Point(365, 404);
             this.btnCadatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadatro.Name = "btnCadatro";
             this.btnCadatro.Size = new System.Drawing.Size(148, 35);
@@ -302,7 +321,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label3;
@@ -319,5 +338,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelDivisionSideMenu;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

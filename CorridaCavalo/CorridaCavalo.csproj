@@ -46,11 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crud\Aposta.cs" />
     <Compile Include="crud\ApostadorDAO.cs" />
+    <Compile Include="crud\CategoriaDAO.cs" />
     <Compile Include="crud\CavaloDAO.cs" />
     <Compile Include="crud\ConnexionDataBase.cs" />
+    <Compile Include="crud\CorridaCavalo.cs" />
+    <Compile Include="crud\CorridaDAO.cs" />
+    <Compile Include="crud\DonoDAO.cs" />
+    <Compile Include="model\Aposta.cs" />
     <Compile Include="model\Apostador.cs" />
+    <Compile Include="model\Categoria.cs" />
     <Compile Include="model\Cavalo.cs" />
+    <Compile Include="model\Corrida.cs" />
+    <Compile Include="model\CorridaCavalo.cs" />
     <Compile Include="model\Dono.cs" />
     <Compile Include="views\FrmAjuda.cs">
       <SubType>Form</SubType>

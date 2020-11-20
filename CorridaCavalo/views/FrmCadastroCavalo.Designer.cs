@@ -33,12 +33,12 @@
             this.lblNomeCav = new System.Windows.Forms.Label();
             this.lblNomeDono = new System.Windows.Forms.Label();
             this.lblIdade = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cmbDono = new System.Windows.Forms.ComboBox();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -46,26 +46,29 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 29);
+            this.label1.Size = new System.Drawing.Size(184, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro Cavalo";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(221, 109);
+            this.txtNome.Location = new System.Drawing.Point(310, 168);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(148, 26);
             this.txtNome.TabIndex = 2;
             // 
             // lblNomeCav
             // 
             this.lblNomeCav.AutoSize = true;
             this.lblNomeCav.ForeColor = System.Drawing.Color.White;
-            this.lblNomeCav.Location = new System.Drawing.Point(47, 112);
+            this.lblNomeCav.Location = new System.Drawing.Point(70, 172);
+            this.lblNomeCav.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeCav.Name = "lblNomeCav";
-            this.lblNomeCav.Size = new System.Drawing.Size(86, 13);
+            this.lblNomeCav.Size = new System.Drawing.Size(125, 20);
             this.lblNomeCav.TabIndex = 3;
             this.lblNomeCav.Text = "Nome do Cavalo";
             // 
@@ -73,9 +76,10 @@
             // 
             this.lblNomeDono.AutoSize = true;
             this.lblNomeDono.ForeColor = System.Drawing.Color.White;
-            this.lblNomeDono.Location = new System.Drawing.Point(47, 162);
+            this.lblNomeDono.Location = new System.Drawing.Point(70, 249);
+            this.lblNomeDono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeDono.Name = "lblNomeDono";
-            this.lblNomeDono.Size = new System.Drawing.Size(33, 13);
+            this.lblNomeDono.Size = new System.Drawing.Size(48, 20);
             this.lblNomeDono.TabIndex = 4;
             this.lblNomeDono.Text = "Dono";
             // 
@@ -83,43 +87,48 @@
             // 
             this.lblIdade.AutoSize = true;
             this.lblIdade.ForeColor = System.Drawing.Color.White;
-            this.lblIdade.Location = new System.Drawing.Point(48, 211);
+            this.lblIdade.Location = new System.Drawing.Point(72, 325);
+            this.lblIdade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdade.Name = "lblIdade";
-            this.lblIdade.Size = new System.Drawing.Size(85, 13);
+            this.lblIdade.Size = new System.Drawing.Size(124, 20);
             this.lblIdade.TabIndex = 5;
             this.lblIdade.Text = "Idade do Cavalo";
             // 
-            // lblStatus
+            // lblCategoria
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(48, 254);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 13);
-            this.lblStatus.TabIndex = 6;
-            this.lblStatus.Text = "Status";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblCategoria.Location = new System.Drawing.Point(72, 357);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(78, 20);
+            this.lblCategoria.TabIndex = 6;
+            this.lblCategoria.Text = "Categoria";
             // 
             // txtIdade
             // 
-            this.txtIdade.Location = new System.Drawing.Point(221, 211);
+            this.txtIdade.Location = new System.Drawing.Point(310, 325);
+            this.txtIdade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(100, 20);
+            this.txtIdade.Size = new System.Drawing.Size(148, 26);
             this.txtIdade.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(51, 312);
+            this.button1.Location = new System.Drawing.Point(76, 483);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 10;
             this.button1.Text = "Casdastrar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(267, 312);
+            this.button2.Location = new System.Drawing.Point(608, 565);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(112, 35);
             this.button2.TabIndex = 11;
             this.button2.Text = "Consultas";
             this.button2.UseVisualStyleBackColor = true;
@@ -127,36 +136,40 @@
             // cmbDono
             // 
             this.cmbDono.FormattingEnabled = true;
-            this.cmbDono.Location = new System.Drawing.Point(221, 154);
+            this.cmbDono.Location = new System.Drawing.Point(310, 237);
+            this.cmbDono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDono.Name = "cmbDono";
-            this.cmbDono.Size = new System.Drawing.Size(121, 21);
+            this.cmbDono.Size = new System.Drawing.Size(180, 28);
             this.cmbDono.TabIndex = 12;
             // 
-            // cmbStatus
+            // cmbCategoria
             // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(221, 265);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 21);
-            this.cmbStatus.TabIndex = 13;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(310, 365);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(180, 28);
+            this.cmbCategoria.TabIndex = 13;
             // 
             // FrmCadastroCavalo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(780, 657);
-            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.cmbDono);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIdade);
-            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblIdade);
             this.Controls.Add(this.lblNomeDono);
             this.Controls.Add(this.lblNomeCav);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCadastroCavalo";
             this.Text = "FrmCadastroCavalo";
             this.ResumeLayout(false);
@@ -171,11 +184,11 @@
         private System.Windows.Forms.Label lblNomeCav;
         private System.Windows.Forms.Label lblNomeDono;
         private System.Windows.Forms.Label lblIdade;
-        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cmbDono;
-        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.ComboBox cmbCategoria;
     }
 }

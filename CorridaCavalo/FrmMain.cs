@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CorridaCavalo.views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,11 @@ namespace CorridaCavalo
             openChildForm(new FrmCadastroApostador());
             hideSubMenu();
         }
-
+        private void btnCadastrarDono_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCadastroDono());
+            hideSubMenu();
+        }
         private void cadastrar_MouseClick(object sender, MouseEventArgs e)
         {
             hideSubMenu();

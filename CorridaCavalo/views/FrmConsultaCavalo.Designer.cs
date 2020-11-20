@@ -46,18 +46,18 @@
             this.txtNomeDn = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblNomeDn = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.txtNomeCav = new System.Windows.Forms.TextBox();
-            this.txtCodDn = new System.Windows.Forms.TextBox();
+            this.txtNomeDono = new System.Windows.Forms.TextBox();
             this.txtCodCav = new System.Windows.Forms.TextBox();
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblNomeCav = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNomeDono = new System.Windows.Forms.Label();
             this.lblCodCav = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -195,12 +195,12 @@
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 38;
             // 
-            // txtStatus
+            // txtCategoria
             // 
-            this.txtStatus.Location = new System.Drawing.Point(168, 381);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtStatus.TabIndex = 37;
+            this.txtCategoria.Location = new System.Drawing.Point(168, 381);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.TabIndex = 37;
             // 
             // lblNomeDn
             // 
@@ -232,15 +232,15 @@
             this.lblEmail.TabIndex = 34;
             this.lblEmail.Text = "Email";
             // 
-            // lblStatus
+            // lblCategoria
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(77, 381);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 13);
-            this.lblStatus.TabIndex = 33;
-            this.lblStatus.Text = "Status";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblCategoria.Location = new System.Drawing.Point(77, 381);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.TabIndex = 33;
+            this.lblCategoria.Text = "Categoria";
             // 
             // txtIdade
             // 
@@ -256,12 +256,12 @@
             this.txtNomeCav.Size = new System.Drawing.Size(100, 20);
             this.txtNomeCav.TabIndex = 51;
             // 
-            // txtCodDn
+            // txtNomeDono
             // 
-            this.txtCodDn.Location = new System.Drawing.Point(168, 260);
-            this.txtCodDn.Name = "txtCodDn";
-            this.txtCodDn.Size = new System.Drawing.Size(100, 20);
-            this.txtCodDn.TabIndex = 50;
+            this.txtNomeDono.Location = new System.Drawing.Point(168, 260);
+            this.txtNomeDono.Name = "txtNomeDono";
+            this.txtNomeDono.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeDono.TabIndex = 50;
             // 
             // txtCodCav
             // 
@@ -290,15 +290,15 @@
             this.lblNomeCav.TabIndex = 47;
             this.lblNomeCav.Text = "Nome Cavalo";
             // 
-            // label5
+            // lblNomeDono
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(77, 260);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Código Dono";
+            this.lblNomeDono.AutoSize = true;
+            this.lblNomeDono.ForeColor = System.Drawing.Color.White;
+            this.lblNomeDono.Location = new System.Drawing.Point(77, 260);
+            this.lblNomeDono.Name = "lblNomeDono";
+            this.lblNomeDono.Size = new System.Drawing.Size(64, 13);
+            this.lblNomeDono.TabIndex = 46;
+            this.lblNomeDono.Text = "Nome Dono";
             // 
             // lblCodCav
             // 
@@ -318,11 +318,11 @@
             this.ClientSize = new System.Drawing.Size(780, 657);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.txtNomeCav);
-            this.Controls.Add(this.txtCodDn);
+            this.Controls.Add(this.txtNomeDono);
             this.Controls.Add(this.txtCodCav);
             this.Controls.Add(this.lblIdade);
             this.Controls.Add(this.lblNomeCav);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblNomeDono);
             this.Controls.Add(this.lblCodCav);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
@@ -331,11 +331,11 @@
             this.Controls.Add(this.txtNomeDn);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblNomeDn);
             this.Controls.Add(this.lblTel);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "FrmConsultaCavalo";
@@ -365,18 +365,18 @@
         private System.Windows.Forms.TextBox txtNomeDn;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblNomeDn;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.TextBox txtNomeCav;
-        private System.Windows.Forms.TextBox txtCodDn;
+        private System.Windows.Forms.TextBox txtNomeDono;
         private System.Windows.Forms.TextBox txtCodCav;
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.Label lblNomeCav;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNomeDono;
         private System.Windows.Forms.Label lblCodCav;
     }
 }
