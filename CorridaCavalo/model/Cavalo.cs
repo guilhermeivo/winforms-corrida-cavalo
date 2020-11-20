@@ -27,11 +27,11 @@ namespace CorridaCavalo.model
             return idCavalo;
         }
         // idDono Methods
-        public void setIdNono(int idDono)
+        public void setIdDono(int idDono)
         {
             this.idDono = idDono;
         }
-        public int getIdNono()
+        public int getIdDono()
         {
             return idDono;
         }

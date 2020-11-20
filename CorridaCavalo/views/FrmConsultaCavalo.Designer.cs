@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.codCava = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +44,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtNomeDn = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblNomeDn = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.lblNomeCav = new System.Windows.Forms.Label();
             this.lblNomeDono = new System.Windows.Forms.Label();
             this.lblCodCav = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,20 +69,20 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 25);
+            this.label1.Size = new System.Drawing.Size(178, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Consulta cavalo";
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codCava,
@@ -95,7 +95,7 @@
             this.emailDn});
             this.dataGridView1.Location = new System.Drawing.Point(1, 41);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(803, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(842, 150);
             this.dataGridView1.TabIndex = 2;
             // 
             // codCava
@@ -140,56 +140,69 @@
             // 
             // btnSair
             // 
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Location = new System.Drawing.Point(497, 492);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 44;
             this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
             // 
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
             this.btnExcluir.Location = new System.Drawing.Point(375, 494);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 43;
             this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Location = new System.Drawing.Point(375, 456);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 42;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnCadastrar.Location = new System.Drawing.Point(375, 411);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 41;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // txtNomeDn
             // 
+            this.txtNomeDn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtNomeDn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeDn.Location = new System.Drawing.Point(168, 413);
             this.txtNomeDn.Name = "txtNomeDn";
             this.txtNomeDn.Size = new System.Drawing.Size(100, 20);
             this.txtNomeDn.TabIndex = 40;
             // 
-            // txtTel
-            // 
-            this.txtTel.Location = new System.Drawing.Point(168, 492);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 20);
-            this.txtTel.TabIndex = 39;
-            // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Location = new System.Drawing.Point(168, 456);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
@@ -197,6 +210,8 @@
             // 
             // txtCategoria
             // 
+            this.txtCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCategoria.Location = new System.Drawing.Point(168, 381);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(100, 20);
@@ -244,6 +259,8 @@
             // 
             // txtIdade
             // 
+            this.txtIdade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtIdade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdade.Location = new System.Drawing.Point(168, 333);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(100, 20);
@@ -251,6 +268,8 @@
             // 
             // txtNomeCav
             // 
+            this.txtNomeCav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtNomeCav.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeCav.Location = new System.Drawing.Point(168, 296);
             this.txtNomeCav.Name = "txtNomeCav";
             this.txtNomeCav.Size = new System.Drawing.Size(100, 20);
@@ -258,6 +277,8 @@
             // 
             // txtNomeDono
             // 
+            this.txtNomeDono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtNomeDono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeDono.Location = new System.Drawing.Point(168, 260);
             this.txtNomeDono.Name = "txtNomeDono";
             this.txtNomeDono.Size = new System.Drawing.Size(100, 20);
@@ -265,6 +286,8 @@
             // 
             // txtCodCav
             // 
+            this.txtCodCav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtCodCav.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodCav.Location = new System.Drawing.Point(168, 220);
             this.txtCodCav.Name = "txtCodCav";
             this.txtCodCav.Size = new System.Drawing.Size(100, 20);
@@ -310,12 +333,24 @@
             this.lblCodCav.TabIndex = 45;
             this.lblCodCav.Text = "Nome";
             // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
+            this.txtTelefone.Location = new System.Drawing.Point(168, 494);
+            this.txtTelefone.Mask = "(999) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 53;
+            // 
             // FrmConsultaCavalo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(780, 657);
+            this.ClientSize = new System.Drawing.Size(855, 657);
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.txtNomeCav);
             this.Controls.Add(this.txtNomeDono);
@@ -329,7 +364,6 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtNomeDn);
-            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblNomeDn);
@@ -340,6 +374,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmConsultaCavalo";
             this.Text = "FrmConsultaCavalo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -363,7 +398,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtNomeDn;
-        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblNomeDn;
@@ -378,5 +412,6 @@
         private System.Windows.Forms.Label lblNomeCav;
         private System.Windows.Forms.Label lblNomeDono;
         private System.Windows.Forms.Label lblCodCav;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

@@ -35,8 +35,8 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.cmbDono = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -49,12 +49,13 @@
             this.label1.Location = new System.Drawing.Point(18, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 25);
+            this.label1.Size = new System.Drawing.Size(181, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro Cavalo";
             // 
             // txtNome
             // 
+            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtNome.Location = new System.Drawing.Point(310, 168);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNome.Name = "txtNome";
@@ -98,7 +99,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria.Location = new System.Drawing.Point(72, 357);
+            this.lblCategoria.Location = new System.Drawing.Point(72, 365);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(78, 20);
@@ -107,34 +108,41 @@
             // 
             // txtIdade
             // 
-            this.txtIdade.Location = new System.Drawing.Point(310, 325);
+            this.txtIdade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtIdade.Location = new System.Drawing.Point(310, 319);
             this.txtIdade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(148, 26);
             this.txtIdade.TabIndex = 8;
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(76, 483);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Casdastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(76, 483);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(112, 35);
+            this.btnCadastrar.TabIndex = 10;
+            this.btnCadastrar.Text = "Casdastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // button2
+            // btnConsulta
             // 
-            this.button2.Location = new System.Drawing.Point(608, 565);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Consultas";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnConsulta.ForeColor = System.Drawing.Color.White;
+            this.btnConsulta.Location = new System.Drawing.Point(292, 483);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(112, 35);
+            this.btnConsulta.TabIndex = 11;
+            this.btnConsulta.Text = "Consultas";
+            this.btnConsulta.UseVisualStyleBackColor = false;
             // 
             // cmbDono
             // 
+            this.cmbDono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.cmbDono.FormattingEnabled = true;
             this.cmbDono.Location = new System.Drawing.Point(310, 237);
             this.cmbDono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -144,6 +152,7 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(310, 365);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -159,8 +168,8 @@
             this.ClientSize = new System.Drawing.Size(780, 657);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.cmbDono);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsulta);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblIdade);
@@ -186,8 +195,8 @@
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.TextBox txtIdade;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.ComboBox cmbDono;
         private System.Windows.Forms.ComboBox cmbCategoria;
     }

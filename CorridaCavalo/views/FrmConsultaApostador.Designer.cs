@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtDinherio = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblDinheiro = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -82,12 +82,12 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.txtTelefone);
             this.panel9.Controls.Add(this.btnFechar);
             this.panel9.Controls.Add(this.btnConsultar);
             this.panel9.Controls.Add(this.txtDinherio);
             this.panel9.Controls.Add(this.txtCodigo);
             this.panel9.Controls.Add(this.lblDinheiro);
-            this.panel9.Controls.Add(this.txtTelefone);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.txtEmail);
             this.panel9.Controls.Add(this.lblTelefone);
@@ -105,6 +105,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(722, 594);
             this.panel9.TabIndex = 25;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
+            this.txtTelefone.Location = new System.Drawing.Point(452, 414);
+            this.txtTelefone.Mask = "(999) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(148, 26);
+            this.txtTelefone.TabIndex = 51;
             // 
             // btnFechar
             // 
@@ -171,17 +182,6 @@
             this.lblDinheiro.Size = new System.Drawing.Size(68, 20);
             this.lblDinheiro.TabIndex = 40;
             this.lblDinheiro.Text = "Dinheiro";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefone.ForeColor = System.Drawing.Color.White;
-            this.txtTelefone.Location = new System.Drawing.Point(452, 414);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(148, 26);
-            this.txtTelefone.TabIndex = 43;
             // 
             // panel10
             // 
@@ -255,7 +255,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(29, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(225, 25);
+            this.lblTitle.Size = new System.Drawing.Size(220, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Consulta Apostador";
             // 
@@ -472,7 +472,6 @@
         private System.Windows.Forms.TextBox txtDinherio;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblDinheiro;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblTelefone;
@@ -496,5 +495,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

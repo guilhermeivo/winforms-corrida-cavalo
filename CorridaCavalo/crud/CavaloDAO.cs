@@ -8,5 +8,6 @@ namespace CorridaCavalo.crud
 {
     class CavaloDAO
     {
+
     }
 }

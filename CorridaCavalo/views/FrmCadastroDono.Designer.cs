@@ -36,7 +36,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCadatro = new System.Windows.Forms.Button();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDivisionSideMenu = new System.Windows.Forms.Panel();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -67,12 +67,12 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.txtTelefone);
             this.panel5.Controls.Add(this.btnFechar);
             this.panel5.Controls.Add(this.btnConsultar);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.btnCadatro);
-            this.panel5.Controls.Add(this.txtTelefone);
             this.panel5.Controls.Add(this.txtEmail);
             this.panel5.Controls.Add(this.txtNome);
             this.panel5.Controls.Add(this.lblTelefone);
@@ -144,7 +144,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(29, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(171, 25);
+            this.lblTitle.Size = new System.Drawing.Size(169, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Cadastro Dono";
             // 
@@ -163,17 +163,6 @@
             this.btnCadatro.Text = "Cadastrar";
             this.btnCadatro.UseVisualStyleBackColor = false;
             this.btnCadatro.Click += new System.EventHandler(this.btnCadatro_Click);
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefone.ForeColor = System.Drawing.Color.White;
-            this.txtTelefone.Location = new System.Drawing.Point(34, 229);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(148, 26);
-            this.txtTelefone.TabIndex = 29;
             // 
             // txtEmail
             // 
@@ -270,6 +259,16 @@
             this.panelDivisionSideMenu.Size = new System.Drawing.Size(2, 598);
             this.panelDivisionSideMenu.TabIndex = 21;
             // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
+            this.txtTelefone.Location = new System.Drawing.Point(34, 228);
+            this.txtTelefone.Mask = "(999) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(140, 26);
+            this.txtTelefone.TabIndex = 35;
+            // 
             // FrmCadastroDono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -299,7 +298,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCadatro;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblEmail;
@@ -309,5 +307,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelDivisionSideMenu;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }
