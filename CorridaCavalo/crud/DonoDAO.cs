@@ -46,6 +46,41 @@ namespace CorridaCavalo.crud
         }
 
         /// <summary>
+        /// Lista a quantidade da cadastros no banco de dados
+        /// </summary>
+        /// <returns>
+        /// Retorna um ds com o idApostador ou null
+        /// </returns>
+        public int listarQuantidade()
+        {
+            conn = ConnexionDataBase.obterConexao();
+            string queryString = "select max(idDono) from Dono";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
+                {
+                    return Convert.ToInt32(reader[0]);
+                }
+
+                return 0;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro: " + error);
+
+                return 0;
+            }
+            finally
+            {
+                ConnexionDataBase.fecharConexao();
+            }
+        }
+
+        /// <summary>
         /// Retorna na classe Dono todos os seus valores dependo do <paramref name="id"/>
         /// </summary>
         /// <param name="id"></param>

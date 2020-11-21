@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvConsultaCavalo = new System.Windows.Forms.DataGridView();
             this.codCava = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codDono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,6 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.txtNomeDono = new System.Windows.Forms.TextBox();
             this.txtCodigoCavalo = new System.Windows.Forms.TextBox();
             this.lblNomeDono = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -67,6 +66,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.cmbNomeDono = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaCavalo)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -78,14 +78,14 @@
             this.dgvConsultaCavalo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvConsultaCavalo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultaCavalo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaCavalo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaCavalo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvConsultaCavalo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvConsultaCavalo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codCava,
@@ -96,31 +96,32 @@
             this.nomeDn,
             this.TelDono,
             this.emailDn});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultaCavalo.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultaCavalo.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvConsultaCavalo.EnableHeadersVisualStyles = false;
             this.dgvConsultaCavalo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.dgvConsultaCavalo.Location = new System.Drawing.Point(34, 105);
             this.dgvConsultaCavalo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvConsultaCavalo.Name = "dgvConsultaCavalo";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaCavalo.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaCavalo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvConsultaCavalo.RowHeadersVisible = false;
             this.dgvConsultaCavalo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConsultaCavalo.Size = new System.Drawing.Size(651, 187);
             this.dgvConsultaCavalo.TabIndex = 2;
+            this.dgvConsultaCavalo.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvConsultaCavalo_CellMouseClick);
             // 
             // codCava
             // 
@@ -169,6 +170,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(257, 486);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
@@ -201,6 +203,7 @@
             // 
             this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.Enabled = false;
             this.txtTelefone.ForeColor = System.Drawing.Color.White;
             this.txtTelefone.Location = new System.Drawing.Point(503, 485);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -225,13 +228,13 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.cmbNomeDono);
             this.panel9.Controls.Add(this.cmbCategoria);
             this.panel9.Controls.Add(this.txtTelefone);
             this.panel9.Controls.Add(this.btnFechar);
             this.panel9.Controls.Add(this.lblTel);
             this.panel9.Controls.Add(this.txtEmail);
             this.panel9.Controls.Add(this.btnConsultar);
-            this.panel9.Controls.Add(this.txtNomeDono);
             this.panel9.Controls.Add(this.lblEmail);
             this.panel9.Controls.Add(this.txtCodigoCavalo);
             this.panel9.Controls.Add(this.lblNomeDono);
@@ -296,17 +299,6 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // txtNomeDono
-            // 
-            this.txtNomeDono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtNomeDono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeDono.ForeColor = System.Drawing.Color.White;
-            this.txtNomeDono.Location = new System.Drawing.Point(32, 486);
-            this.txtNomeDono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNomeDono.Name = "txtNomeDono";
-            this.txtNomeDono.Size = new System.Drawing.Size(202, 26);
-            this.txtNomeDono.TabIndex = 44;
             // 
             // txtCodigoCavalo
             // 
@@ -505,6 +497,19 @@
             this.panel15.Size = new System.Drawing.Size(2, 598);
             this.panel15.TabIndex = 21;
             // 
+            // cmbNomeDono
+            // 
+            this.cmbNomeDono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbNomeDono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbNomeDono.ForeColor = System.Drawing.Color.White;
+            this.cmbNomeDono.FormattingEnabled = true;
+            this.cmbNomeDono.Location = new System.Drawing.Point(32, 486);
+            this.cmbNomeDono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbNomeDono.Name = "cmbNomeDono";
+            this.cmbNomeDono.Size = new System.Drawing.Size(202, 28);
+            this.cmbNomeDono.TabIndex = 56;
+            this.cmbNomeDono.SelectedIndexChanged += new System.EventHandler(this.cmbNomeDono_SelectedIndexChanged);
+            // 
             // FrmConsultaCavalo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -545,7 +550,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.TextBox txtNomeDono;
         private System.Windows.Forms.TextBox txtCodigoCavalo;
         private System.Windows.Forms.Label lblNomeDono;
         private System.Windows.Forms.Panel panel10;
@@ -564,5 +568,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.ComboBox cmbNomeDono;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using CorridaCavalo.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,13 +23,17 @@ namespace CorridaCavalo.crud
         public void criarCavalo(Cavalo cavalo)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "insert into Cavalo (idDono, idCategoria, nome, idade) values (@idDono, @idCategoria, @nome, @idade)";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@idDono", SqlDbType.Int).Value = cavalo.getIdDono();
+                cmd.Parameters.Add("@idCategoria", SqlDbType.Int).Value = cavalo.getIdStatus();
+                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = cavalo.getNome();
+                cmd.Parameters.Add("@idade", SqlDbType.Int).Value = cavalo.getIdade();
+
+                cmd.ExecuteScalar();
 
                 MessageBox.Show("Registro inserido com sucesso!");
             }
@@ -51,13 +56,17 @@ namespace CorridaCavalo.crud
         public int listarQuantidade()
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "select max(idcavalo) from Cavalo";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
+                {
+                    return Convert.ToInt32(reader[0]);
+                }
 
                 return 0;
             }
@@ -81,16 +90,32 @@ namespace CorridaCavalo.crud
         public Cavalo listarCavalo(int id)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "select * from Cavalo where idCavalo = @id";
 
             try
             {
-                Cavalo cavalo = new Cavalo();
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
 
-                return cavalo;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Cavalo cavalo = new Cavalo();
+                    cavalo.setIdCavalo(id);
+
+                    cavalo.setIdCavalo(int.Parse(reader["idCavalo"].ToString()));
+                    cavalo.setIdDono(int.Parse(reader["idDono"].ToString()));
+                    cavalo.setIdStatus(int.Parse(reader["idCategoria"].ToString()));
+                    cavalo.setNome(reader["nome"].ToString());
+                    cavalo.setIdade(int.Parse(reader["idade"].ToString()));
+
+                    return cavalo;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception error)
             {
@@ -111,13 +136,18 @@ namespace CorridaCavalo.crud
         public void excluirCavalo(int id)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "delete from Cavalo where idCavalo = @id";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                }
             }
             catch (Exception error)
             {
@@ -136,13 +166,22 @@ namespace CorridaCavalo.crud
         public void alterarCavalo(Cavalo cavalo)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "update Cavalo set idDono = @idDono, idCategoria = @idCategoria, nome = @nome, idade = @idade where idCavalo = @Id";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = cavalo.getIdCavalo();
+                cmd.Parameters.Add("@idDono", SqlDbType.Int).Value = cavalo.getIdDono();
+                cmd.Parameters.Add("@idCategoria", SqlDbType.Int).Value = cavalo.getIdStatus();
+                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = cavalo.getNome();
+                cmd.Parameters.Add("@idade", SqlDbType.Int).Value = cavalo.getIdade();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Registro atualizado com sucesso!");
+                }
             }
             catch (Exception error)
             {

@@ -19,5 +19,17 @@ namespace CorridaCavalo
 
             return retString;
         }
+        public static bool checkValuesDataGriView(DataGridView dataGridView, int line)
+        {
+            for (int i = 0; i < dataGridView.RowCount; i++)
+            {
+                if (dataGridView.Rows[line].Cells[i].Value == null)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

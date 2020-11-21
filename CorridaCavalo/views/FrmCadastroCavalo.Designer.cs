@@ -120,7 +120,7 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(210, 524);
+            this.btnFechar.Location = new System.Drawing.Point(226, 528);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(148, 35);
@@ -137,7 +137,7 @@
             this.bntConsultar.FlatAppearance.BorderSize = 0;
             this.bntConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntConsultar.ForeColor = System.Drawing.Color.White;
-            this.bntConsultar.Location = new System.Drawing.Point(534, 524);
+            this.bntConsultar.Location = new System.Drawing.Point(550, 528);
             this.bntConsultar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bntConsultar.Name = "bntConsultar";
             this.bntConsultar.Size = new System.Drawing.Size(148, 35);
@@ -183,13 +183,14 @@
             this.btnCadatro.FlatAppearance.BorderSize = 0;
             this.btnCadatro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadatro.ForeColor = System.Drawing.Color.White;
-            this.btnCadatro.Location = new System.Drawing.Point(372, 524);
+            this.btnCadatro.Location = new System.Drawing.Point(388, 528);
             this.btnCadatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadatro.Name = "btnCadatro";
             this.btnCadatro.Size = new System.Drawing.Size(148, 35);
             this.btnCadatro.TabIndex = 30;
             this.btnCadatro.Text = "Cadastrar";
             this.btnCadatro.UseVisualStyleBackColor = false;
+            this.btnCadatro.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtIdade
             // 
@@ -222,7 +223,7 @@
             this.lblIdade.Name = "lblIdade";
             this.lblIdade.Size = new System.Drawing.Size(50, 20);
             this.lblIdade.TabIndex = 25;
-            this.lblIdade.Text = "Saldo";
+            this.lblIdade.Text = "Idade";
             // 
             // lblNomeDono
             // 

@@ -89,11 +89,7 @@ namespace CorridaCavalo
         {
             int linhas = dgvConsultaApostador.CurrentRow.Index;
 
-            if (dgvConsultaApostador.Rows[linhas].Cells[0].Value != null ||
-                dgvConsultaApostador.Rows[linhas].Cells[1].Value != null ||
-                dgvConsultaApostador.Rows[linhas].Cells[2].Value != null ||
-                dgvConsultaApostador.Rows[linhas].Cells[3].Value != null ||
-                dgvConsultaApostador.Rows[linhas].Cells[4].Value != null)
+            if (Utils.checkValuesDataGriView(dgvConsultaApostador, linhas))
             {
                 try
                 {

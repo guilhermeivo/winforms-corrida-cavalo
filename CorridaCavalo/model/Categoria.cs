@@ -12,21 +12,20 @@ namespace CorridaCavalo.model
         private int idCategoria;
         private string categoria;
 
+        // idCategoria Methods
         public void setIdCategoria(int idCategoria)
         {
             this.idCategoria = idCategoria;
         }
-
         public int getIdCategoria()
         {
             return idCategoria;
         }
-
+        // idDescricao
         public void setDescCategoria(string categoria)
         {
             this.categoria = categoria;
         }
-
         public string getDescCategoria()
         {
             return categoria;

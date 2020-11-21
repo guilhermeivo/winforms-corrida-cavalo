@@ -1,6 +1,7 @@
 ﻿using CorridaCavalo.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,13 +23,14 @@ namespace CorridaCavalo.crud
         public void criarCategoria(Categoria categoria)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "insert into Categoria (descr) values (@descr)";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@descr", SqlDbType.NVarChar, 200).Value = categoria.getDescCategoria();
+
+                cmd.ExecuteScalar();
 
                 MessageBox.Show("Registro inserido com sucesso!");
             }
@@ -51,13 +53,17 @@ namespace CorridaCavalo.crud
         public int listarQuantidade()
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "select max(idCategoria) from Categoria";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
+                {
+                    return Convert.ToInt32(reader[0]);
+                }
 
                 return 0;
             }
@@ -81,16 +87,29 @@ namespace CorridaCavalo.crud
         public Categoria listarCategoria(int id)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "select * from Categoria where idCategoria = @id";
 
             try
             {
-                Categoria categoria = new Categoria();
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
 
-                return categoria;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Categoria categoria = new Categoria();
+                    categoria.setIdCategoria(id);
+
+                    categoria.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
+                    categoria.setDescCategoria(reader["descr"].ToString());
+
+                    return categoria;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception error)
             {
@@ -111,13 +130,18 @@ namespace CorridaCavalo.crud
         public void excluirCategoria(int id)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "delete from Categoria where idCategoria = @id";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                }
             }
             catch (Exception error)
             {
@@ -136,13 +160,19 @@ namespace CorridaCavalo.crud
         public void alterarCategoria(Categoria categoria)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "update Categoria set descr = @descr where idCategoria = @Id";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = categoria.getIdCategoria();
+                cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 200).Value = categoria.getDescCategoria();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Registro atualizado com sucesso!");
+                }
             }
             catch (Exception error)
             {

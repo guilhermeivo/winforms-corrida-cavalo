@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crud\Aposta.cs" />
+    <Compile Include="crud\ApostaDAO.cs" />
     <Compile Include="crud\ApostadorDAO.cs" />
     <Compile Include="crud\CategoriaDAO.cs" />
     <Compile Include="crud\CavaloDAO.cs" />

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CorridaCavalo.crud
 {
-    class Aposta
+    class ApostaDAO
     {
         SqlConnection conn;
 
@@ -18,7 +18,7 @@ namespace CorridaCavalo.crud
         /// <param name="aposta">
         /// Aposta com os seus gets e sets.
         /// </param>
-        public void criarApostador(Aposta aposta)
+        public void criarApostador(ApostaDAO aposta)
         {
             conn = ConnexionDataBase.obterConexao();
 
@@ -77,13 +77,13 @@ namespace CorridaCavalo.crud
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Retorna a classe Aposta</returns>
-        public Aposta listarAposta(int id)
+        public ApostaDAO listarAposta(int id)
         {
             conn = ConnexionDataBase.obterConexao();
 
             try
             {
-                Aposta aposta = new Aposta();
+                ApostaDAO aposta = new ApostaDAO();
                 // Codigo
                 // ...
                 // ...
@@ -132,7 +132,7 @@ namespace CorridaCavalo.crud
         /// Altera no banco de dados o Aposta
         /// </summary>
         /// <param name="aposta"></param>
-        public void alterarAposta(Aposta aposta)
+        public void alterarAposta(ApostaDAO aposta)
         {
             conn = ConnexionDataBase.obterConexao();
 
