@@ -14,6 +14,7 @@ namespace CorridaCavalo
 {
     public partial class FrmCadastroCavalo : Form
     {
+        // Inicializa o apostadorDAO para poder usar os seus metodos
         CavaloDAO cavaloDAO = new CavaloDAO();
         CategoriaDAO categoriaDAO = new CategoriaDAO();
         DonoDAO donoDAO = new DonoDAO();
