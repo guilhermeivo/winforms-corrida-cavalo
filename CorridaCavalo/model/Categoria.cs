@@ -8,28 +8,28 @@ namespace CorridaCavalo.model
 {
     class Categoria
     {
-        private int idcat;
-        private string cat;
+        /// <summary>Primary key</summary>
+        private int idCategoria;
+        private string categoria;
 
-        public void setIdCategoria(int idcat)
+        public void setIdCategoria(int idCategoria)
         {
-            this.idcat = idcat;
+            this.idCategoria = idCategoria;
         }
 
         public int getIdCategoria()
         {
-            return idcat;
+            return idCategoria;
         }
 
-        public void setDescCategoria(string cat)
+        public void setDescCategoria(string categoria)
         {
-            this.cat = cat;
+            this.categoria = categoria;
         }
 
         public string getDescCategoria()
         {
-            return cat;
+            return categoria;
         }
-
     }
 }

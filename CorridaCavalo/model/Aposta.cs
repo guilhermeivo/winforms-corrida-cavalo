@@ -8,46 +8,46 @@ namespace CorridaCavalo.model
 {
     class Aposta
     {
-        private int idapostador;
-        private int idcavalo;
-        private int idcorrida;
+        /// <summary>Foreign key</summary> 
+        private int idApostador;
+        /// <summary>Foreign key</summary> 
+        private int idCavalo;
+        /// <summary>Foreign key</summary> 
+        private int idCorrida;
         private double valor;
 
-        public void setIdApostador(int idapostador)
+        // idApostador Methods
+        public void setIdApostador(int idApostador)
         {
-            this.idapostador = idapostador;
+            this.idApostador = idApostador;
         }
-
         public int getIdApostador()
         {
-            return idapostador;
+            return idApostador;
         }
-
-        public void setIdCavalo(int idcavalo)
+        // idCavalo Methods
+        public void setIdCavalo(int idCavalo)
         {
-            this.idcavalo = idcavalo;
+            this.idCavalo = idCavalo;
         }
-
         public int getIdCavalo()
         {
-            return idcavalo;
+            return idCavalo;
         }
-
-        public void setIdCorrida(int idcorrida)
+        // idCorrida Methods
+        public void setIdCorrida(int idCorrida)
         {
-            this.idcorrida = idcorrida;
+            this.idCorrida = idCorrida;
         }
-
         public int getIdCorrida()
         {
-            return idcorrida;
+            return idCorrida;
         }
-
+        // valor Methods
         public void setValor(double valor)
         {
             this.valor = valor;
         }
-
         public double getValor()
         {
             return valor;

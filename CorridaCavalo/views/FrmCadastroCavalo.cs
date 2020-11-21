@@ -31,8 +31,8 @@ namespace CorridaCavalo
                 cavalo.setNome(txtNome.Text.Trim());
                 cavalo.setIdade(Convert.ToInt32(txtIdade.Text.Trim()));
 
-            ///CavaloDAO ainda não foi codificado ;-;
-                cavaloDAO.criarCavalo(cavalo);
+                //CavaloDAO ainda não foi codificado ;-;
+                //cavaloDAO.criarCavalo(cavalo);
             }
             catch (Exception)
             {

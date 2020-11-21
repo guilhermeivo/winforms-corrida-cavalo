@@ -16,6 +16,7 @@ namespace CorridaCavalo
     {
         // Inicializa o apostadorDAO para poder usar os seus metodos
         ApostadorDAO apostadorDAO = new ApostadorDAO();
+
         public FrmCadastroApostador()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace CorridaCavalo
 
                 // Armazena os valores das textbox na classe apostador
                 apostador.setNome(txtNome.Text.Trim());
-                apostador.setTelefone(txtTelefone.Text.Trim());
+                apostador.setTelefone(txtTelefone.TextNoFormating().Trim());
                 apostador.setEmail(txtEmail.Text.Trim());
                 apostador.setValor(Convert.ToDouble(txtValor.Text.Trim()));
 

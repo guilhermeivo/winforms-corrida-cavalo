@@ -29,7 +29,7 @@ namespace CorridaCavalo.crud
             {                   
                 SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
-                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
+                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 20).Value = apostador.getTelefone();
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
                 cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
 
@@ -173,7 +173,7 @@ namespace CorridaCavalo.crud
                 SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.Add("@Id", SqlDbType.Int).Value = apostador.getIdApostador();
                 cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = apostador.getNome();
-                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = apostador.getTelefone();
+                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 20).Value = apostador.getTelefone();
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = apostador.getEmail();
                 cmd.Parameters.Add("@valor", SqlDbType.Money).Value = apostador.getValor();
 

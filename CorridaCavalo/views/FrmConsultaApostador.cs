@@ -15,7 +15,9 @@ namespace CorridaCavalo
 {
     public partial class FrmConsultaApostador : Form
     {
+        // Inicializa o apostadorDAO para poder usar os seus metodos
         ApostadorDAO apostadorDAO = new ApostadorDAO();
+
         public FrmConsultaApostador()
         {
             InitializeComponent();
@@ -140,7 +142,7 @@ namespace CorridaCavalo
 
                 apostador.setIdApostador(int.Parse(txtCodigo.Text));
                 apostador.setNome(txtNome.Text);
-                apostador.setTelefone(txtTelefone.Text);
+                apostador.setTelefone(txtTelefone.TextNoFormating());
                 apostador.setEmail(txtEmail.Text);
                 apostador.setValor(Convert.ToDouble(txtDinherio.Text));
 
@@ -153,7 +155,7 @@ namespace CorridaCavalo
             {
                 MessageBox.Show("Não foi possível editar os valores!");
             }
-        }
+        }        
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {

@@ -33,7 +33,7 @@ namespace CorridaCavalo.views
                 // Armazena os valores das textbox na classe apostador
                 dono.setNome(txtNome.Text.Trim());
                 dono.setEmail(txtEmail.Text.Trim());
-                dono.setTelefone(txtTelefone.Text.Trim());
+                dono.setTelefone(txtTelefone.TextNoFormating().Trim());
 
 
                 // Manda a classe Dono para o método criarApostador onde armazena os dados no banco de dados

@@ -8,27 +8,28 @@ namespace CorridaCavalo.model
 {
     class CorridaCavalo
     {
-        private int idcavalo;
-        private int idcorrida;
+        /// <summary>Foreign key</summary> 
+        private int idCavalo;
+        /// <summary>Foreign key</summary> 
+        private int idCorrida;
 
-        public void setIdCavalo(int idcavalo)
+        // idCavalo Methods
+        public void setIdCavalo(int idCavalo)
         {
-            this.idcavalo = idcavalo;
+            this.idCavalo = idCavalo;
         }
-
         public int getIdCavalo()
         {
-            return idcavalo;
+            return idCavalo;
         }
-
-        public void setIdCorrida(int idcorrida)
+        // idCorrida Methods
+        public void setIdCorrida(int idCorrida)
         {
-            this.idcorrida = idcorrida;
+            this.idCorrida = idCorrida;
         }
-
         public int getIdCorrida()
         {
-            return idcorrida;
+            return idCorrida;
         }
     }
 }

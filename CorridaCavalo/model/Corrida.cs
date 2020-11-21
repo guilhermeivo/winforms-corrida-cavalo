@@ -8,46 +8,44 @@ namespace CorridaCavalo.model
 {
     class Corrida
     {
-        private int idcorrida;
-        private string dtcorrida;
+        /// <summary>Primary key</summary> 
+        private int idCorrida;
+        private string dtCorrida;
         private string local;
         private string distancia;
 
-        public void setIdCorrida(int idcorrida)
+        // idCorrida Methods
+        public void setIdCorrida(int idCorrida)
         {
-            this.idcorrida = idcorrida;
+            this.idCorrida = idCorrida;
         }
-
         public int getIdCorrida()
         {
-            return idcorrida;
+            return idCorrida;
         }
-
-        public void setDtCorrida(string dtcorrida)
+        // dtCorrida Methods
+        public void setDtCorrida(string dtCorrida)
         {
-            this.dtcorrida = dtcorrida;
+            this.dtCorrida = dtCorrida;
         }
-
         public string getDtCorrida()
         {
-            return dtcorrida;
+            return dtCorrida;
         }
-
+        // local Methods
         public void setLocal(string local)
         {
             this.local = local;
         }
-
         public string getLocal()
         {
             return local;
         }
-
+        // distancia Methods
         public void setDistancia(string distancia)
         {
             this.distancia = distancia;
         }
-
         public string getDistancia()
         {
             return distancia;

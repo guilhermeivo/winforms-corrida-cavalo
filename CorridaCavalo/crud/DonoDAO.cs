@@ -28,7 +28,7 @@ namespace CorridaCavalo.crud
             {               
                 SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = dono.getNome();
-                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = dono.getTelefone();
+                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 20).Value = dono.getTelefone();
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar, 80).Value = dono.getEmail();
 
                 cmd.ExecuteScalar();
@@ -135,7 +135,7 @@ namespace CorridaCavalo.crud
                 SqlCommand cmd = new SqlCommand(queryString, conn);
                 cmd.Parameters.Add("@Id", SqlDbType.Int).Value = dono.getIdDono();
                 cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 100).Value = dono.getNome();
-                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 11).Value = dono.getTelefone();
+                cmd.Parameters.Add("@telefone", SqlDbType.NVarChar, 20).Value = dono.getTelefone();
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar, 80).Value = dono.getEmail();
 
                 int i = cmd.ExecuteNonQuery();

@@ -7,7 +7,7 @@ go
 create table Apostador (
     idApostador int identity not null,
     nome char (100),
-    telefone char(11),
+    telefone char(20),
     email char(100),
     valor money
 )
@@ -53,7 +53,7 @@ go
 create table Dono (
     idDono int identity not null,
     nomedn char (100),
-    telefone char (11),
+    telefone char (20),
     email char(80)
 )
 go

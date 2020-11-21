@@ -61,6 +61,7 @@
     <Compile Include="model\Corrida.cs" />
     <Compile Include="model\CorridaCavalo.cs" />
     <Compile Include="model\Dono.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="views\FrmCadastroApostador.cs">
       <SubType>Form</SubType>
     </Compile>
