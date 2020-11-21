@@ -19,7 +19,7 @@ namespace CorridaCavalo
         {
             InitializeComponent();
 
-            txtNome.Focus();
+            txtNomeCavalo.Focus();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -28,8 +28,8 @@ namespace CorridaCavalo
             {
                 Cavalo cavalo = new Cavalo();
 
-                cavalo.setNome(txtNome.Text.Trim());
-                cavalo.setIdade(Convert.ToInt32(txtIdade.Text.Trim()));
+                cavalo.setNome(txtNomeCavalo.Text.Trim());
+                cavalo.setIdade(int.Parse(txtIdade.Text.Trim()));
 
                 //CavaloDAO ainda não foi codificado ;-;
                 //cavaloDAO.criarCavalo(cavalo);
@@ -39,5 +39,13 @@ namespace CorridaCavalo
                 MessageBox.Show("Não foi possível cadastrar!");
             }
         }
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void bntConsultar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }        
     }
 }

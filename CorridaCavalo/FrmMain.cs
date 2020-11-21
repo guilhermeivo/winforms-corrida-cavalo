@@ -39,7 +39,6 @@ namespace CorridaCavalo
         }
         private void cadastrar_MouseClick(object sender, MouseEventArgs e)
         {
-            hideSubMenu();
             showSubMenu(panelCadastrarSubmenu);
             setColorButtonMenu(panelCadastrar);
         }

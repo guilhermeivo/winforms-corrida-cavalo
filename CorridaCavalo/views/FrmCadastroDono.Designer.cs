@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDivisionSideMenu = new System.Windows.Forms.Panel();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -84,6 +84,17 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(722, 594);
             this.panel5.TabIndex = 25;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
+            this.txtTelefone.Location = new System.Drawing.Point(34, 228);
+            this.txtTelefone.Mask = "(999) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(140, 26);
+            this.txtTelefone.TabIndex = 35;
             // 
             // btnFechar
             // 
@@ -144,7 +155,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(29, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(169, 29);
+            this.lblTitle.Size = new System.Drawing.Size(171, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Cadastro Dono";
             // 
@@ -258,16 +269,6 @@
             this.panelDivisionSideMenu.Name = "panelDivisionSideMenu";
             this.panelDivisionSideMenu.Size = new System.Drawing.Size(2, 598);
             this.panelDivisionSideMenu.TabIndex = 21;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtTelefone.ForeColor = System.Drawing.Color.White;
-            this.txtTelefone.Location = new System.Drawing.Point(34, 228);
-            this.txtTelefone.Mask = "(999) 00000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(140, 26);
-            this.txtTelefone.TabIndex = 35;
             // 
             // FrmCadastroDono
             // 
