@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CorridaCavalo.model
 {
-    class CorridaCavalo
+    class CoridaCavalo
     {
         /// <summary>Foreign key</summary> 
         private int idCavalo;

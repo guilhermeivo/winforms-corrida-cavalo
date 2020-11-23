@@ -51,7 +51,7 @@
     <Compile Include="crud\CategoriaDAO.cs" />
     <Compile Include="crud\CavaloDAO.cs" />
     <Compile Include="crud\ConnexionDataBase.cs" />
-    <Compile Include="crud\CorridaCavalo.cs" />
+    <Compile Include="crud\CorridaCavaloDAO.cs" />
     <Compile Include="crud\CorridaDAO.cs" />
     <Compile Include="crud\DonoDAO.cs" />
     <Compile Include="model\Aposta.cs" />
@@ -59,9 +59,21 @@
     <Compile Include="model\Categoria.cs" />
     <Compile Include="model\Cavalo.cs" />
     <Compile Include="model\Corrida.cs" />
-    <Compile Include="model\CorridaCavalo.cs" />
+    <Compile Include="model\CoridaCavalo.cs" />
     <Compile Include="model\Dono.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="views\CadastroAposta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\CadastroAposta.Designer.cs">
+      <DependentUpon>CadastroAposta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ConsultaAposta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ConsultaAposta.Designer.cs">
+      <DependentUpon>ConsultaAposta.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\FrmCadastroApostador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="views\CadastroAposta.resx">
+      <DependentUpon>CadastroAposta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ConsultaAposta.resx">
+      <DependentUpon>ConsultaAposta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\FrmCadastroApostador.resx">
       <DependentUpon>FrmCadastroApostador.cs</DependentUpon>
     </EmbeddedResource>

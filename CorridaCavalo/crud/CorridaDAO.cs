@@ -1,12 +1,12 @@
 ﻿using CorridaCavalo.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace CorridaCavalo.crud
 {
     class CorridaDAO
@@ -22,13 +22,15 @@ namespace CorridaCavalo.crud
         public void criarCorrida(Corrida corrida)
         {
             conn = ConnexionDataBase.obterConexao();
-
+            string queryString = "insert into Corrida values (@data, @local, @distancia)";
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@data", SqlDbType.DateTime).Value = corrida.getDtCorrida();
+                cmd.Parameters.Add("@local", SqlDbType.NVarChar, 30).Value = corrida.getLocal();
+                cmd.Parameters.Add("@distancia", SqlDbType.NVarChar, 9).Value = corrida.getDistancia ();
+
+                cmd.ExecuteScalar();
 
                 MessageBox.Show("Registro inserido com sucesso!");
             }
@@ -51,13 +53,17 @@ namespace CorridaCavalo.crud
         public int listarQuantidade()
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "select max(idCorrida) from Corrida";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows && reader.Read() && reader[0] != DBNull.Value)
+                {
+                    return Convert.ToInt32(reader[0]);
+                }
 
                 return 0;
             }
@@ -81,16 +87,31 @@ namespace CorridaCavalo.crud
         public Corrida listarCorrida(int id)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "select * from Corrida where idCorrida = @id";
 
             try
             {
-                Corrida corrida = new Corrida();
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
 
-                return corrida;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Corrida corrida = new Corrida();
+                    corrida.setIdCorrida(id);
+
+                    corrida.setIdCorrida(int.Parse(reader["idCorrida"].ToString()));
+                    corrida.setDtCorrida(reader["dt_Corrida"].ToString());
+                    corrida.setLocal(reader["local_"].ToString());
+                    corrida.setDistancia(reader["distancia"].ToString());
+
+                    return corrida;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception error)
             {
@@ -111,13 +132,18 @@ namespace CorridaCavalo.crud
         public void excluirCorrida(int id)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "delete from Corrida where idCorrida = @id";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                }
             }
             catch (Exception error)
             {
@@ -136,13 +162,21 @@ namespace CorridaCavalo.crud
         public void alterarCorrida(Corrida corrida)
         {
             conn = ConnexionDataBase.obterConexao();
+            string queryString = "update Corrida set dt_Corrida = @data, local_ = @local, distancia = @distancia where idCorrida = @Id";
 
             try
             {
-                // Codigo
-                // ...
-                // ...
-                // ...
+                SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = corrida.getIdCorrida();
+                cmd.Parameters.Add("@data", SqlDbType.DateTime).Value = corrida.getDtCorrida();
+                cmd.Parameters.Add("@local", SqlDbType.NVarChar, 30).Value = corrida.getLocal();
+                cmd.Parameters.Add("@distancia", SqlDbType.NVarChar, 9).Value = corrida.getDistancia();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Registro atualizado com sucesso!");
+                }
             }
             catch (Exception error)
             {
