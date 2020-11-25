@@ -140,14 +140,16 @@ namespace CorridaCavalo.crud
 
             try
             {
-                SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.AddWithValue("@id", id);
+                ApostaDAO apostaDAO = new ApostaDAO();
 
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    MessageBox.Show("Registro excluído com sucesso!");
-                }                    
+                    SqlCommand cmd = new SqlCommand(queryString, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Registro excluído com sucesso!");
+                    }
             }
             catch (Exception error)
             {

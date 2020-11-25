@@ -47,10 +47,10 @@ namespace CorridaCavalo.views
 
                     if (index == 0)
                     {
-                        cmbCavalo.Text = cavalo.getNome(); ;
+                        cmbCavalo.Text = cavalo.getNome();
                     }
 
-                    cmbCavalo.Items.Insert(index, cavalo.getIdCavalo());
+                    cmbCavalo.Items.Insert(index, cavalo.getNome());
 
                     index++;
                 }
@@ -126,7 +126,7 @@ namespace CorridaCavalo.views
                         cmbCorrida.Text = corrida.getLocal();
                     }
 
-                    cmbCorrida.Items.Insert(index, corrida.getIdCorrida());
+                    cmbCorrida.Items.Insert(index, corrida.getLocal());
 
                     index++;
                 }

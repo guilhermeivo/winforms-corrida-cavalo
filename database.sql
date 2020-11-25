@@ -43,6 +43,7 @@ Create table Corrida (
 go
 
 create table Aposta (
+    idAposta int identity not null,
     idApostador int not null,
     idCavalo int not null,
     idCorrida int not null,
@@ -74,7 +75,7 @@ go
 alter table Cavalo add constraint fk_cavalo_dono foreign key (idDono) references Dono (idDono)
 alter table Cavalo add constraint fk_cavalo_statu foreign key (idCategoria) references Categoria (idCategoria)
 alter table CorridaCavalo add constraint fk_corridaCavalo_cavalo foreign key (idCavalo) references Cavalo (idCavalo)
-alter table CorridaCavalo add constraint fk_corridaCavalo_corrida foreign key (idCorrida) references Corrida (idCorrida)
+alter table CorridaCavalo add constraint fk_corridaCavalo_corrida foreign key (idCorrida) references Corrida (idCorrida) on delete cascade
 alter table Aposta add constraint fk_aposta_apostador foreign key (idApostador) references Apostador (idApostador)
 alter table Aposta add constraint fk_aposta_cavalo foreign key (idCavalo) references Cavalo (idCavalo)
 alter table Aposta add constraint fk_aposta_corrida foreign key (idCorrida) references Corrida (idCorrida)

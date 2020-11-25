@@ -314,7 +314,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(23, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(188, 29);
+            this.lblTitle.Size = new System.Drawing.Size(190, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Cadastro Corrida";
             // 

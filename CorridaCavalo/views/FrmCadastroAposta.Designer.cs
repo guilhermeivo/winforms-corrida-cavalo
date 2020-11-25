@@ -30,6 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmbCorrida = new System.Windows.Forms.ComboBox();
+            this.cmbCavalo = new System.Windows.Forms.ComboBox();
+            this.cmbApostador = new System.Windows.Forms.ComboBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -44,9 +47,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDivisionSideMenu = new System.Windows.Forms.Panel();
-            this.cmbApostador = new System.Windows.Forms.ComboBox();
-            this.cmbCavalo = new System.Windows.Forms.ComboBox();
-            this.cmbCorrida = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -86,6 +86,42 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(718, 590);
             this.panel5.TabIndex = 25;
+            // 
+            // cmbCorrida
+            // 
+            this.cmbCorrida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbCorrida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCorrida.ForeColor = System.Drawing.Color.White;
+            this.cmbCorrida.FormattingEnabled = true;
+            this.cmbCorrida.Location = new System.Drawing.Point(34, 290);
+            this.cmbCorrida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbCorrida.Name = "cmbCorrida";
+            this.cmbCorrida.Size = new System.Drawing.Size(180, 28);
+            this.cmbCorrida.TabIndex = 39;
+            // 
+            // cmbCavalo
+            // 
+            this.cmbCavalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbCavalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCavalo.ForeColor = System.Drawing.Color.White;
+            this.cmbCavalo.FormattingEnabled = true;
+            this.cmbCavalo.Location = new System.Drawing.Point(34, 218);
+            this.cmbCavalo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbCavalo.Name = "cmbCavalo";
+            this.cmbCavalo.Size = new System.Drawing.Size(180, 28);
+            this.cmbCavalo.TabIndex = 38;
+            // 
+            // cmbApostador
+            // 
+            this.cmbApostador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbApostador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbApostador.ForeColor = System.Drawing.Color.White;
+            this.cmbApostador.FormattingEnabled = true;
+            this.cmbApostador.Location = new System.Drawing.Point(34, 145);
+            this.cmbApostador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbApostador.Name = "cmbApostador";
+            this.cmbApostador.Size = new System.Drawing.Size(247, 28);
+            this.cmbApostador.TabIndex = 37;
             // 
             // txtValor
             // 
@@ -151,7 +187,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 29);
+            this.label1.Size = new System.Drawing.Size(189, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro Aposta";
             // 
@@ -178,9 +214,9 @@
             this.lblCodCorrida.Location = new System.Drawing.Point(33, 267);
             this.lblCodCorrida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodCorrida.Name = "lblCodCorrida";
-            this.lblCodCorrida.Size = new System.Drawing.Size(114, 20);
+            this.lblCodCorrida.Size = new System.Drawing.Size(102, 20);
             this.lblCodCorrida.TabIndex = 25;
-            this.lblCodCorrida.Text = "Código Corrida";
+            this.lblCodCorrida.Text = "Local Corrida";
             // 
             // lblCodCavalo
             // 
@@ -189,9 +225,9 @@
             this.lblCodCavalo.Location = new System.Drawing.Point(30, 193);
             this.lblCodCavalo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodCavalo.Name = "lblCodCavalo";
-            this.lblCodCavalo.Size = new System.Drawing.Size(111, 20);
+            this.lblCodCavalo.Size = new System.Drawing.Size(103, 20);
             this.lblCodCavalo.TabIndex = 24;
-            this.lblCodCavalo.Text = "Código Cavalo";
+            this.lblCodCavalo.Text = "Nome Cavalo";
             // 
             // lblCodApostador
             // 
@@ -200,9 +236,9 @@
             this.lblCodApostador.Location = new System.Drawing.Point(30, 120);
             this.lblCodApostador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodApostador.Name = "lblCodApostador";
-            this.lblCodApostador.Size = new System.Drawing.Size(137, 20);
+            this.lblCodApostador.Size = new System.Drawing.Size(129, 20);
             this.lblCodApostador.TabIndex = 22;
-            this.lblCodApostador.Text = "Código Apostador";
+            this.lblCodApostador.Text = "Nome Apostador";
             // 
             // panel4
             // 
@@ -243,42 +279,6 @@
             this.panelDivisionSideMenu.Name = "panelDivisionSideMenu";
             this.panelDivisionSideMenu.Size = new System.Drawing.Size(2, 594);
             this.panelDivisionSideMenu.TabIndex = 21;
-            // 
-            // cmbApostador
-            // 
-            this.cmbApostador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.cmbApostador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbApostador.ForeColor = System.Drawing.Color.White;
-            this.cmbApostador.FormattingEnabled = true;
-            this.cmbApostador.Location = new System.Drawing.Point(34, 145);
-            this.cmbApostador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbApostador.Name = "cmbApostador";
-            this.cmbApostador.Size = new System.Drawing.Size(247, 28);
-            this.cmbApostador.TabIndex = 37;
-            // 
-            // cmbCavalo
-            // 
-            this.cmbCavalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.cmbCavalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCavalo.ForeColor = System.Drawing.Color.White;
-            this.cmbCavalo.FormattingEnabled = true;
-            this.cmbCavalo.Location = new System.Drawing.Point(34, 218);
-            this.cmbCavalo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbCavalo.Name = "cmbCavalo";
-            this.cmbCavalo.Size = new System.Drawing.Size(180, 28);
-            this.cmbCavalo.TabIndex = 38;
-            // 
-            // cmbCorrida
-            // 
-            this.cmbCorrida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.cmbCorrida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCorrida.ForeColor = System.Drawing.Color.White;
-            this.cmbCorrida.FormattingEnabled = true;
-            this.cmbCorrida.Location = new System.Drawing.Point(34, 290);
-            this.cmbCorrida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbCorrida.Name = "cmbCorrida";
-            this.cmbCorrida.Size = new System.Drawing.Size(180, 28);
-            this.cmbCorrida.TabIndex = 39;
             // 
             // FrmCadastroAposta
             // 

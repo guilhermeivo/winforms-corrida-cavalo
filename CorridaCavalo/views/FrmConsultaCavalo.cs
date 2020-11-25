@@ -240,7 +240,7 @@ namespace CorridaCavalo
             try
             {
                 int id = int.Parse(txtCodigoCavalo.Text);
-                cavaloDAO.excluirCavalo(id);
+                cavaloDAO.excluirCavalo(id);                
 
                 limparTextBox();
                 listarTable();

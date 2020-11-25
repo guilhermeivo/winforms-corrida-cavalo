@@ -65,7 +65,6 @@ namespace CorridaCavalo
 
             dgvConsultaCorrida.clearValuesGrid();
 
-            txtIdCorrida.Enabled = false;
             txtData.Enabled = false;
             txtLocal.Enabled = false;
             txtDistancia.Enabled = false;

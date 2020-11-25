@@ -55,7 +55,7 @@ namespace CorridaCavalo.crud
         public int listarQuantidade()
         {
             conn = ConnexionDataBase.obterConexao();
-            string queryString = "select max(idApostador) from Aposta";
+            string queryString = "select max(idAposta) from Aposta";
 
             try
             {
@@ -89,7 +89,7 @@ namespace CorridaCavalo.crud
         public Aposta listarAposta(int id)
         {
             conn = ConnexionDataBase.obterConexao();
-            string queryString = "select * from Aposta where idApostador = @id";
+            string queryString = "select * from Aposta where idAposta = @id";
 
             try
             {
@@ -103,6 +103,7 @@ namespace CorridaCavalo.crud
                     Aposta aposta = new Aposta();
                     aposta.setIdCorrida(id);
 
+                    aposta.setIdAposta(int.Parse(reader["idAposta"].ToString()));
                     aposta.setIdApostador(int.Parse(reader["idApostador"].ToString()));
                     aposta.setIdCavalo(int.Parse(reader["idCavalo"].ToString()));
                     aposta.setIdCorrida(int.Parse(reader["idCorrida"].ToString()));
@@ -164,11 +165,12 @@ namespace CorridaCavalo.crud
         public void alterarAposta(Aposta aposta)
         {
             conn = ConnexionDataBase.obterConexao();
-            string queryString = "update Aposta set idApostador = @idApostador, idCavalo = @idCavalo, idCorrida = @idCorrida, valor = @valor where idApostador = @Id";
+            string queryString = "update Aposta set idApostador = @idApostador, idCavalo = @idCavalo, idCorrida = @idCorrida, valor = @valor where idAposta = @Id";
 
             try
             {
                 SqlCommand cmd = new SqlCommand(queryString, conn);
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = aposta.getIdAposta();
                 cmd.Parameters.Add("@idApostador", SqlDbType.Int).Value = aposta.getIdApostador();
                 cmd.Parameters.Add("@idCavalo", SqlDbType.Int).Value = aposta.getIdCavalo();
                 cmd.Parameters.Add("@idCorrida", SqlDbType.Int).Value = aposta.getIdCorrida();

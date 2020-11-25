@@ -140,14 +140,23 @@ namespace CorridaCavalo.crud
 
             try
             {
-                SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.AddWithValue("@id", id);
+                CorridaCavaloDAO corridaCavaloDAO = new CorridaCavaloDAO();
 
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
+                if (corridaCavaloDAO.listarCorridaCavalo(id) == null)
                 {
-                    MessageBox.Show("Registro excluído com sucesso!");
+                    SqlCommand cmd = new SqlCommand(queryString, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Registro excluído com sucesso!");
+                    }
                 }
+                else
+                {
+                    throw new Exception("Antes é nescessário apagar as relações do cavalo com a corrida!");
+                }                
             }
             catch (Exception error)
             {

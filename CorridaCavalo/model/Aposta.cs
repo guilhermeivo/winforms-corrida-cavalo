@@ -8,6 +8,7 @@ namespace CorridaCavalo.model
 {
     class Aposta
     {
+        private int idAposta;
         /// <summary>Foreign key</summary> 
         private int idApostador;
         /// <summary>Foreign key</summary> 
@@ -16,6 +17,15 @@ namespace CorridaCavalo.model
         private int idCorrida;
         private double valor;
 
+        // idAposta Methods
+        public void setIdAposta(int idAposta)
+        {
+            this.idAposta = idAposta;
+        }
+        public int getIdAposta()
+        {
+            return idAposta;
+        }
         // idApostador Methods
         public void setIdApostador(int idApostador)
         {
