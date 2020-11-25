@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace CorridaCavalo.crud
 {
     class ApostaDAO
@@ -22,14 +23,14 @@ namespace CorridaCavalo.crud
         public void criarApostador(Aposta aposta)
         {
             conn = ConnexionDataBase.obterConexao();
-            string queryString = "insert into Aposta values (@id, @idc, @idco, @valor)";
+            string queryString = "insert into Aposta values (@idApostador, @idCavalo, @idCorrida, @valor)";
             try
             {
                 SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = aposta.getIdApostador();
-                cmd.Parameters.Add("@idc", SqlDbType.Int).Value = aposta.getIdCavalo();
-                cmd.Parameters.Add("@idco", SqlDbType.Int).Value = aposta.getIdCorrida();
-                cmd.Parameters.Add("@valor", SqlDbType.Int).Value = aposta.getValor();
+                cmd.Parameters.Add("@idApostador", SqlDbType.Int).Value = aposta.getIdApostador();
+                cmd.Parameters.Add("@idCavalo", SqlDbType.Int).Value = aposta.getIdCavalo();
+                cmd.Parameters.Add("@idCorrida", SqlDbType.Int).Value = aposta.getIdCorrida();
+                cmd.Parameters.Add("@valor", SqlDbType.Money).Value = aposta.getValor();
 
                 cmd.ExecuteScalar();
 
@@ -163,14 +164,14 @@ namespace CorridaCavalo.crud
         public void alterarAposta(Aposta aposta)
         {
             conn = ConnexionDataBase.obterConexao();
-            string queryString = "update Aposta set idApostador = @id, idCavalo = @idc, idCorrida = @idco, valor = @valor where idApostador = @Id";
+            string queryString = "update Aposta set idApostador = @idApostador, idCavalo = @idCavalo, idCorrida = @idCorrida, valor = @valor where idApostador = @Id";
 
             try
             {
                 SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = aposta.getIdApostador();
-                cmd.Parameters.Add("@idc", SqlDbType.Int).Value = aposta.getIdCavalo();
-                cmd.Parameters.Add("@idco", SqlDbType.Int).Value = aposta.getIdCorrida();
+                cmd.Parameters.Add("@idApostador", SqlDbType.Int).Value = aposta.getIdApostador();
+                cmd.Parameters.Add("@idCavalo", SqlDbType.Int).Value = aposta.getIdCavalo();
+                cmd.Parameters.Add("@idCorrida", SqlDbType.Int).Value = aposta.getIdCorrida();
                 cmd.Parameters.Add("@valor", SqlDbType.Money).Value = aposta.getValor(); //caso dê erro troque o money por double
 
                 int i = cmd.ExecuteNonQuery();

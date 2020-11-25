@@ -17,6 +17,8 @@ namespace CorridaCavalo
         CorridaDAO corridaDAO = new CorridaDAO();
         CavaloDAO cavaloDAO = new CavaloDAO();
         CategoriaDAO categoriaDAO = new CategoriaDAO();
+        CorridaCavaloDAO corridaCavaloDAO = new CorridaCavaloDAO();
+
         Object[,] cavaloObject;
         
         public FrmCorrida()
@@ -104,17 +106,75 @@ namespace CorridaCavalo
             if (dgvCavalo.Rows.Count - 1 < 13)
             {
                 dgvCavalo.Rows.Insert(
-             0,
-             cavaloRes.getIdCavalo(),
-             cavaloRes.getNome(),
-             cavaloRes.getIdade(),
-             categoriaDAO.listarCategoria(cavaloDAO.listarCavalo(cavaloRes.getIdCavalo()).getIdStatus()).getDescCategoria());
+                     0, // linha index
+                     cavaloRes.getIdCavalo(),
+                     cavaloRes.getNome(),
+                     cavaloRes.getIdade(),
+                     categoriaDAO.listarCategoria(
+                         cavaloDAO.listarCavalo(
+                             cavaloRes.getIdCavalo()
+                         ).getIdStatus()
+                     ).getDescCategoria()
+                );
             }
             else
             {
                 MessageBox.Show("Limite de cavalos atingido para a corrida: máximo de 13");
+            }             
+        }
+
+        private void btnCadatro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Inicializa o apostador para poder usar seus metodos {get, set}
+                Corrida corrida = new Corrida();
+                CoridaCavalo coridaCavalo = new CoridaCavalo();
+
+                // Armazena os valores das textbox na classe apostador
+                corrida.setDtCorrida(txtdtCorrida.TextNoFormating().Trim());
+                corrida.setDistancia(txtDistancia.Text.Trim());
+                corrida.setLocal(txtLocal.Text.Trim());
+
+                // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
+                corridaDAO.criarCorrida(corrida);
+
+                for (int i = 0; i < dgvCavalo.Rows.Count - 1; i++)
+                {
+                    coridaCavalo.setIdCavalo(int.Parse(dgvCavalo.Rows[i].Cells[0].Value.ToString()));
+                    coridaCavalo.setIdCorrida(corridaDAO.listarQuantidade());
+
+                    corridaCavaloDAO.criarCorridaCavalo(coridaCavalo);
+                }
+
+                for (int i = 0; i < dgvCavalo.RowCount; i++)
+                {
+                    dgvCavalo.Rows[i].DataGridView.Rows.Clear();
+                }
+
+                txtdtCorrida.Clear();
+                txtDistancia.Clear();
+                txtLocal.Clear();
+
+                txtIdade.Clear();
+                txtCat.Clear();
+
+                txtdtCorrida.Focus();
             }
-             
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possível cadastrar!");
+            }
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }        
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

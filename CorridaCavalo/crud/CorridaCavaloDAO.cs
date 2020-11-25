@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace CorridaCavalo.crud
 {
     class CorridaCavaloDAO
@@ -19,15 +20,15 @@ namespace CorridaCavalo.crud
         /// <param name="corridaCavalo">
         /// Aposta com os seus gets e sets.
         /// </param>
-        public void criarCorridaCavalo(CoridaCavalo cc)
+        public void criarCorridaCavalo(CoridaCavalo coridaCavalo)
         {
             conn = ConnexionDataBase.obterConexao();
-            string queryString = "insert into CorridaCavalo values (@id, @idc)";
+            string queryString = "insert into CorridaCavalo values (@idCavalo, @idCorrida)";
             try
             {
                 SqlCommand cmd = new SqlCommand(queryString, conn);
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = cc.getIdCavalo();
-                cmd.Parameters.Add("@idc", SqlDbType.Int).Value = cc.getIdCorrida();
+                cmd.Parameters.Add("@idCavalo", SqlDbType.Int).Value = coridaCavalo.getIdCavalo();
+                cmd.Parameters.Add("@idCorrida", SqlDbType.Int).Value = coridaCavalo.getIdCorrida();
 
                 cmd.ExecuteScalar();
 
@@ -62,13 +63,13 @@ namespace CorridaCavalo.crud
 
                 if (reader.Read())
                 {
-                    CoridaCavalo cc = new CoridaCavalo();
-                    cc.setIdCorrida(id);
+                    CoridaCavalo coridaCavalo = new CoridaCavalo();
+                    coridaCavalo.setIdCorrida(id);
 
-                    cc.setIdCorrida(int.Parse(reader["idCorrida"].ToString()));
-                    cc.setIdCavalo(int.Parse(reader["idCavalo"].ToString()));
+                    coridaCavalo.setIdCorrida(int.Parse(reader["idCorrida"].ToString()));
+                    coridaCavalo.setIdCavalo(int.Parse(reader["idCavalo"].ToString()));
 
-                    return cc;
+                    return coridaCavalo;
                 }
                 else
                 {

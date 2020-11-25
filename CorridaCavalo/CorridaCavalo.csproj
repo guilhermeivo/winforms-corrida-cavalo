@@ -62,17 +62,17 @@
     <Compile Include="model\CoridaCavalo.cs" />
     <Compile Include="model\Dono.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="views\CadastroAposta.cs">
+    <Compile Include="views\FrmCadastroAposta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\CadastroAposta.Designer.cs">
-      <DependentUpon>CadastroAposta.cs</DependentUpon>
+    <Compile Include="views\FrmCadastroAposta.Designer.cs">
+      <DependentUpon>FrmCadastroAposta.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\ConsultaAposta.cs">
+    <Compile Include="views\FrmConsultaAposta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\ConsultaAposta.Designer.cs">
-      <DependentUpon>ConsultaAposta.cs</DependentUpon>
+    <Compile Include="views\FrmConsultaAposta.Designer.cs">
+      <DependentUpon>FrmConsultaAposta.cs</DependentUpon>
     </Compile>
     <Compile Include="views\FrmCadastroApostador.cs">
       <SubType>Form</SubType>
@@ -130,11 +130,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="views\CadastroAposta.resx">
-      <DependentUpon>CadastroAposta.cs</DependentUpon>
+    <EmbeddedResource Include="views\FrmCadastroAposta.resx">
+      <DependentUpon>FrmCadastroAposta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\ConsultaAposta.resx">
-      <DependentUpon>ConsultaAposta.cs</DependentUpon>
+    <EmbeddedResource Include="views\FrmConsultaAposta.resx">
+      <DependentUpon>FrmConsultaAposta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\FrmCadastroApostador.resx">
       <DependentUpon>FrmCadastroApostador.cs</DependentUpon>

@@ -21,7 +21,7 @@ namespace CorridaCavalo
         }
         public static bool checkValuesDataGriView(DataGridView dataGridView, int line)
         {
-            for (int i = 0; i < dataGridView.RowCount; i++)
+            for (int i = 0; i < dataGridView.RowCount - 1; i++)
             {
                 if (dataGridView.Rows[line].Cells[i].Value == null)
                 {

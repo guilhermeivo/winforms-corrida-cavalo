@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CorridaCavalo.views
 {
-    public partial class CadastroAposta : Form
+    public partial class FrmConsultaAposta : Form
     {
-        public CadastroAposta()
+        public FrmConsultaAposta()
         {
             InitializeComponent();
         }
