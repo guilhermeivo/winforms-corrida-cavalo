@@ -20,7 +20,7 @@ namespace CorridaCavalo.crud
         /// <param name="aposta">
         /// Aposta com os seus gets e sets.
         /// </param>
-        public void criarApostador(Aposta aposta)
+        public void criarAposta(Aposta aposta)
         {
             conn = ConnexionDataBase.obterConexao();
             string queryString = "insert into Aposta values (@idApostador, @idCavalo, @idCorrida, @valor)";

@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvConsultaCorrida = new System.Windows.Forms.DataGridView();
+            this.IdCorrida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtCorrida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.txtDistancia = new System.Windows.Forms.TextBox();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtIdCorrida = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -45,18 +50,13 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblData = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.txtDistancia = new System.Windows.Forms.TextBox();
-            this.IdCorrida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtCorrida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.local = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaCorrida)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -68,45 +68,73 @@
             this.dgvConsultaCorrida.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvConsultaCorrida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultaCorrida.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaCorrida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaCorrida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsultaCorrida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvConsultaCorrida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCorrida,
             this.dtCorrida,
             this.local,
             this.dis});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultaCorrida.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultaCorrida.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsultaCorrida.EnableHeadersVisualStyles = false;
             this.dgvConsultaCorrida.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.dgvConsultaCorrida.Location = new System.Drawing.Point(32, 106);
+            this.dgvConsultaCorrida.Location = new System.Drawing.Point(34, 106);
             this.dgvConsultaCorrida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvConsultaCorrida.Name = "dgvConsultaCorrida";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaCorrida.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvConsultaCorrida.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaCorrida.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConsultaCorrida.RowHeadersVisible = false;
             this.dgvConsultaCorrida.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConsultaCorrida.Size = new System.Drawing.Size(651, 187);
             this.dgvConsultaCorrida.TabIndex = 2;
+            this.dgvConsultaCorrida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaCorrida_CellContentClick);
+            // 
+            // IdCorrida
+            // 
+            this.IdCorrida.HeaderText = "Código Corrida";
+            this.IdCorrida.Name = "IdCorrida";
+            this.IdCorrida.ReadOnly = true;
+            // 
+            // dtCorrida
+            // 
+            this.dtCorrida.HeaderText = "Data Corrida";
+            this.dtCorrida.Name = "dtCorrida";
+            this.dtCorrida.ReadOnly = true;
+            // 
+            // local
+            // 
+            this.local.HeaderText = "Local";
+            this.local.Name = "local";
+            this.local.ReadOnly = true;
+            this.local.Width = 200;
+            // 
+            // dis
+            // 
+            this.dis.HeaderText = "Distancia";
+            this.dis.Name = "dis";
+            this.dis.ReadOnly = true;
+            this.dis.Width = 200;
             // 
             // panel8
             // 
@@ -127,7 +155,7 @@
             this.panel9.Controls.Add(this.txtDistancia);
             this.panel9.Controls.Add(this.dgvConsultaCorrida);
             this.panel9.Controls.Add(this.txtData);
-            this.panel9.Controls.Add(this.button1);
+            this.panel9.Controls.Add(this.btnFechar);
             this.panel9.Controls.Add(this.btnConsultar);
             this.panel9.Controls.Add(this.txtIdCorrida);
             this.panel9.Controls.Add(this.panel10);
@@ -136,7 +164,7 @@
             this.panel9.Controls.Add(this.lblCodigo);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.lblLocal);
-            this.panel9.Controls.Add(this.button2);
+            this.panel9.Controls.Add(this.btnExcluir);
             this.panel9.Controls.Add(this.btnEditar);
             this.panel9.Controls.Add(this.lblData);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -145,6 +173,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(722, 594);
             this.panel9.TabIndex = 25;
+            // 
+            // txtDistancia
+            // 
+            this.txtDistancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtDistancia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDistancia.ForeColor = System.Drawing.Color.White;
+            this.txtDistancia.Location = new System.Drawing.Point(503, 414);
+            this.txtDistancia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDistancia.Name = "txtDistancia";
+            this.txtDistancia.Size = new System.Drawing.Size(180, 26);
+            this.txtDistancia.TabIndex = 54;
             // 
             // txtData
             // 
@@ -160,20 +199,21 @@
             this.txtData.TabIndex = 53;
             this.txtData.ValidatingType = typeof(System.DateTime);
             // 
-            // button1
+            // btnFechar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(34, 536);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 35);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Fechar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(34, 536);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(148, 35);
+            this.btnFechar.TabIndex = 50;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnConsultar
             // 
@@ -189,6 +229,7 @@
             this.btnConsultar.TabIndex = 49;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // txtIdCorrida
             // 
@@ -262,7 +303,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(29, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(190, 25);
+            this.lblTitle.Size = new System.Drawing.Size(188, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Consulta Corrida";
             // 
@@ -278,21 +319,22 @@
             this.lblLocal.TabIndex = 38;
             this.lblLocal.Text = "Local";
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(535, 536);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 35);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(535, 536);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(148, 35);
+            this.btnExcluir.TabIndex = 46;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -309,6 +351,7 @@
             this.btnEditar.TabIndex = 45;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // lblData
             // 
@@ -362,40 +405,6 @@
             this.panel15.Size = new System.Drawing.Size(2, 598);
             this.panel15.TabIndex = 21;
             // 
-            // txtDistancia
-            // 
-            this.txtDistancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtDistancia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDistancia.ForeColor = System.Drawing.Color.White;
-            this.txtDistancia.Location = new System.Drawing.Point(503, 414);
-            this.txtDistancia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDistancia.Name = "txtDistancia";
-            this.txtDistancia.Size = new System.Drawing.Size(180, 26);
-            this.txtDistancia.TabIndex = 54;
-            // 
-            // IdCorrida
-            // 
-            this.IdCorrida.HeaderText = "Código Corrida";
-            this.IdCorrida.Name = "IdCorrida";
-            this.IdCorrida.Width = 50;
-            // 
-            // dtCorrida
-            // 
-            this.dtCorrida.HeaderText = "Data Corrida";
-            this.dtCorrida.Name = "dtCorrida";
-            // 
-            // local
-            // 
-            this.local.HeaderText = "Local";
-            this.local.Name = "local";
-            this.local.Width = 200;
-            // 
-            // dis
-            // 
-            this.dis.HeaderText = "Distancia";
-            this.dis.Name = "dis";
-            this.dis.Width = 200;
-            // 
             // FrmConsultaCorrida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -423,7 +432,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtDistancia;
         private System.Windows.Forms.MaskedTextBox txtData;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtIdCorrida;
         private System.Windows.Forms.Panel panel10;
@@ -433,7 +442,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblLocal;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Panel panel12;

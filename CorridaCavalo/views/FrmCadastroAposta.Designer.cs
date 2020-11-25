@@ -30,15 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCadatro = new System.Windows.Forms.Button();
-            this.txtIDCorrida = new System.Windows.Forms.TextBox();
-            this.txtIdCavalo = new System.Windows.Forms.TextBox();
-            this.txtIdApostador = new System.Windows.Forms.TextBox();
             this.lblCodCorrida = new System.Windows.Forms.Label();
             this.lblCodCavalo = new System.Windows.Forms.Label();
             this.lblCodApostador = new System.Windows.Forms.Label();
@@ -46,8 +44,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDivisionSideMenu = new System.Windows.Forms.Panel();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.lblValor = new System.Windows.Forms.Label();
+            this.cmbApostador = new System.Windows.Forms.ComboBox();
+            this.cmbCavalo = new System.Windows.Forms.ComboBox();
+            this.cmbCorrida = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -69,16 +68,15 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.cmbCorrida);
+            this.panel5.Controls.Add(this.cmbCavalo);
+            this.panel5.Controls.Add(this.cmbApostador);
             this.panel5.Controls.Add(this.txtValor);
             this.panel5.Controls.Add(this.lblValor);
             this.panel5.Controls.Add(this.btnClose);
-            this.panel5.Controls.Add(this.btnConsulta);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.btnCadatro);
-            this.panel5.Controls.Add(this.txtIDCorrida);
-            this.panel5.Controls.Add(this.txtIdCavalo);
-            this.panel5.Controls.Add(this.txtIdApostador);
             this.panel5.Controls.Add(this.lblCodCorrida);
             this.panel5.Controls.Add(this.lblCodCavalo);
             this.panel5.Controls.Add(this.lblCodApostador);
@@ -89,6 +87,28 @@
             this.panel5.Size = new System.Drawing.Size(718, 590);
             this.panel5.TabIndex = 25;
             // 
+            // txtValor
+            // 
+            this.txtValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtValor.ForeColor = System.Drawing.Color.White;
+            this.txtValor.Location = new System.Drawing.Point(326, 292);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(148, 26);
+            this.txtValor.TabIndex = 36;
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.ForeColor = System.Drawing.Color.White;
+            this.lblValor.Location = new System.Drawing.Point(322, 267);
+            this.lblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(46, 20);
+            this.lblValor.TabIndex = 35;
+            this.lblValor.Text = "Valor";
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -96,7 +116,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(210, 524);
+            this.btnClose.Location = new System.Drawing.Point(380, 518);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(148, 35);
@@ -104,23 +124,6 @@
             this.btnClose.Text = "Fechar";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnConsulta
-            // 
-            this.btnConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.btnConsulta.Enabled = false;
-            this.btnConsulta.FlatAppearance.BorderSize = 0;
-            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulta.ForeColor = System.Drawing.Color.White;
-            this.btnConsulta.Location = new System.Drawing.Point(534, 524);
-            this.btnConsulta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(148, 35);
-            this.btnConsulta.TabIndex = 33;
-            this.btnConsulta.Text = "Consultar";
-            this.btnConsulta.UseVisualStyleBackColor = false;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // panel7
             // 
@@ -148,7 +151,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 25);
+            this.label1.Size = new System.Drawing.Size(185, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro Aposta";
             // 
@@ -159,7 +162,7 @@
             this.btnCadatro.FlatAppearance.BorderSize = 0;
             this.btnCadatro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadatro.ForeColor = System.Drawing.Color.White;
-            this.btnCadatro.Location = new System.Drawing.Point(372, 524);
+            this.btnCadatro.Location = new System.Drawing.Point(542, 518);
             this.btnCadatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadatro.Name = "btnCadatro";
             this.btnCadatro.Size = new System.Drawing.Size(148, 35);
@@ -167,39 +170,6 @@
             this.btnCadatro.Text = "Cadastrar";
             this.btnCadatro.UseVisualStyleBackColor = false;
             this.btnCadatro.Click += new System.EventHandler(this.btnCadatro_Click);
-            // 
-            // txtIDCorrida
-            // 
-            this.txtIDCorrida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtIDCorrida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDCorrida.ForeColor = System.Drawing.Color.White;
-            this.txtIDCorrida.Location = new System.Drawing.Point(37, 292);
-            this.txtIDCorrida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtIDCorrida.Name = "txtIDCorrida";
-            this.txtIDCorrida.Size = new System.Drawing.Size(148, 26);
-            this.txtIDCorrida.TabIndex = 29;
-            // 
-            // txtIdCavalo
-            // 
-            this.txtIdCavalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtIdCavalo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdCavalo.ForeColor = System.Drawing.Color.White;
-            this.txtIdCavalo.Location = new System.Drawing.Point(34, 218);
-            this.txtIdCavalo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtIdCavalo.Name = "txtIdCavalo";
-            this.txtIdCavalo.Size = new System.Drawing.Size(151, 26);
-            this.txtIdCavalo.TabIndex = 28;
-            // 
-            // txtIdApostador
-            // 
-            this.txtIdApostador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtIdApostador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdApostador.ForeColor = System.Drawing.Color.White;
-            this.txtIdApostador.Location = new System.Drawing.Point(34, 145);
-            this.txtIdApostador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtIdApostador.Name = "txtIdApostador";
-            this.txtIdApostador.Size = new System.Drawing.Size(151, 26);
-            this.txtIdApostador.TabIndex = 26;
             // 
             // lblCodCorrida
             // 
@@ -274,27 +244,41 @@
             this.panelDivisionSideMenu.Size = new System.Drawing.Size(2, 594);
             this.panelDivisionSideMenu.TabIndex = 21;
             // 
-            // txtValor
+            // cmbApostador
             // 
-            this.txtValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtValor.ForeColor = System.Drawing.Color.White;
-            this.txtValor.Location = new System.Drawing.Point(223, 292);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(148, 26);
-            this.txtValor.TabIndex = 36;
+            this.cmbApostador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbApostador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbApostador.ForeColor = System.Drawing.Color.White;
+            this.cmbApostador.FormattingEnabled = true;
+            this.cmbApostador.Location = new System.Drawing.Point(34, 145);
+            this.cmbApostador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbApostador.Name = "cmbApostador";
+            this.cmbApostador.Size = new System.Drawing.Size(247, 28);
+            this.cmbApostador.TabIndex = 37;
             // 
-            // lblValor
+            // cmbCavalo
             // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.ForeColor = System.Drawing.Color.White;
-            this.lblValor.Location = new System.Drawing.Point(219, 267);
-            this.lblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(46, 20);
-            this.lblValor.TabIndex = 35;
-            this.lblValor.Text = "Valor";
+            this.cmbCavalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbCavalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCavalo.ForeColor = System.Drawing.Color.White;
+            this.cmbCavalo.FormattingEnabled = true;
+            this.cmbCavalo.Location = new System.Drawing.Point(34, 218);
+            this.cmbCavalo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbCavalo.Name = "cmbCavalo";
+            this.cmbCavalo.Size = new System.Drawing.Size(180, 28);
+            this.cmbCavalo.TabIndex = 38;
+            // 
+            // cmbCorrida
+            // 
+            this.cmbCorrida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.cmbCorrida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCorrida.ForeColor = System.Drawing.Color.White;
+            this.cmbCorrida.FormattingEnabled = true;
+            this.cmbCorrida.Location = new System.Drawing.Point(34, 290);
+            this.cmbCorrida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbCorrida.Name = "cmbCorrida";
+            this.cmbCorrida.Size = new System.Drawing.Size(180, 28);
+            this.cmbCorrida.TabIndex = 39;
             // 
             // FrmCadastroAposta
             // 
@@ -323,14 +307,10 @@
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCadatro;
-        private System.Windows.Forms.TextBox txtIDCorrida;
-        private System.Windows.Forms.TextBox txtIdCavalo;
-        private System.Windows.Forms.TextBox txtIdApostador;
         private System.Windows.Forms.Label lblCodCorrida;
         private System.Windows.Forms.Label lblCodCavalo;
         private System.Windows.Forms.Label lblCodApostador;
@@ -338,5 +318,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelDivisionSideMenu;
+        private System.Windows.Forms.ComboBox cmbApostador;
+        private System.Windows.Forms.ComboBox cmbCavalo;
+        private System.Windows.Forms.ComboBox cmbCorrida;
     }
 }

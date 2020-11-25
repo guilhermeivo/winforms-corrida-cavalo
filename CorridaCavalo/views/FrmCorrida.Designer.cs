@@ -47,7 +47,6 @@
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.txtDistancia = new System.Windows.Forms.TextBox();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -130,7 +129,6 @@
             // 
             this.txtId.HeaderText = "Cod Cavalo";
             this.txtId.Name = "txtId";
-            this.txtId.Width = 50;
             // 
             // txtNome
             // 
@@ -174,7 +172,6 @@
             this.panel5.Controls.Add(this.txtIdade);
             this.panel5.Controls.Add(this.txtDistancia);
             this.panel5.Controls.Add(this.btnFechar);
-            this.panel5.Controls.Add(this.btnConsulta);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.btnCadatro);
@@ -282,7 +279,7 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(182, 650);
+            this.btnFechar.Location = new System.Drawing.Point(356, 649);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(148, 35);
@@ -290,23 +287,6 @@
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // btnConsulta
-            // 
-            this.btnConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.btnConsulta.Enabled = false;
-            this.btnConsulta.FlatAppearance.BorderSize = 0;
-            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulta.ForeColor = System.Drawing.Color.White;
-            this.btnConsulta.Location = new System.Drawing.Point(532, 650);
-            this.btnConsulta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(148, 35);
-            this.btnConsulta.TabIndex = 33;
-            this.btnConsulta.Text = "Consultar";
-            this.btnConsulta.UseVisualStyleBackColor = false;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // panel7
             // 
@@ -334,7 +314,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(23, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(190, 25);
+            this.lblTitle.Size = new System.Drawing.Size(188, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Cadastro Corrida";
             // 
@@ -345,7 +325,7 @@
             this.btnCadatro.FlatAppearance.BorderSize = 0;
             this.btnCadatro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadatro.ForeColor = System.Drawing.Color.White;
-            this.btnCadatro.Location = new System.Drawing.Point(357, 650);
+            this.btnCadatro.Location = new System.Drawing.Point(531, 649);
             this.btnCadatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadatro.Name = "btnCadatro";
             this.btnCadatro.Size = new System.Drawing.Size(148, 35);
@@ -372,9 +352,9 @@
             this.label4.Location = new System.Drawing.Point(24, 310);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Saldo";
+            this.label4.Text = "Cavalo";
             // 
             // lblLocal
             // 
@@ -490,7 +470,6 @@
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.TextBox txtDistancia;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblTitle;
@@ -506,11 +485,11 @@
         private System.Windows.Forms.Panel panelDivisionSideMenu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.MaskedTextBox txtdtCorrida;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtId;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtAge;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtCategoria;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.MaskedTextBox txtdtCorrida;
     }
 }

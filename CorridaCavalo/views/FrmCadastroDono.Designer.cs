@@ -32,7 +32,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -69,7 +68,6 @@
             // 
             this.panel5.Controls.Add(this.txtTelefone);
             this.panel5.Controls.Add(this.btnFechar);
-            this.panel5.Controls.Add(this.btnConsultar);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.btnCadatro);
@@ -103,7 +101,7 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(214, 528);
+            this.btnFechar.Location = new System.Drawing.Point(384, 534);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(148, 35);
@@ -111,23 +109,6 @@
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.btnConsultar.Enabled = false;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(538, 528);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(148, 35);
-            this.btnConsultar.TabIndex = 33;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // panel7
             // 
@@ -155,7 +136,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(29, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(171, 25);
+            this.lblTitle.Size = new System.Drawing.Size(169, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Cadastro Dono";
             // 
@@ -166,7 +147,7 @@
             this.btnCadatro.FlatAppearance.BorderSize = 0;
             this.btnCadatro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadatro.ForeColor = System.Drawing.Color.White;
-            this.btnCadatro.Location = new System.Drawing.Point(376, 528);
+            this.btnCadatro.Location = new System.Drawing.Point(546, 534);
             this.btnCadatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadatro.Name = "btnCadatro";
             this.btnCadatro.Size = new System.Drawing.Size(148, 35);
@@ -294,7 +275,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblTitle;
