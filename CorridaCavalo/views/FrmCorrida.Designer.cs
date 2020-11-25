@@ -39,6 +39,7 @@
             this.txtCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtdtCorrida = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDivisionSideMenu = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txtdtCorrida = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCavalo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -190,6 +190,18 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(722, 710);
             this.panel5.TabIndex = 25;
+            // 
+            // txtdtCorrida
+            // 
+            this.txtdtCorrida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtdtCorrida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtdtCorrida.ForeColor = System.Drawing.Color.White;
+            this.txtdtCorrida.Location = new System.Drawing.Point(28, 125);
+            this.txtdtCorrida.Mask = "00/00/0000";
+            this.txtdtCorrida.Name = "txtdtCorrida";
+            this.txtdtCorrida.Size = new System.Drawing.Size(100, 26);
+            this.txtdtCorrida.TabIndex = 41;
+            this.txtdtCorrida.ValidatingType = typeof(System.DateTime);
             // 
             // label2
             // 
@@ -444,18 +456,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(763, 25);
             this.panel8.TabIndex = 38;
-            // 
-            // txtdtCorrida
-            // 
-            this.txtdtCorrida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtdtCorrida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtdtCorrida.ForeColor = System.Drawing.Color.White;
-            this.txtdtCorrida.Location = new System.Drawing.Point(28, 125);
-            this.txtdtCorrida.Mask = "00/00/0000";
-            this.txtdtCorrida.Name = "txtdtCorrida";
-            this.txtdtCorrida.Size = new System.Drawing.Size(100, 26);
-            this.txtdtCorrida.TabIndex = 41;
-            this.txtdtCorrida.ValidatingType = typeof(System.DateTime);
             // 
             // FrmCorrida
             // 

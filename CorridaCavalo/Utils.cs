@@ -27,9 +27,16 @@ namespace CorridaCavalo
                 {
                     return false;
                 }
-            }
+            }            
 
             return true;
+        }
+        public static void clearValuesGrid(this DataGridView dataGridView)
+        {
+            for (int i = 0; i < dataGridView.RowCount; i++)
+            {
+                dataGridView.Rows[i].DataGridView.Rows.Clear();
+            }
         }
     }
 }

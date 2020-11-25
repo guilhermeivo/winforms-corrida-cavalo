@@ -37,6 +37,11 @@ namespace CorridaCavalo
             openChildForm(new FrmCadastroDono());
             hideSubMenu();
         }
+        private void btnCadastrarAposta_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCadastroAposta());
+            hideSubMenu();
+        }
         private void cadastrar_MouseClick(object sender, MouseEventArgs e)
         {
             showSubMenu(panelCadastrarSubmenu);
@@ -77,6 +82,11 @@ namespace CorridaCavalo
         private void btnConsultaApostador_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmConsultaApostador());
+            hideSubMenu();
+        }
+        private void btnConsultaAposta_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmConsultaAposta());
             hideSubMenu();
         }
         private void btnConsultaCorrida_Click(object sender, EventArgs e)
@@ -458,5 +468,6 @@ namespace CorridaCavalo
             }
         }
         #endregion
+
     }
 }

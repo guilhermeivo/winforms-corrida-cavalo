@@ -71,10 +71,7 @@ namespace CorridaCavalo
 
             txtCodigo.Focus();
 
-            for (int i = 0; i < dgvConsultaApostador.RowCount; i++)
-            {
-                dgvConsultaApostador.Rows[i].DataGridView.Rows.Clear();
-            }            
+            dgvConsultaApostador.clearValuesGrid();
 
             txtNome.Enabled = false;
             txtTelefone.Enabled = false;

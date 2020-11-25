@@ -16,5 +16,20 @@ namespace CorridaCavalo.views
         {
             InitializeComponent();
         }
+
+        private void btnCadatro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

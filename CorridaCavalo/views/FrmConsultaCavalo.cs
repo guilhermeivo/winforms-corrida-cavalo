@@ -89,10 +89,7 @@ namespace CorridaCavalo
 
             txtCodigoCavalo.Focus();
 
-            for (int i = 0; i < dgvConsultaCavalo.RowCount; i++)
-            {
-                dgvConsultaCavalo.Rows[i].DataGridView.Rows.Clear();
-            }
+            dgvConsultaCavalo.clearValuesGrid();
 
             txtNomeCavalo.Enabled = false;
             txtIdade.Enabled = false;

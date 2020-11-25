@@ -132,7 +132,7 @@ namespace CorridaCavalo
                 CoridaCavalo coridaCavalo = new CoridaCavalo();
 
                 // Armazena os valores das textbox na classe apostador
-                corrida.setDtCorrida(txtdtCorrida.TextNoFormating().Trim());
+                corrida.setDtCorrida(txtdtCorrida.Text.Trim());
                 corrida.setDistancia(txtDistancia.Text.Trim());
                 corrida.setLocal(txtLocal.Text.Trim());
 
@@ -147,10 +147,7 @@ namespace CorridaCavalo
                     corridaCavaloDAO.criarCorridaCavalo(coridaCavalo);
                 }
 
-                for (int i = 0; i < dgvCavalo.RowCount; i++)
-                {
-                    dgvCavalo.Rows[i].DataGridView.Rows.Clear();
-                }
+                dgvCavalo.clearValuesGrid();
 
                 txtdtCorrida.Clear();
                 txtDistancia.Clear();
