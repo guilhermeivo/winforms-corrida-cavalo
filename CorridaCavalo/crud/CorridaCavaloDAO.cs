@@ -31,8 +31,6 @@ namespace CorridaCavalo.crud
                 cmd.Parameters.Add("@idCorrida", SqlDbType.Int).Value = coridaCavalo.getIdCorrida();
 
                 cmd.ExecuteScalar();
-
-                MessageBox.Show("Registro inserido com sucesso!");
             }
             catch (Exception error)
             {

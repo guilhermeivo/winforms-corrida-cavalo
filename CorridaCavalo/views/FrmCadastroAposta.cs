@@ -156,7 +156,6 @@ namespace CorridaCavalo.views
                 // Inicializa o apostador para poder usar seus metodos {get, set}
                 Aposta aposta = new Aposta();
 
-                // Armazena os valores das textbox na classe apostador
                 aposta.setValor(Double.Parse(txtValor.Text.Trim()));
 
                 for (int i = 0; i < apostadorObject.Length / 2; i++)
@@ -166,27 +165,44 @@ namespace CorridaCavalo.views
                         aposta.setIdApostador(Convert.ToInt32(apostadorObject[i, 0]));
                     }
                 }
-                for (int i = 0; i < cavaloObject.Length / 2; i++)
-                {
-                    if (Convert.ToString(cavaloObject[i, 1]) == cmbCavalo.Text.ToString())
-                    {
-                        aposta.setIdCavalo(Convert.ToInt32(cavaloObject[i, 0]));
-                    }
-                }
-                for (int i = 0; i < corridaObject.Length / 2; i++)
-                {
-                    if (Convert.ToString(corridaObject[i, 1]) == cmbCorrida.Text.ToString())
-                    {
-                        aposta.setIdCorrida(Convert.ToInt32(corridaObject[i, 0]));
-                    }
-                }
 
-                // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
-                apostaDAO.criarAposta(aposta);
+                Apostador apostador = new Apostador();
 
-                txtValor.Clear();
-               
-                txtValor.Focus();
+                apostador = apostadorDAO.listarApostador(aposta.getIdApostador());
+
+                apostador.setValor(apostador.getValor() - aposta.getValor());                
+
+                if (apostador.getValor() > 0)
+                {
+                    apostadorDAO.alterarApostador(apostador);
+                    // Armazena os valores das textbox na classe apostador
+
+                    for (int i = 0; i < cavaloObject.Length / 2; i++)
+                    {
+                        if (Convert.ToString(cavaloObject[i, 1]) == cmbCavalo.Text.ToString())
+                        {
+                            aposta.setIdCavalo(Convert.ToInt32(cavaloObject[i, 0]));
+                        }
+                    }
+                    for (int i = 0; i < corridaObject.Length / 2; i++)
+                    {
+                        if (Convert.ToString(corridaObject[i, 1]) == cmbCorrida.Text.ToString())
+                        {
+                            aposta.setIdCorrida(Convert.ToInt32(corridaObject[i, 0]));
+                        }
+                    }
+
+                    // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
+                    apostaDAO.criarAposta(aposta);
+
+                    txtValor.Clear();
+
+                    txtValor.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("O apostador não tem dinheiro suficiente para fazer a aposta!");
+                }
             }
             catch (Exception)
             {

@@ -127,38 +127,48 @@ namespace CorridaCavalo
         {
             try
             {
-                // Inicializa o apostador para poder usar seus metodos {get, set}
-                Corrida corrida = new Corrida();
-                CoridaCavalo coridaCavalo = new CoridaCavalo();
+                DateTime thisDay = DateTime.Today;
+                int res = DateTime.Compare(Convert.ToDateTime(thisDay.ToString("d")), Convert.ToDateTime(txtdtCorrida.Text.Trim()));
 
-                // Armazena os valores das textbox na classe apostador
-                corrida.setDtCorrida(txtdtCorrida.Text.Trim());
-                corrida.setDistancia(txtDistancia.Text.Trim());
-                corrida.setLocal(txtLocal.Text.Trim());
-
-                // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
-                corridaDAO.criarCorrida(corrida);
-
-                for (int i = 0; i < dgvCavalo.Rows.Count - 1; i++)
+                if (res < 0)
                 {
-                    coridaCavalo.setIdCavalo(int.Parse(dgvCavalo.Rows[i].Cells[0].Value.ToString()));
-                    coridaCavalo.setIdCorrida(corridaDAO.listarQuantidade());
+                    // Inicializa o apostador para poder usar seus metodos {get, set}
+                    Corrida corrida = new Corrida();
+                    CoridaCavalo coridaCavalo = new CoridaCavalo();
 
-                    corridaCavaloDAO.criarCorridaCavalo(coridaCavalo);
+                    // Armazena os valores das textbox na classe apostador
+                    corrida.setDtCorrida(txtdtCorrida.Text.Trim());
+                    corrida.setDistancia(txtDistancia.Text.Trim());
+                    corrida.setLocal(txtLocal.Text.Trim());
+
+                    // Manda a classe Apostador para o método criarApostador onde armazena os dados no banco de dados
+                    corridaDAO.criarCorrida(corrida);
+
+                    for (int i = 0; i < dgvCavalo.Rows.Count - 1; i++)
+                    {
+                        coridaCavalo.setIdCavalo(int.Parse(dgvCavalo.Rows[i].Cells[0].Value.ToString()));
+                        coridaCavalo.setIdCorrida(corridaDAO.listarQuantidade());
+
+                        corridaCavaloDAO.criarCorridaCavalo(coridaCavalo);
+                    }
+
+                    dgvCavalo.clearValuesGrid();
+
+                    txtdtCorrida.Clear();
+                    txtDistancia.Clear();
+                    txtLocal.Clear();
+
+                    txtIdade.Clear();
+                    txtCat.Clear();
+
+                    txtdtCorrida.Focus();
                 }
-
-                dgvCavalo.clearValuesGrid();
-
-                txtdtCorrida.Clear();
-                txtDistancia.Clear();
-                txtLocal.Clear();
-
-                txtIdade.Clear();
-                txtCat.Clear();
-
-                txtdtCorrida.Focus();
+                else
+                {
+                    MessageBox.Show("Só pode criar corridas com datas posteriores à atual!");
+                }
             }
-            catch (Exception)
+            catch (Exception )
             {
                 MessageBox.Show("Não foi possível cadastrar!");
             }
