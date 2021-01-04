@@ -9,7 +9,7 @@
 </p>
 
 <div align="center">
-    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/logo_horse.png" alt"logo-horse" title="logo-horse" width="150px" />
+    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/logo_horse.png" alt="logo-horse" title="logo-horse" width="150px" />
 </div>
 
 
@@ -45,7 +45,7 @@ Projeto foi desenvolvido como forma de trabalho na matéria de Desenvolvimento d
 O layout da aplicação é:
 
 <div align="center">
-    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/print-app.png" alt"logo-horse" title="logo-horse"/>
+    <img src="https://github.com/guilhermeivo/winforms-corrida-cavalo/blob/master/.github/print-app.png" alt="logo-horse" title="logo-horse"/>
 </div>
 
 ## :computer: Tecnologias
