@@ -19,17 +19,6 @@
 
 Projeto foi desenvolvido como forma de trabalho na matéria de Desenvolvimento de Sistemas (DS).
 
-# :scroll: Sumário
-
-- [Funcionalidades](#⚙️-Funcionalidades)
-- [Layout](#🎨-Layout)
-- [Tecnologias](#computer-tecnologias)
-- [Como rodar o projeto](##construction_worker-como-rodar-o-projeto)
-    - [Baixando o projeto](##computer-baixando-o-projeto)
-    - [Configurando o projeto](##wrench-configurando-o-ambiente)
-    - [Rodando o projeto](##computer-rodando-o-projeto)
-- [Autores](#🦸-Autores);
-
 ## ⚙️ Funcionalidades
 
 - [x] Donos de cavalos e apostadores podem se cadastrar, inserindo:
